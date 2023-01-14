@@ -1,7 +1,8 @@
 #include "src/net/EventLoop.h"
 #include "src/logger/Logging.h"
-#include "src/net/Poller.h"
 #include "src/net/Channel.h"
+#include "src/net/Poller.h"
+#include "src/net/TimerQueue.h"
 using namespace mymuduo;
 
 // 防止一个线程创建多个EventLoop
@@ -12,7 +13,7 @@ const int kPollTimeMs = 10000;
 
 EventLoop::EventLoop()
     : looping_(false), quit_(false), threadId_(CurrentThread::tid()),
-      poller_(new Poller(this)) {
+      poller_(new Poller(this)), timerQueue_(new TimerQueue(this)) {
   LOG_TRACE << "EventLoop created " << this << " in thread " << threadId_;
   if (t_loopInThisThread) {
     LOG_FATAL << "Another EventLoop " << t_loopInThisThread
@@ -46,19 +47,41 @@ void EventLoop::loop() {
   looping_ = false;
 }
 
-void EventLoop::quit()
-{
+void EventLoop::quit() {
   quit_ = true;
   // wakeup();
 }
 
-void EventLoop::updateChannel(Channel* channel)
-{
+void EventLoop::runInLoop(Functor cb) {
+  bool inThread = isInLoopThread();
+  LOG_TRACE << "EventLoop::runInLoop in loopThread:"
+            << (inThread ? "true" : "false");
+  if (isInLoopThread()) {
+    cb();
+  } else {
+    // TODO:queueInLoop(cb);
+  }
+}
+
+TimerId EventLoop::runAt(const Timestamp &time, const TimerCallback &cb) {
+  return timerQueue_->addTimer(cb, time, 0.0);
+}
+
+TimerId EventLoop::runAfter(double delay, const TimerCallback &cb) {
+  Timestamp time(addTime(Timestamp::now(), delay));
+  return runAt(time, cb);
+}
+
+TimerId EventLoop::runEvery(double interval, const TimerCallback &cb) {
+  Timestamp time(addTime(Timestamp::now(), interval));
+  return timerQueue_->addTimer(cb, time, interval);
+}
+
+void EventLoop::updateChannel(Channel *channel) {
   assert(channel->ownerLoop() == this);
   assertInLoopThread();
   poller_->updateChannel(channel);
 }
-
 
 void EventLoop::abortNotInLoopThread() {
   LOG_FATAL << "EventLoop::abortNotInLoopThread - EventLoop " << this

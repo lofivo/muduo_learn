@@ -1,15 +1,12 @@
 #ifndef MYMUDUO_BASE_TIMESTAMP_H
 #define MYMUDUO_BASE_TIMESTAMP_H
 
-#include <algorithm>
-#include <iostream>
-#include <string>
-
-namespace mymuduo {
 
 #include <iostream>
 #include <string>
 #include <sys/time.h>
+
+namespace mymuduo {
 
 class Timestamp {
 public:
@@ -36,6 +33,8 @@ public:
 
   // 格式, "%4d年%02d月%02d日 星期%d %02d:%02d:%02d.%06d",时分秒.微秒
   std::string toFormattedString(bool showMicroseconds = false) const;
+
+  bool valid() const { return microSecondsSinceEpoch_ > 0; }
 
   // 返回当前时间戳的微妙
   int64_t microSecondsSinceEpoch() const { return microSecondsSinceEpoch_; }

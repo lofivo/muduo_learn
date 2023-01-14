@@ -1,8 +1,8 @@
-#include "Timer.h"
+#include "src/net/Timer.h"
 
 using namespace mymuduo;
 
-static std::atomic<int64_t> s_numCreated_;
+std::atomic<int64_t> Timer::s_numCreated_;
 
 void Timer::restart(Timestamp now) {
   if (repeat_) {
