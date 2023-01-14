@@ -1,8 +1,12 @@
 #ifndef MYMUDUO_LOGGER_FILEUTIL_H
 #define MYMUDUO_LOGGER_FILEUTIL_H
 
+
 #include <stdio.h>
 #include <string>
+
+#include "src/base/noncopyable.h"
+
 
 namespace mymuduo {
 class FileUtil {

@@ -1,5 +1,5 @@
-#include "AsyncLogging.h"
-#include "Timestamp.h"
+#include "src/logger/AsyncLogging.h"
+#include "src/base/Timestamp.h"
 
 #include <stdio.h>
 

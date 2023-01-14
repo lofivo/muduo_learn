@@ -1,8 +1,8 @@
 #ifndef MYMUDUO_LOGGER_LOGSTREAM_H
 #define MYMUDUO_LOGGER_LOGSTREAM_H
 
-#include "FixedBuffer.h"
-#include "noncopyable.h"
+#include "src/logger/FixedBuffer.h"
+#include "src/base/noncopyable.h"
 
 #include <string>
 

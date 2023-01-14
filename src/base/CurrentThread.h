@@ -3,6 +3,7 @@
 #include <sys/syscall.h>
 #include <unistd.h>
 namespace mymuduo {
+
 namespace CurrentThread {
 extern __thread int t_cachedTid; // 保存tid缓冲，避免多次系统调用
 

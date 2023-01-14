@@ -1,8 +1,8 @@
 #ifndef MYMUDUO_LOGGER_LOGGING_H
 #define MYMUDUO_LOGGER_LOGGING_H
 
-#include "LogStream.h"
-#include "Timestamp.h"
+#include "src/logger/LogStream.h"
+#include "src/base/Timestamp.h"
 
 #include <errno.h>
 #include <functional>
@@ -46,6 +46,7 @@ public:
   Logger(const char *file, int line);
   Logger(const char *file, int line, LogLevel level);
   Logger(const char *file, int line, LogLevel level, const char *func);
+  Logger(const char* file, int line, bool toAbort);
   ~Logger();
 
   // 流是会改变的
@@ -111,8 +112,8 @@ const char *getErrnoMsg(int savedErrno);
   Logger(__FILE__, __LINE__, Logger::ERROR).stream()
 #define LOG_FATAL                                                              \
   Logger(__FILE__, __LINE__, Logger::FATAL).stream()
-// #define LOG_SYSERR Logger(__FILE__, __LINE__, false).stream()
-// #define LOG_SYSFATAL Logger(__FILE__, __LINE__, true).stream()
+#define LOG_SYSERR Logger(__FILE__, __LINE__, false).stream()
+#define LOG_SYSFATAL Logger(__FILE__, __LINE__, true).stream()
 
 
 #endif // MYMUDUO_LOGGER_LOGGING_H

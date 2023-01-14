@@ -21,8 +21,19 @@ public:
   // 获取当前时间戳
   static Timestamp now();
 
+  // 失效的时间戳，返回一个值为0的Timestamp
+  static Timestamp invalid() { return Timestamp(); }
+
+  static Timestamp fromUnixTime(time_t t) { return fromUnixTime(t, 0); }
+
+  static Timestamp fromUnixTime(time_t t, int microseconds) {
+    return Timestamp(static_cast<int64_t>(t) * kMicroSecondsPerSecond +
+                     microseconds);
+  }
+
   // 用std::string形式返回,格式[millisec].[microsec]
   std::string toString() const;
+
   // 格式, "%4d年%02d月%02d日 星期%d %02d:%02d:%02d.%06d",时分秒.微秒
   std::string toFormattedString(bool showMicroseconds = false) const;
 
@@ -34,9 +45,7 @@ public:
                                kMicroSecondsPerSecond);
   }
 
-  // 失效的时间戳，返回一个值为0的Timestamp
-  static Timestamp invalid() { return Timestamp(); }
-
+public:
   // 1秒=1000*1000微妙
   static const int kMicroSecondsPerSecond = 1000 * 1000;
 
@@ -54,6 +63,18 @@ inline bool operator<(Timestamp lhs, Timestamp rhs) {
 
 inline bool operator==(Timestamp lhs, Timestamp rhs) {
   return lhs.microSecondsSinceEpoch() == rhs.microSecondsSinceEpoch();
+}
+
+///
+/// Gets time difference of two timestamps, result in seconds.
+///
+/// @param high, low
+/// @return (high-low) in seconds
+/// @c double has 52-bit precision, enough for one-microsecond
+/// resolution for next 100 years.
+inline double timeDifference(Timestamp high, Timestamp low) {
+  int64_t diff = high.microSecondsSinceEpoch() - low.microSecondsSinceEpoch();
+  return static_cast<double>(diff) / Timestamp::kMicroSecondsPerSecond;
 }
 
 // 如果是重复定时任务就会对此时间戳进行增加。

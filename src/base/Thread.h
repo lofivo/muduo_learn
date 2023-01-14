@@ -2,6 +2,7 @@
 #define MYMUDUO_BASE_THREAD_H
 
 #include "noncopyable.h"
+
 #include <atomic>
 #include <functional>
 #include <memory>

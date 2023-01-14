@@ -1,7 +1,7 @@
 #ifndef MYMUDUO_LOGGER_FIXEDBUFFER_H
 #define MYMUDUO_LOGGER_FIXEDBUFFER_H
 
-#include "noncopyable.h"
+#include "src/base/noncopyable.h"
 #include <assert.h>
 #include <string.h> // memcpy
 #include <string>

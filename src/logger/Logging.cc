@@ -1,4 +1,4 @@
-#include "Logging.h"
+#include "src/logger/Logging.h"
 
 namespace mymuduo {
 // TODO: 加上tid的输出
@@ -87,6 +87,9 @@ Logger::Logger(const char *file, int line, Logger::LogLevel level,
     : impl_(level, 0, file, line) {
   impl_.stream_ << func << ' ';
 }
+
+Logger::Logger(const char *file, int line, bool toAbort)
+    : impl_(toAbort ? FATAL : ERROR, errno, file, line) {}
 
 Logger::~Logger() {
   impl_.finish();

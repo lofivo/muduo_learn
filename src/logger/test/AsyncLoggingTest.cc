@@ -1,6 +1,6 @@
-#include "AsyncLogging.h"
-#include "Logging.h"
-#include "Timestamp.h"
+#include "src/logger/AsyncLogging.h"
+#include "src/logger/Logging.h"
+#include "src/base/Timestamp.h"
 
 #include <stdio.h>
 #include <unistd.h>
