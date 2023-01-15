@@ -85,31 +85,46 @@ TimerQueue::~TimerQueue() {
 TimerId TimerQueue::addTimer(TimerCallback cb, Timestamp when,
                              double interval) {
   Timer *timer = new Timer(std::move(cb), when, interval);
-  loop_->assertInLoopThread();
-  bool earliestChanged = insert(timer);
-
-  if (earliestChanged) {
-    resetTimerfd(timerfd_, timer->expiration());
-  }
+  loop_->runInLoop(std::bind(&TimerQueue::addTimerInLoop, this, timer));
   return TimerId(timer);
 }
 
+void TimerQueue::addTimerInLoop(Timer *timer) {
+  loop_->assertInLoopThread();
+
+  // 插入一个定时器，有可能会使得最早到期的定时器发生改变
+  bool earliestChanged = insert(timer);
+
+  // 如果最早到期的定时器发生改变
+  // 说明当前插入的timer是最早到期的定时器
+  if (earliestChanged) {
+    // 重置定时器的超时时刻
+    resetTimerfd(timerfd_, timer->expiration());
+  }
+}
+
+// 当定时器channel产生可读事件时，会调用handleRead()
 void TimerQueue::handleRead() {
   loop_->assertInLoopThread();
   Timestamp now(Timestamp::now());
+  // 清除该事件，避免一直触发
   readTimerfd(timerfd_, now);
 
+  // 得到所有超时的定时器
   std::vector<Entry> expired = getExpired(now);
 
   // safe to callback outside critical section
   for (std::vector<Entry>::iterator it = expired.begin(); it != expired.end();
        ++it) {
+    // 回调定时器处理函数
     it->second->run();
   }
 
+  // 重启所有非一次性的定时器
   reset(expired, now);
 }
 
+// 获得超时定时器列表
 std::vector<TimerQueue::Entry> TimerQueue::getExpired(Timestamp now) {
   std::vector<Entry> expired;
   Entry sentry = std::make_pair(now, reinterpret_cast<Timer *>(UINTPTR_MAX));
@@ -121,6 +136,7 @@ std::vector<TimerQueue::Entry> TimerQueue::getExpired(Timestamp now) {
   return expired;
 }
 
+// 重启所有非一次性的定时器
 void TimerQueue::reset(const std::vector<Entry> &expired, Timestamp now) {
   Timestamp nextExpire;
 
@@ -144,6 +160,7 @@ void TimerQueue::reset(const std::vector<Entry> &expired, Timestamp now) {
   }
 }
 
+// 插入定时器
 bool TimerQueue::insert(Timer *timer) {
   bool earliestChanged = false;
   Timestamp when = timer->expiration();
