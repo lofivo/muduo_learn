@@ -1,8 +1,8 @@
 #ifndef MYMUDUO_LOGGER_LOGGING_H
 #define MYMUDUO_LOGGER_LOGGING_H
 
-#include "src/logger/LogStream.h"
 #include "src/base/Timestamp.h"
+#include "src/logger/LogStream.h"
 
 #include <errno.h>
 #include <functional>
@@ -46,7 +46,7 @@ public:
   Logger(const char *file, int line);
   Logger(const char *file, int line, LogLevel level);
   Logger(const char *file, int line, LogLevel level, const char *func);
-  Logger(const char* file, int line, bool toAbort);
+  Logger(const char *file, int line, bool toAbort);
   ~Logger();
 
   // 流是会改变的
@@ -89,31 +89,29 @@ inline Logger::LogLevel logLevel() { return g_logLevel; }
 // 获取errno信息
 const char *getErrnoMsg(int savedErrno);
 
-
-
-} // namespace mymuduo
-
 /**
  * 当日志等级小于对应等级才会输出
  * 比如设置等级为FATAL，则logLevel等级大于DEBUG和INFO，DEBUG和INFO等级的日志就不会输出
  */
 #define LOG_TRACE                                                              \
-  if (logLevel() <= Logger::TRACE)                   \
+  if (logLevel() <= Logger::TRACE)                                             \
   Logger(__FILE__, __LINE__, Logger::TRACE, __func__).stream()
 #define LOG_DEBUG                                                              \
-  if (logLevel() <= Logger::DEBUG)                   \
+  if (logLevel() <= Logger::DEBUG)                                             \
   Logger(__FILE__, __LINE__, Logger::DEBUG, __func__).stream()
 #define LOG_INFO                                                               \
-  if (logLevel() <= Logger::INFO)                    \
+  if (logLevel() <= Logger::INFO)                                              \
   Logger(__FILE__, __LINE__).stream()
-#define LOG_WARN                                                               \
-  Logger(__FILE__, __LINE__, Logger::WARN).stream()
-#define LOG_ERROR                                                              \
-  Logger(__FILE__, __LINE__, Logger::ERROR).stream()
-#define LOG_FATAL                                                              \
-  Logger(__FILE__, __LINE__, Logger::FATAL).stream()
+#define LOG_WARN Logger(__FILE__, __LINE__, Logger::WARN).stream()
+#define LOG_ERROR Logger(__FILE__, __LINE__, Logger::ERROR).stream()
+#define LOG_FATAL Logger(__FILE__, __LINE__, Logger::FATAL).stream()
 #define LOG_SYSERR Logger(__FILE__, __LINE__, false).stream()
 #define LOG_SYSFATAL Logger(__FILE__, __LINE__, true).stream()
 
+template <typename To, typename From> inline To implicit_cast(From const &f) {
+  return f;
+}
+
+} // namespace mymuduo
 
 #endif // MYMUDUO_LOGGER_LOGGING_H
