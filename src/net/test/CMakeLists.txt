@@ -18,3 +18,6 @@ target_link_libraries(test6 mymuduo)
 
 add_executable(test7 test7.cc)
 target_link_libraries(test7 mymuduo)
+
+add_executable(test8 test8.cc)
+target_link_libraries(test8 mymuduo)

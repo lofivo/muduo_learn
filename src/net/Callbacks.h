@@ -18,7 +18,7 @@ using HighWaterMarkCallback =
     std::function<void(const TcpConnectionPtr &, size_t)>;
 
 using MessageCallback =
-    std::function<void(const TcpConnectionPtr &, Buffer *, Timestamp)>;
+    std::function<void(const TcpConnectionPtr &, const char *, size_t)>;
 
 } // namespace mymuduo
 
