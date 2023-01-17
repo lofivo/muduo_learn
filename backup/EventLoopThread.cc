@@ -1,15 +1,13 @@
 #include "src/net/EventLoopThread.h"
 #include "src/net/EventLoop.h"
 
+#include <assert.h>
 using namespace mymuduo;
 
-EventLoopThread::EventLoopThread(const ThreadInitCallback &cb,
-                                 const std::string &name)
+EventLoopThread::EventLoopThread()
     : loop_(nullptr), exiting_(false),
-      thread_(std::bind(&EventLoopThread::threadFunc, this),
-              name), // 新线程绑定此函数
-      callback_(cb) // 传入的线程初始化回调函数，用户自定义的
-{}
+      thread_(std::bind(&EventLoopThread::threadFunc, this)), mutex_(),
+      cond_() {}
 
 EventLoopThread::~EventLoopThread() {
   exiting_ = true;
@@ -20,10 +18,11 @@ EventLoopThread::~EventLoopThread() {
 }
 
 EventLoop *EventLoopThread::startLoop() {
+  assert(!thread_.started());
   thread_.start();
-
   EventLoop *loop = nullptr;
   {
+    // 等待新线程执行threadFunc完毕，所以使用cond_.wait
     std::unique_lock<std::mutex> lock(mutex_);
     while (loop_ == nullptr) {
       cond_.wait(lock);
@@ -36,14 +35,9 @@ EventLoop *EventLoopThread::startLoop() {
 void EventLoopThread::threadFunc() {
   EventLoop loop;
 
-  // 用户自定义的函数
-  if (callback_) {
-    callback_(&loop);
-  }
-
   {
     std::unique_lock<std::mutex> lock(mutex_);
-    loop_ = &loop; // 等到生成EventLoop对象之后才唤醒
+    loop_ = &loop;
     cond_.notify_one();
   }
   // 执行EventLoop的loop() 开启了底层的Poller的poll()

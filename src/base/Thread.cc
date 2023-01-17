@@ -1,27 +1,28 @@
-#include "Thread.h"
-#include "CurrentThread.h"
+#include "src/base/Thread.h"
+
+#include <assert.h>
+#include <cstring>
 #include <semaphore.h>
 
 using namespace mymuduo;
 
 std::atomic_int32_t Thread::numCreated_(0);
 
-/**
- * TODO:error
- * default argument given for parameter 2 of ‘Thread::Thread(Thread::ThreadFunc,
- * const string&)’GCC
- * 默认参数在定义和声明中只能出现一次，不能声明和定义都有默认参数
- */
 Thread::Thread(ThreadFunc func, const std::string &name)
     : started_(false),        // 还未开始
       joined_(false),         // 还未设置等待线程
       tid_(0),                // 初始 tid 设置为0
       func_(std::move(func)), // EventLoopThread::threadFunc()
-      name_(name)             // 默认姓名是空字符串
+      name_(name)             // 默认名称是空字符串""
 
 {
   // 设置线程索引编号和姓名
-  setDefaultName();
+  int num = ++numCreated_;
+  if (name_.empty()) {
+    char buf[32];
+    snprintf(buf, sizeof(buf), "Thread%d", num);
+    name_ = buf;
+  }
 }
 
 Thread::~Thread() {
@@ -33,18 +34,16 @@ Thread::~Thread() {
 }
 
 void Thread::start() {
-  started_ = true;
+  assert(!started_);
   sem_t sem;
   sem_init(&sem, false, 0);
+  started_ = true;
   // 开启线程
-  thread_ = std::shared_ptr<std::thread>(new std::thread([&]() {
-    // 获取线程tid
-    tid_ = CurrentThread::tid();
-    // v操作
+  thread_ = std::make_shared<std::thread>([&]() {
+    tid_ = std::this_thread::get_id();
     sem_post(&sem);
-    // 开启一个新线程专门执行该线程函数
     func_();
-  }));
+  });
 
   /**
    * 这里必须等待获取上面新创建的线程的tid
@@ -60,11 +59,8 @@ void Thread::join() {
   thread_->join();
 }
 
-void Thread::setDefaultName() {
-  int num = ++numCreated_;
-  if (name_.empty()) {
-    char buf[32] = {0};
-    snprintf(buf, sizeof(buf), "Thread%d", num);
-    name_ = buf;
-  }
+uint64_t Thread::tid() const {
+  uint64_t tid;
+  memcpy(&tid, &tid_, 8);
+  return tid;
 }

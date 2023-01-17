@@ -1,57 +1,84 @@
 #ifndef MYMUDUO_NET_TCPSERVER_H
 #define MYMUDUO_NET_TCPSERVER_H
 
-#include "src/net/Callbacks.h"
 #include "src/base/noncopyable.h"
+#include "src/net/Acceptor.h"
+#include "src/net/Callbacks.h"
+#include "src/net/EventLoop.h"
+#include "src/net/EventLoopThread.h"
+#include "src/net/EventLoopThreadPool.h"
 #include "src/net/TcpConnection.h"
 
 #include <atomic>
 #include <memory>
-#include <unordered_map>
 #include <string>
+#include <unordered_map>
 
 namespace mymuduo {
 
-class Acceptor;
-class EventLoop;
-
 class TcpServer : noncopyable {
 public:
-  TcpServer(EventLoop *loop, const InetAddress &listenAddr);
+  using ThreadInitCallback = std::function<void(EventLoop *)>;
+  enum Option {
+    kNoReusePort,
+    kReusePort,
+  };
+
+  // TcpServer(EventLoop *loop, InetAddress &listenAddr,
+  //           const std::string &nameArg, Option option = kNoReusePort);
   TcpServer(EventLoop *loop, const InetAddress &listenAddr,
-            const std::string &name);
-  ~TcpServer(); // force out-line dtor, for scoped_ptr members.
+            const std::string &nameArg, Option option = kNoReusePort);
+  ~TcpServer();
 
-  /// Starts the server if it's not listenning.
-  ///
-  /// It's harmless to call it multiple times.
-  /// Thread safe.
-  void start();
+  // 设置回调函数(用户自定义的函数传入)
+  void setThreadInitCallback(const ThreadInitCallback &cb) {
+    threadInitCallback_ = cb;
+  }
 
-  /// Set connection callback.
-  /// Not thread safe.
   void setConnectionCallback(const ConnectionCallback &cb) {
     connectionCallback_ = cb;
   }
 
-  /// Set message callback.
-  /// Not thread safe.
   void setMessageCallback(const MessageCallback &cb) { messageCallback_ = cb; }
 
+  void setWriteCompleteCallback(const WriteCompleteCallback &cb) {
+    writeCompleteCallback_ = cb;
+  }
+
+  // 设置底层subLoop的个数
+  void setThreadNum(int numThreads);
+
+  // 开启服务器监听
+  void start();
+
+  EventLoop *getLoop() const { return loop_; }
+
+  const std::string name() { return name_; }
+
+  const std::string ipPort() { return ipPort_; }
+
 private:
-  /// Not thread safe, but in loop
   void newConnection(int sockfd, const InetAddress &peerAddr);
+  void removeConnection(const TcpConnectionPtr &conn);
+  void removeConnectionInLoop(const TcpConnectionPtr &conn);
 
+private:
   using ConnectionMap = std::unordered_map<std::string, TcpConnectionPtr>;
+  EventLoop *loop_;                    // 用户定义的baseLoop
+  const std::string ipPort_;           // 传入的IP地址和端口号
+  const std::string name_;             // TcpServer名字
+  std::unique_ptr<Acceptor> acceptor_; // Acceptor对象负责监视
 
-  EventLoop *loop_; // the acceptor loop
-  const std::string name_;
-  std::unique_ptr<Acceptor> acceptor_; // avoid revealing Acceptor
-  ConnectionCallback connectionCallback_;
-  MessageCallback messageCallback_;
+  std::shared_ptr<EventLoopThreadPool> threadPool_; // 线程池
+
+  ConnectionCallback connectionCallback_; // 有新连接时的回调函数
+  MessageCallback messageCallback_;       // 有读写消息时的回调函数
+  WriteCompleteCallback writeCompleteCallback_; // 消息发送完成以后的回调函数
+  // TODO: CloseCallback closeCallback_;
+  ThreadInitCallback threadInitCallback_; // loop线程初始化的回调函数
   std::atomic_int started_;
-  int nextConnId_; // always in loop thread
-  ConnectionMap connections_;
+  int nextConnId_;            // 连接索引
+  ConnectionMap connections_; // 保存所有的连接
 };
 
 } // namespace mymuduo

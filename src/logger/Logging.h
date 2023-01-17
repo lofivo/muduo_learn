@@ -121,10 +121,6 @@ T *CheckNotNull(const char *file, int line, const char *names, T *ptr) {
 #define LOG_SYSERR Logger(__FILE__, __LINE__, false).stream()
 #define LOG_SYSFATAL Logger(__FILE__, __LINE__, true).stream()
 
-template <typename To, typename From> inline To implicit_cast(From const &f) {
-  return f;
-}
-
 } // namespace mymuduo
 
 #endif // MYMUDUO_LOGGER_LOGGING_H

@@ -14,17 +14,15 @@ public:
   using NewConnectionCallback =
       std::function<void(int sockfd, const InetAddress &)>;
 
-public:
-  Acceptor(EventLoop *loop, const InetAddress &ListenAddr,
-           bool reuseport = true);
-  ~Acceptor();
+  Acceptor(EventLoop *loop, const InetAddress &ListenAddr);
+
   void setNewConnectionCallback(const NewConnectionCallback &cb) {
     newConnectionCallback_ = cb;
   }
 
-  void listen();
-
   bool listenning() const { return listenning_; }
+
+  void listen();
 
 private:
   void handleRead();

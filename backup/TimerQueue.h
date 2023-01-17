@@ -4,7 +4,6 @@
 #include <mutex>
 #include <set>
 #include <vector>
-#include <atomic>
 
 #include "src/base/Timestamp.h"
 #include "src/base/noncopyable.h"
@@ -18,23 +17,20 @@ class TimerId;
 
 class TimerQueue : noncopyable {
 public:
-  explicit TimerQueue(EventLoop *loop);
+  TimerQueue(EventLoop *loop);
   ~TimerQueue();
 
   TimerId addTimer(TimerCallback cb, Timestamp when, double interval);
-  void cancel(TimerId timerId);
 
 private:
-  using Entry = std::pair<Timestamp, Timer *>;
+  using Entry = std::pair<Timestamp, Timer*>;
   using TimerList = std::set<Entry>;
-  using ActiveTimer = std::pair<Timer *, int64_t>;
-  using ActiveTimerSet = std::set<ActiveTimer>;
 
   // called when timerfd alarms
   void handleRead();
 
+  
   void addTimerInLoop(Timer *timer);
-  void cancelInLoop(TimerId timerId);
 
   // move out all expired timers
   std::vector<Entry> getExpired(Timestamp now);
@@ -49,11 +45,6 @@ private:
   Channel timerfdChannel_;
   // Timer list sorted by expiration
   TimerList timers_;
-
-  // for cancel()
-  ActiveTimerSet activeTimers_;
-  std::atomic_bool callingExpiredTimers_;
-  ActiveTimerSet cancelingTimers_;
 };
 
 } // namespace mymuduo

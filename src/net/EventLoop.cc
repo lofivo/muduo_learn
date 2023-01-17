@@ -1,20 +1,21 @@
 #include "src/net/EventLoop.h"
+#include "TimerQueue.h"
 #include "src/logger/Logging.h"
 #include "src/net/Channel.h"
 #include "src/net/Poller.h"
-#include "src/net/TimerQueue.h"
 
 #include <sys/eventfd.h>
+#include <unistd.h>
 
 using namespace mymuduo;
 
-// 防止一个线程创建多个EventLoop
-// __thread修饰的变量，在不同线程中是相互独立的
-__thread EventLoop *t_loopInThisThread = nullptr;
+thread_local EventLoop *t_loopInThisThread = nullptr;
 
+// default poller timeout value
 const int kPollTimeMs = 10000;
 
-static int createEventfd() {
+// create wakeup fd to notify subReactor's channel
+static int createEvent() {
   int evtfd = ::eventfd(0, EFD_NONBLOCK | EFD_CLOEXEC);
   if (evtfd < 0) {
     LOG_SYSERR << "Failed in eventfd";
@@ -23,15 +24,22 @@ static int createEventfd() {
   return evtfd;
 }
 
+uint64_t EventLoop::getThreadId() {
+  unsigned long id;
+  memcpy(&id, &threadId_, 8);
+  return id;
+}
+
 EventLoop::EventLoop()
     : looping_(false), quit_(false), callingPendingFunctors_(false),
-      threadId_(CurrentThread::tid()), poller_(new Poller(this)),
-      timerQueue_(new TimerQueue(this)), wakeupFd_(createEventfd()),
+      threadId_(std::this_thread::get_id()),
+      poller_(Poller::newDefaultPoller(this)),
+      timerQueue_(new TimerQueue(this)), wakeupFd_(createEvent()),
       wakeupChannel_(new Channel(this, wakeupFd_)) {
-  LOG_TRACE << "EventLoop created " << this << " in thread " << threadId_;
+  LOG_DEBUG << "EventLoop created " << this << " in thread " << getThreadId();
   if (t_loopInThisThread) {
     LOG_FATAL << "Another EventLoop " << t_loopInThisThread
-              << " exists in this thread " << threadId_;
+              << " exists in this thread " << getThreadId();
   } else {
     t_loopInThisThread = this;
   }
@@ -42,72 +50,63 @@ EventLoop::EventLoop()
 }
 
 EventLoop::~EventLoop() {
-  assert(!looping_);
+  wakeupChannel_->disableAll();
+  wakeupChannel_->remove();
   ::close(wakeupFd_);
   t_loopInThisThread = nullptr;
 }
 
 void EventLoop::loop() {
-  assert(!looping_);
-  assertInLoopThread();
-  looping_ = true;
-  quit_ = false;
+  looping_.store(true);
+  quit_.store(false);
 
-  while (!quit_) {
+  LOG_TRACE << "EventLoop " << this << " start looping";
+
+  while (!quit_.load()) {
+    // 清空activeChannels_
     activeChannels_.clear();
+    // 获取
     pollReturnTime_ = poller_->poll(kPollTimeMs, &activeChannels_);
-    for (ChannelList::iterator it = activeChannels_.begin();
-         it != activeChannels_.end(); ++it) {
-      (*it)->handleEvent(pollReturnTime_);
+    for (Channel *channel : activeChannels_) {
+      channel->handleEvent(pollReturnTime_);
     }
     // 执行当前EventLoop事件循环需要处理的回调操作
-    /**
-     * IO thread：mainLoop accept fd 打包成 chennel 分发给 subLoop
-     * mainLoop实现注册一个回调，交给subLoop来执行，wakeup subLoop
-     * 之后，让其执行注册的回调操作 这些回调函数在 std::vector<Functor>
-     * pendingFunctors_; 之中
-     */
     doPendingFunctors();
   }
-
-  LOG_TRACE << "EventLoop " << this << " stop looping";
-  looping_ = false;
+  looping_.store(false);
 }
 
 void EventLoop::quit() {
-  quit_ = true;
-  /**
-   * TODO:生产者消费者队列派发方式和muduo的派发方式
-   * 有可能是别的线程调用quit(调用线程不是生成EventLoop对象的那个线程)
-   * 比如在工作线程(subLoop)中调用了IO线程(mainLoop)
-   * 这种情况会唤醒主线程
-   */
+  quit_.store(true);
   if (!isInLoopThread()) {
     wakeup();
   }
 }
 
 void EventLoop::runInLoop(Functor cb) {
-  bool inThread = isInLoopThread();
-  LOG_TRACE << "EventLoop::runInLoop in loopThread:"
-            << (inThread ? "true" : "false");
   if (isInLoopThread()) {
     cb();
   } else {
-    queueInLoop(cb);
+    queueInLoop(std::move(cb));
   }
 }
 
 void EventLoop::queueInLoop(Functor cb) {
   {
-    std::unique_lock<std::mutex> lock(mutex_);
-    pendingFunctors_.emplace_back(cb); // 使用了std::move
+    std::lock_guard<std::mutex> lg(mutex_);
+    pendingFunctors_.emplace_back(cb);
   }
 
-  // 唤醒相应的，需要执行上面回调操作的loop线程
-  if (!isInLoopThread() || callingPendingFunctors_) {
-    // 唤醒loop所在的线程
+  if (!isInLoopThread() || callingPendingFunctors_.load()) {
     wakeup();
+  }
+}
+
+void EventLoop::wakeup() {
+  uint64_t one = 1;
+  ssize_t n = write(wakeupFd_, &one, sizeof one);
+  if (n != sizeof one) {
+    LOG_ERROR << "EventLoop::wakeup() writes " << n << " bytes instead of 8";
   }
 }
 
@@ -125,40 +124,34 @@ TimerId EventLoop::runEvery(double interval, TimerCallback cb) {
   return timerQueue_->addTimer(std::move(cb), time, interval);
 }
 
+void EventLoop::cancel(TimerId timerId) { return timerQueue_->cancel(timerId); }
+
 void EventLoop::updateChannel(Channel *channel) {
-  assert(channel->ownerLoop() == this);
-  assertInLoopThread();
   poller_->updateChannel(channel);
 }
 
-void EventLoop::abortNotInLoopThread() {
-  LOG_FATAL << "EventLoop::abortNotInLoopThread - EventLoop " << this
-            << " was created in threadId_ = " << threadId_
-            << ", current thread id = " << CurrentThread::tid();
+void EventLoop::removeChannel(Channel *channel) {
+  poller_->removeChannel(channel);
 }
 
-void EventLoop::wakeup() {
-  uint64_t one = 1;
-  ssize_t n = write(wakeupFd_, &one, sizeof(one));
-  if (n != sizeof(one)) {
-    LOG_ERROR << "EventLoop::wakeup writes " << n << " bytes instead of 8";
-  }
+bool EventLoop::hasChannel(Channel *channel) {
+  return poller_->hasChannel(channel);
 }
 
 void EventLoop::handleRead() {
   uint64_t one = 1;
-  ssize_t n = read(wakeupFd_, &one, sizeof(one));
-  if (n != sizeof(one)) {
+  ssize_t n = ::read(wakeupFd_, &one, sizeof one);
+  if (n != sizeof one) {
     LOG_ERROR << "EventLoop::handleRead() reads " << n << " bytes instead of 8";
   }
 }
 
 void EventLoop::doPendingFunctors() {
   std::vector<Functor> functors;
-  callingPendingFunctors_ = true;
+  callingPendingFunctors_.store(true);
 
   {
-    std::unique_lock<std::mutex> lock(mutex_);
+    std::lock_guard<std::mutex> lock(mutex_);
     functors.swap(pendingFunctors_);
   }
 
@@ -166,5 +159,5 @@ void EventLoop::doPendingFunctors() {
     functor();
   }
 
-  callingPendingFunctors_ = false;
+  callingPendingFunctors_.store(false);
 }

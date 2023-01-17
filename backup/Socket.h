@@ -15,23 +15,21 @@ public:
 
   int fd() const { return sockfd_; }
 
+  /// abort if address in use
   void bindAddress(const InetAddress &localaddr);
-
+  /// abort if address in use
   void listen();
 
+  /// On success, returns a non-negative integer that is
+  /// a descriptor for the accepted socket, which has been
+  /// set to non-blocking and close-on-exec. *peeraddr is assigned.
+  /// On error, -1 is returned, and *peeraddr is untouched.
   int accept(InetAddress *peeraddr);
 
-  // 设置半关闭
-  void shutdownWrite();
-
-  void setTcpNoDelay(bool on); // 设置Nagel算法
-  void setReuseAddr(bool on);  // 设置地址复用
-  void setReusePort(bool on);  // 设置端口复用
-  void setKeepAlive(bool on);  // 设置长连接
-
-  static int createNoneblockingFd();
-  static int getSocketError(int sockfd);
-  static bool isSelfConnect(int sockfd);
+  ///
+  /// Enable/disable SO_REUSEADDR
+  ///
+  void setReuseAddr(bool on);
 
 private:
   const int sockfd_;
