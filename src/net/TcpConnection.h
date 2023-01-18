@@ -65,10 +65,14 @@ public:
   void connectEstablished(); // 连接建立
   void connectDestroyed();   // 连接销毁
 
+  static void defaultConnectionCallback(const TcpConnectionPtr &conn);
+  static void defaultMessageCallback(const TcpConnectionPtr &conn, Buffer *buf,
+                                     Timestamp);
+
 private:
   enum StateE { kDisconnected, kConnecting, kConnected, kDisconnecting };
   void setState(StateE state) { state_.store(state); }
-  const char* stateToString() const;
+  const char *stateToString() const;
   void sendInLoop(const void *data, size_t len);
   void shutdownInLoop();
   void forceCloseInLoop();

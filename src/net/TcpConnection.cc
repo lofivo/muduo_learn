@@ -132,8 +132,8 @@ void TcpConnection::sendInLoop(const void *data, size_t len) {
     size_t oldLen = outputBuffer_.readableBytes();
     if (oldLen + remaining >= highWaterMark_ && oldLen < highWaterMark_ &&
         highWaterMarkCallback_) {
-      loop_->queueInLoop(std::bind(
-          highWaterMarkCallback_, shared_from_this(), oldLen + remaining));
+      loop_->queueInLoop(std::bind(highWaterMarkCallback_, shared_from_this(),
+                                   oldLen + remaining));
     }
     outputBuffer_.append((char *)data + nwrote, remaining);
     if (!channel_->isWriting()) {
@@ -262,4 +262,18 @@ void TcpConnection::handleError() {
   }
   LOG_ERROR << "cpConnection::handleError name:" << name_.c_str()
             << " - SO_ERROR:" << err;
+}
+
+void TcpConnection::defaultConnectionCallback(const TcpConnectionPtr &conn) {
+  LOG_TRACE << conn->localAddress().toIpPort() << " -> "
+            << conn->peerAddress().toIpPort() << " is "
+            << (conn->connected() ? "UP" : "DOWN");
+  // do not call conn->forceClose(), because some users want to register message
+  // callback only.
+}
+
+void TcpConnection::defaultMessageCallback(const TcpConnectionPtr &conn,
+                                           Buffer *buffer,
+                                           Timestamp receiveTime) {
+  buffer->retrieveAll();
 }

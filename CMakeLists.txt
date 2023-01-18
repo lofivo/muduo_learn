@@ -36,3 +36,4 @@ target_link_libraries(mymuduo pthread)
 set(LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/lib)
 
 add_subdirectory(src/logger/test)
+add_subdirectory(src/net/test)

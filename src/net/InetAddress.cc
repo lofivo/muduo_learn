@@ -3,6 +3,13 @@
 
 using namespace mymuduo;
 
+InetAddress::InetAddress(uint16_t port) {
+  ::bzero(&addr_, sizeof(addr_));
+  addr_.sin_family = AF_INET;
+  addr_.sin_port = ::htons(port);
+  addr_.sin_addr.s_addr = ::inet_addr("127.0.0.1");
+}
+
 InetAddress::InetAddress(std::string ip, uint16_t port) {
   ::bzero(&addr_, sizeof(addr_));
   addr_.sin_family = AF_INET;

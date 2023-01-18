@@ -11,7 +11,11 @@
 namespace mymuduo {
 class InetAddress {
 public:
-  explicit InetAddress(const std::string ip = "127.0.0.1", uint16_t port = 0);
+  InetAddress() = default;
+
+  explicit InetAddress(uint16_t port);
+  
+  explicit InetAddress(const std::string ip, uint16_t port);
 
   explicit InetAddress(const struct sockaddr_in &addr);
 

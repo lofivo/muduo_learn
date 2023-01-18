@@ -27,7 +27,7 @@ public:
   // TcpServer(EventLoop *loop, InetAddress &listenAddr,
   //           const std::string &nameArg, Option option = kNoReusePort);
   TcpServer(EventLoop *loop, const InetAddress &listenAddr,
-            const std::string &nameArg, Option option = kNoReusePort);
+            const std::string &nameArg = std::string(), Option option = kNoReusePort);
   ~TcpServer();
 
   // 设置回调函数(用户自定义的函数传入)

@@ -13,22 +13,6 @@ static EventLoop *CheckLoopNotNull(EventLoop *loop) {
   return loop;
 }
 
-// TcpServer::TcpServer(EventLoop *loop, const InetAddress &listenAddr,
-//                      const std::string &nameArg, Option option)
-//     : loop_(CheckLoopNotNull(loop)), ipPort_(listenAddr.toIpPort()),
-//       name_(nameArg),
-//       acceptor_(new Acceptor(loop, listenAddr, option == kReusePort)),
-//       threadPool_(new EventLoopThreadPool(loop, name_)),
-//       connectionCallback_(), messageCallback_(), writeCompleteCallback_(),
-//       threadInitCallback_(), started_(0), nextConnId_(1) {
-//   //
-//   当有新用户连接时，Acceptor类中绑定的acceptChannel_会有读事件发生执行handleRead()调用TcpServer::newConnection回调
-//   acceptor_->setNewConnectionCallback(std::bind(&TcpServer::newConnection,
-//   this,
-//                                                 std::placeholders::_1,
-//                                                 std::placeholders::_2));
-// }
-
 TcpServer::TcpServer(EventLoop *loop, const InetAddress &listenAddr,
                      const std::string &nameArg, Option option)
     : loop_(CheckLoopNotNull(loop)), ipPort_(listenAddr.toIpPort()),

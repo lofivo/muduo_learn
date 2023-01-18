@@ -89,19 +89,6 @@ inline Logger::LogLevel logLevel() { return g_logLevel; }
 // 获取errno信息
 const char *getErrnoMsg(int savedErrno);
 
-#define CHECK_NOTNULL(val)                                                     \
-  ::mymuduo::CheckNotNull(__FILE__, __LINE__, "'" #val "' Must be non NULL",     \
-                        (val))
-
-// A small helper for CHECK_NOTNULL().
-template <typename T>
-T *CheckNotNull(const char *file, int line, const char *names, T *ptr) {
-  if (ptr == NULL) {
-    Logger(file, line, Logger::FATAL).stream() << names;
-  }
-  return ptr;
-}
-
 /**
  * 当日志等级小于对应等级才会输出
  * 比如设置等级为FATAL，则logLevel等级大于DEBUG和INFO，DEBUG和INFO等级的日志就不会输出

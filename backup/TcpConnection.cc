@@ -6,6 +6,13 @@
 
 using namespace mymuduo;
 
+static EventLoop *CheckLoopNotNull(EventLoop *loop) {
+  if (loop == nullptr) {
+    LOG_FATAL << "TcpConnection Loop is null";
+  }
+  return loop;
+}
+
 TcpConnection::TcpConnection(EventLoop *loop, const std::string &nameArg,
                              int sockfd, const InetAddress &localAddr,
                              const InetAddress &peerAddr)
