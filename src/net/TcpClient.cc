@@ -50,8 +50,6 @@ TcpClient::~TcpClient() {
 }
 
 void TcpClient::connect() {
-  if (connector_->connected())
-    return;
   LOG_INFO << "TcpClient::connect[" << name_ << "] - connecting to "
            << connector_->serverAddress().toIpPort();
   connect_.store(true);

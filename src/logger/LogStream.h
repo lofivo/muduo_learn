@@ -5,6 +5,7 @@
 #include "src/base/noncopyable.h"
 
 #include <string>
+#include <thread>
 
 namespace mymuduo {
 /**
@@ -56,6 +57,7 @@ public:
   // (const char*, int)的重载
   LogStream &operator<<(const GeneralTemplate &g);
 
+  LogStream &operator<<(std::thread::id &id);
 private:
   static const int kMaxNumericSize = 48;
 

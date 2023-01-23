@@ -48,40 +48,60 @@ Timestamp EPollPoller::poll(int timeoutMs, ChannelList *activeChannels) {
 
 void EPollPoller::fillActiveChannels(int numEvents,
                                      ChannelList *activeChannels) const {
+  assert(static_cast<size_t>(numEvents) <= events_.size());
   for (int i = 0; i < numEvents; ++i) {
     Channel *channel = static_cast<Channel *>(events_[i].data.ptr);
+    auto it = channels_.find(channel->fd());
+    assert(it != channels_.end());
+    assert(it->second == channel);
     channel->set_revents(events_[i].events);
     activeChannels->push_back(channel);
   }
 }
 
 void EPollPoller::updateChannel(Channel *channel) {
+  assertInLoopThread();
   const int index = channel->index();
-  LOG_TRACE << "fd = " << channel->fd() << " events = " << channel->events()
-            << " index = " << index;
   if (index == kNew || index == kDeleted) {
     // a new one, add with EPOLL_CTL_ADD
+    int fd = channel->fd();
     if (index == kNew) {
-      int fd = channel->fd();
+      assert(channels_.find(fd) == channels_.end());
       channels_[fd] = channel;
+    }
+    else {
+      assert(channels_.find(fd) != channels_.end());
+      assert(channels_[fd] == channel);
     }
     channel->set_index(kAdded);
     update(EPOLL_CTL_ADD, channel);
-  } else {
+  }
+  else {
+    // update existed one with EPOLL_CTL_MOD/DEL
+    int fd = channel->fd();
+    assert(channels_.find(fd) != channels_.end());
+    assert(channels_[fd] == channel);
+    assert(index == kAdded);
     if (channel->isNoneEvent()) {
       update(EPOLL_CTL_DEL, channel);
       channel->set_index(kDeleted);
-    } else {
+    }
+    else {
       update(EPOLL_CTL_MOD, channel);
     }
   }
 }
 
 void EPollPoller::removeChannel(Channel *channel) {
+  assertInLoopThread();
   int fd = channel->fd();
-  LOG_TRACE << "fd = " << fd;
-  channels_.erase(fd);
+  assert(channels_.find(fd) != channels_.end());
+  assert(channels_[fd] == channel);
+  assert(channel->isNoneEvent());
   int index = channel->index();
+  assert(index == kAdded || index == kDeleted);
+
+  assert(channels_.erase(fd) == 1);
   if (index == kAdded) {
     update(EPOLL_CTL_DEL, channel);
   }

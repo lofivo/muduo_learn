@@ -23,13 +23,14 @@ public:
 
   // 设置半关闭
   void shutdownWrite();
-
+  // 设置全关闭
+  void shutdown();
   void setTcpNoDelay(bool on); // 设置Nagel算法
   void setReuseAddr(bool on);  // 设置地址复用
   void setReusePort(bool on);  // 设置端口复用
   void setKeepAlive(bool on);  // 设置长连接
 
-  static int createNoneblockingFd();
+  static int createNonblockingFd();
   static int getSocketError(int sockfd);
   static bool isSelfConnect(int sockfd);
 

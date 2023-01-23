@@ -6,14 +6,18 @@
 #include <atomic>
 #include <functional>
 #include <memory>
+
 #include <string>
 #include <thread>
 
 namespace mymuduo {
 
+
+
 class Thread : noncopyable {
 public:
   using ThreadFunc = std::function<void()>;
+
 public:
   explicit Thread(ThreadFunc, const std::string &nameArg = std::string());
   ~Thread();
@@ -22,7 +26,7 @@ public:
   void join();  // 等待线程
 
   bool started() const { return started_; }
-  unsigned long tid() const;
+  uint64_t threadId() const;
   const std::string &name() const { return name_; }
 
   static int numCreated() { return numCreated_; }
@@ -31,7 +35,7 @@ private:
   bool started_; // 是否启动线程
   bool joined_;  // 是否等待该线程
   std::shared_ptr<std::thread> thread_;
-  std::thread::id tid_;
+  std::thread::id threadId_;
   // Thread::start() 调用的回调函数
   // 其实保存的是 EventLoopThread::threadFunc()
   ThreadFunc func_;

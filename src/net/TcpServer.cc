@@ -1,7 +1,6 @@
 #include "src/net/TcpServer.h"
 #include "src/logger/Logging.h"
 #include "src/net/TcpConnection.h"
-
 using namespace mymuduo;
 
 static EventLoop *CheckLoopNotNull(EventLoop *loop) {
@@ -15,7 +14,7 @@ static EventLoop *CheckLoopNotNull(EventLoop *loop) {
 
 TcpServer::TcpServer(EventLoop *loop, const InetAddress &listenAddr,
                      const std::string &nameArg, Option option)
-    : loop_(CheckLoopNotNull(loop)), ipPort_(listenAddr.toIpPort()),
+    : loop_(loop), ipPort_(listenAddr.toIpPort()),
       name_(nameArg),
       acceptor_(new Acceptor(loop, listenAddr, option == kReusePort)),
       threadPool_(new EventLoopThreadPool(loop, name_)), connectionCallback_(),
@@ -28,6 +27,8 @@ TcpServer::TcpServer(EventLoop *loop, const InetAddress &listenAddr,
 }
 
 TcpServer::~TcpServer() {
+  loop_->assertInLoopThread();
+  LOG_TRACE << "TcpServer::~TcpServer [" << name_ << "] dtor";
   for (auto &item : connections_) {
     TcpConnectionPtr conn(item.second);
     // 把原始的智能指针复位 让栈空间的TcpConnectionPtr conn指向该对象
@@ -41,25 +42,31 @@ TcpServer::~TcpServer() {
 
 // 设置底层subloop的个数
 void TcpServer::setThreadNum(int numThreads) {
+  assert(!started_);
+  assert(numThreads >= 0);
   threadPool_->setThreadNum(numThreads);
 }
 
 // 开启服务器监听
 void TcpServer::start() {
-  if (started_++ == 0) {
+  if (started_ == 0) {
+    ++started_;
     // 启动底层的lopp线程池
     threadPool_->start(threadInitCallback_);
+    assert(!acceptor_->listening());
     // acceptor_.get()绑定时候需要地址
     loop_->runInLoop(std::bind(&Acceptor::listen, acceptor_.get()));
   }
+  assert(started_ != 0);
 }
 
 // 有一个新用户连接，acceptor会执行这个回调操作，负责将mainLoop接收到的请求连接(acceptChannel_会有读事件发生)通过回调轮询分发给subLoop去处理
 void TcpServer::newConnection(int sockfd, const InetAddress &peerAddr) {
+  loop_->assertInLoopThread();
   // 轮询算法 选择一个subLoop 来管理connfd对应的channel
   EventLoop *ioLoop = threadPool_->getNextLoop();
   // 提示信息
-  char buf[64]{0};
+  char buf[64];
   snprintf(buf, sizeof buf, "-%s#%d", ipPort_.c_str(), nextConnId_);
   // 这里没有设置为原子类是因为其只在mainloop中执行 不涉及线程安全问题
   ++nextConnId_;
@@ -70,14 +77,7 @@ void TcpServer::newConnection(int sockfd, const InetAddress &peerAddr) {
            << connName << "] from " << peerAddr.toIpPort();
 
   // 通过sockfd获取其绑定的本机的ip地址和端口信息
-  sockaddr_in local;
-  ::memset(&local, 0, sizeof local);
-  socklen_t addrLen = sizeof local;
-  if (::getsockname(sockfd, (sockaddr *)&local, &addrLen) < 0) {
-    LOG_ERROR << "sockets::getLocalAddr() failed";
-  }
-
-  InetAddress localAddr(local);
+  InetAddress localAddr(InetAddress::getLocalAddr(sockfd));
   TcpConnectionPtr conn(
       new TcpConnection(ioLoop, connName, sockfd, localAddr, peerAddr));
   connections_[connName] = conn;
@@ -100,10 +100,10 @@ void TcpServer::removeConnection(const TcpConnectionPtr &conn) {
 }
 
 void TcpServer::removeConnectionInLoop(const TcpConnectionPtr &conn) {
+  loop_->assertInLoopThread();
   LOG_INFO << "TcpServer::removeConnectionInLoop [" << name_
            << "] - connection " << conn->name();
-
-  connections_.erase(conn->name());
+  assert(connections_.erase(conn->name()) == 1);
   EventLoop *ioLoop = conn->getLoop();
   ioLoop->queueInLoop(std::bind(&TcpConnection::connectDestroyed, conn));
 }

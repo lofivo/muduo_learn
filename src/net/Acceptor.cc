@@ -4,6 +4,7 @@
 #include "src/net/InetAddress.h"
 
 #include <errno.h>
+#include <fcntl.h>
 #include <functional>
 #include <sys/socket.h>
 #include <sys/types.h>
@@ -23,7 +24,9 @@ static int createNonblocking() {
 Acceptor::Acceptor(EventLoop *loop, const InetAddress &listenAddr,
                    bool reuseport)
     : loop_(loop), acceptSocket_(createNonblocking()),
-      acceptChannel_(loop, acceptSocket_.fd()), listenning_(false) {
+      acceptChannel_(loop, acceptSocket_.fd()), listening_(false),
+      idleFd_(::open("/dev/null", O_RDONLY | O_CLOEXEC)) {
+  assert(idleFd_ >= 0);
   acceptSocket_.setReuseAddr(true);
   acceptSocket_.setReusePort(reuseport);
   acceptSocket_.bindAddress(listenAddr);
@@ -44,13 +47,15 @@ Acceptor::~Acceptor() {
 }
 
 void Acceptor::listen() {
-  listenning_ = true;
+  loop_->assertInLoopThread();
+  listening_ = true;
   acceptSocket_.listen();
   // 将acceptChannel的读事件注册到poller
   acceptChannel_.enableReading();
 }
 
 void Acceptor::handleRead() {
+  loop_->assertInLoopThread();
   InetAddress peerAddr;
   // 接受新连接
   int connfd = acceptSocket_.accept(&peerAddr);
@@ -59,7 +64,9 @@ void Acceptor::handleRead() {
     if (newConnectionCallback_) {
       newConnectionCallback_(connfd, peerAddr);
     } else {
-      ::close(connfd);
+      if (::close(connfd) < 0) {
+        LOG_SYSERR << "Socket::handleRead(), close connected fd error";
+      }
     }
   } else {
     LOG_SYSERR << "in Acceptor::handleRead";
@@ -68,6 +75,10 @@ void Acceptor::handleRead() {
     // 也可以分布式部署
     if (errno == EMFILE) {
       LOG_ERROR << "sockfd reached limit";
+      ::close(idleFd_); // 关闭后可能被其他线程抢占fd
+      idleFd_ = ::accept(acceptSocket_.fd(), nullptr, nullptr);
+      ::close(idleFd_);
+      idleFd_ = ::open("/dev/null", O_RDONLY | O_CLOEXEC);
     }
   }
 }

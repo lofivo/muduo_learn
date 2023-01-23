@@ -11,6 +11,7 @@ include_directories(${PROJECT_SOURCE_DIR})
 aux_source_directory(${PROJECT_SOURCE_DIR}/src/base SRC_BASE)
 aux_source_directory(${PROJECT_SOURCE_DIR}/src/logger SRC_LOG)
 aux_source_directory(${PROJECT_SOURCE_DIR}/src/net SRC_NET)
+aux_source_directory(${PROJECT_SOURCE_DIR}/src/http SRC_HTTP)
 
 # 设置编译选项
 set(CXX_FLAGS
@@ -27,6 +28,7 @@ add_library(mymuduo SHARED
 ${SRC_BASE}
 ${SRC_LOG}
 ${SRC_NET}
+${SRC_HTTP}
 )
 
 # 目标动态库所需连接的库（这里需要连接libpthread.so）
@@ -37,3 +39,5 @@ set(LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/lib)
 
 add_subdirectory(src/logger/test)
 add_subdirectory(src/net/test)
+add_subdirectory(src/http)
+add_subdirectory(example)

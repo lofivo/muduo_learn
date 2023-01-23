@@ -25,9 +25,6 @@ public:
   void restart(); // must be called in loop thread
   void stop();    // can be called in any thread
 
-  bool connected() const {
-    return connect_.load() && state_.load() != kDisconnected;
-  }
 
   const InetAddress &serverAddress() const { return serverAddr_; }
 

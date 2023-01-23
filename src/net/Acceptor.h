@@ -24,7 +24,7 @@ public:
 
   void listen();
 
-  bool listenning() const { return listenning_; }
+  bool listening() const { return listening_; }
 
 private:
   void handleRead();
@@ -34,7 +34,8 @@ private:
   Socket acceptSocket_;
   Channel acceptChannel_;
   NewConnectionCallback newConnectionCallback_;
-  bool listenning_; // 是否正在监听的标志
+  bool listening_; // 是否正在监听的标志
+  int idleFd_;
 };
 
 } // namespace mymuduo

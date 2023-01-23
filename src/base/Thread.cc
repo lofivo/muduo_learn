@@ -11,7 +11,7 @@ std::atomic_int32_t Thread::numCreated_(0);
 Thread::Thread(ThreadFunc func, const std::string &name)
     : started_(false),        // 还未开始
       joined_(false),         // 还未设置等待线程
-      tid_(0),                // 初始 tid 设置为0
+      threadId_(0),                // 初始 tid 设置为0
       func_(std::move(func)), // EventLoopThread::threadFunc()
       name_(name)             // 默认名称是空字符串""
 
@@ -40,11 +40,10 @@ void Thread::start() {
   started_ = true;
   // 开启线程
   thread_ = std::make_shared<std::thread>([&]() {
-    tid_ = std::this_thread::get_id();
+    threadId_ = std::this_thread::get_id();
     sem_post(&sem);
     func_();
   });
-
   /**
    * 这里必须等待获取上面新创建的线程的tid
    * 未获取到信息则不会执行sem_post，所以会被阻塞住
@@ -54,13 +53,15 @@ void Thread::start() {
 }
 
 void Thread::join() {
+  assert(started_);
+  assert(!joined_);
   joined_ = true;
   // 等待线程执行完毕
   thread_->join();
 }
 
-uint64_t Thread::tid() const {
+uint64_t Thread::threadId() const {
   uint64_t tid;
-  memcpy(&tid, &tid_, 8);
+  memcpy(&tid, &threadId_, 8);
   return tid;
 }

@@ -7,8 +7,8 @@
 #include "src/net/Buffer.h"
 #include "src/net/Callbacks.h"
 #include "src/net/InetAddress.h"
+#include "src/http/HttpConnection.h"
 
-#include <any>
 #include <atomic>
 #include <cstring>
 #include <memory>
@@ -41,6 +41,8 @@ public:
 
   void forceClose();
 
+  void setTcpNoDelay(bool on);
+
   void setConnectionCallback(const ConnectionCallback &cb) {
     connectionCallback_ = cb;
   }
@@ -61,6 +63,9 @@ public:
 
   Buffer *outputBuffer() { return &outputBuffer_; }
 
+  void setContext(const HttpConnectionPtr &context) { context_ = context; }
+  const HttpConnectionPtr &getContext() const { return context_; }
+
   // TcpServer会调用
   void connectEstablished(); // 连接建立
   void connectDestroyed();   // 连接销毁
@@ -73,7 +78,7 @@ private:
   enum StateE { kDisconnected, kConnecting, kConnected, kDisconnecting };
   void setState(StateE state) { state_.store(state); }
   const char *stateToString() const;
-  void sendInLoop(const void *data, size_t len);
+  void sendInLoop(const std::string& message);
   void shutdownInLoop();
   void forceCloseInLoop();
 
@@ -85,8 +90,9 @@ private:
 private:
   EventLoop *loop_;
   const std::string name_;
-  std::atomic_int state_;
+  std::atomic<TcpConnection::StateE> state_;
   bool reading_;
+  HttpConnectionPtr context_;
 
   std::unique_ptr<Socket> socket_;
   std::unique_ptr<Channel> channel_;

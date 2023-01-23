@@ -55,7 +55,7 @@ void Connector::stopInLoop() {
 }
 
 void Connector::connect() {
-  int sockfd = Socket::createNoneblockingFd();
+  int sockfd = Socket::createNonblockingFd();
   socklen_t len = static_cast<socklen_t>(sizeof(struct sockaddr_in6));
   int ret = ::connect(sockfd, (const sockaddr *)serverAddr_.getSockAddr(), len);
   int savedErrno = (ret == 0) ? 0 : errno;

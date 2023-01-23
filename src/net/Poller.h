@@ -35,6 +35,7 @@ public:
   virtual bool hasChannel(Channel *channel) const;
 
   static Poller *newDefaultPoller(EventLoop *loop);
+  void assertInLoopThread() const;
 
 protected:
   using ChannelMap = std::unordered_map<int, Channel *>;

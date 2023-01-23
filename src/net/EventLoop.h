@@ -6,7 +6,7 @@
 #include <mutex>
 #include <vector>
 #include <thread>
-
+#include <src/base/Thread.h>
 #include "src/base/Timestamp.h"
 #include "src/base/noncopyable.h"
 #include "src/net/Callbacks.h"
@@ -58,20 +58,30 @@ public:
   void removeChannel(Channel *channel);
   bool hasChannel(Channel *channel);
 
+  void assertInLoopThread() {
+    if (!isInLoopThread()) {
+      abortNotInLoopThread();
+    }
+  }
+
   bool isInLoopThread() { return threadId_ == std::this_thread::get_id(); }
 
   uint64_t getThreadId();
 
+  static EventLoop* getEventLoopOfCurrentThread();
+
 private:
-  
+  void abortNotInLoopThread();
   void handleRead(); // waked up
   void doPendingFunctors(); // callback
+  void printActiveChannels() const;
 
 private:
   using ChannelList = std::vector<Channel *>;
 
   std::atomic_bool looping_;                // atomic
   std::atomic_bool quit_;                   // 退出事件循环flag
+  std::atomic_bool eventHandling_;
   std::atomic_bool callingPendingFunctors_; // 当前loop是否有需要执行的回调操作
   const std::thread::id threadId_; // 记录当前loop所在线程的id
   Timestamp pollReturnTime_;

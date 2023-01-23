@@ -5,7 +5,6 @@
 #include <memory>
 #include <sys/epoll.h>
 
-#include "src/base/Timestamp.h"
 #include "src/base/noncopyable.h"
 #include "src/logger/Logging.h"
 #include "src/net/Callbacks.h"
@@ -19,7 +18,7 @@ public:
 
 public:
   Channel(EventLoop *loop, int fd);
-
+  ~Channel();
   // fd得到poller通知以后，处理事件的回调函数
   void handleEvent(Timestamp receiveTime);
 
@@ -70,22 +69,27 @@ public:
   EventLoop *ownerLoop() { return loop_; }
   void remove();
 
-private:
-  void update();
+  // for debug
+  std::string reventsToString() const;
+  std::string eventsToString() const;
 
+private:
+  static std::string eventsToString(int fd, int ev);
+  void update();
   void handleEventWithGuard(Timestamp receiveTime);
 
 private:
-  inline static constexpr int kNoneEvent = 0;
-  inline static constexpr int kReadEvent = EPOLLIN | EPOLLPRI;
-  inline static constexpr int kWriteEvent = EPOLLOUT;
+  static const int kNoneEvent;
+  static const int kReadEvent;
+  static const int kWriteEvent;
 
   EventLoop *loop_; // 该Channel属于的EventLoop
   const int fd_;    // fd, Poller监听对象
   int events_;      // 注册fd感兴趣的事件
   int revents_;     // poller返回的具体发生的事件
   int index_;       // 在Poller上注册的情况
-
+  bool addedToLoop_;
+  bool eventHandling_;
   // 弱指针指向TcpConnection(必要时升级为shared_ptr多一份引用计数，避免用户误删)
   std::weak_ptr<void> tie_;
   // 标志此 Channel 是否被调用过 Channel::tie 方法

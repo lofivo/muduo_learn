@@ -6,7 +6,9 @@ namespace ThreadInfo {
 __thread char t_errnobuf[512];
 __thread char t_time[64];
 __thread time_t t_lastSecond;
+
 }; // namespace ThreadInfo
+
 
 const char *getErrnoMsg(int savedErrno) {
   return strerror_r(savedErrno, ThreadInfo::t_errnobuf,

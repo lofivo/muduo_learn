@@ -10,11 +10,11 @@
 
 using namespace mymuduo;
 
-int Socket::createNoneblockingFd() {
+int Socket::createNonblockingFd() {
   int sockfd = ::socket(AF_INET, SOCK_STREAM | SOCK_NONBLOCK | SOCK_CLOEXEC,
                         IPPROTO_TCP);
   if (sockfd < 0) {
-    LOG_SYSFATAL << "Socket::createNoneblockingFd";
+    LOG_SYSFATAL << "Socket::createNonblockingFd()";
   }
   return sockfd;
 }
@@ -36,31 +36,34 @@ bool Socket::isSelfConnect(int sockfd) {
          localaddr.sin_port == peeraddr.sin_port;
 }
 
-Socket::~Socket() { ::close(sockfd_); }
+Socket::~Socket() {
+  if (::close(sockfd_) < 0) {
+    LOG_SYSERR << "Socket::~Socket()";
+  }
+}
 
 void Socket::bindAddress(const InetAddress &localaddr) {
   if (0 != ::bind(sockfd_, (sockaddr *)localaddr.getSockAddr(),
                   sizeof(sockaddr_in))) {
-    LOG_FATAL << "bind sockfd:" << sockfd_ << " fail";
+    LOG_FATAL << "Socket::bindAddr(): bind" << sockfd_ << " fail";
   }
 }
 
 void Socket::listen() {
-  if (0 != ::listen(sockfd_, 1024)) {
-    LOG_FATAL << "listen sockfd:" << sockfd_ << " fail";
+  if (::listen(sockfd_, SOMAXCONN) < 0) {
+    LOG_SYSFATAL << "Socket::listen()";
   }
 }
 
 int Socket::accept(InetAddress *peeraddr) {
   sockaddr_in addr;
   socklen_t len = sizeof addr;
-  ::memset(&addr, 0, sizeof addr);
   int connfd =
       ::accept4(sockfd_, (sockaddr *)&addr, &len, SOCK_NONBLOCK | SOCK_CLOEXEC);
   if (connfd >= 0) {
     peeraddr->setSockAddr(addr);
   } else {
-    LOG_ERROR << "accept4() failed";
+    LOG_SYSERR << "Socket::accept()";
   }
   return connfd;
 }
@@ -68,6 +71,12 @@ int Socket::accept(InetAddress *peeraddr) {
 void Socket::shutdownWrite() {
   if (::shutdown(sockfd_, SHUT_WR) < 0) {
     LOG_ERROR << "Socket::shutdownWrite error";
+  }
+}
+
+void Socket::shutdown() {
+  if (::shutdown(sockfd_, SHUT_RDWR) < 0) {
+    LOG_ERROR << "Socket::shutdown error";
   }
 }
 
@@ -81,19 +90,29 @@ void Socket::setTcpNoDelay(bool on) {
 // 设置地址复用，其实就是可以使用处于Time-wait的端口
 void Socket::setReuseAddr(bool on) {
   int optval = on ? 1 : 0;
-  ::setsockopt(sockfd_, SOL_SOCKET, SO_REUSEADDR, &optval,
-               sizeof(optval)); // TCP_NODELAY包含头文件 <netinet/tcp.h>
+  int ret = ::setsockopt(sockfd_, SOL_SOCKET, SO_REUSEADDR, &optval,
+                         static_cast<socklen_t>(sizeof(
+                             optval))); // TCP_NODELAY包含头文件 <netinet/tcp.h>
+  if (ret < 0) {
+    LOG_SYSERR << "Socket::setReuseAddr()";
+  }
 }
 
 // 通过改变内核信息，多个进程可以绑定同一个地址。通俗就是多个服务的ip+port是一样
 void Socket::setReusePort(bool on) {
   int optval = on ? 1 : 0;
-  ::setsockopt(sockfd_, SOL_SOCKET, SO_REUSEPORT, &optval,
-               sizeof(optval)); // TCP_NODELAY包含头文件 <netinet/tcp.h>
+  int ret = setsockopt(sockfd_, SOL_SOCKET, SO_REUSEPORT, &optval,
+                       static_cast<socklen_t>(sizeof(optval)));
+  if (ret < 0) {
+    LOG_SYSERR << "Socket::setReusePort()";
+  }
 }
 
 void Socket::setKeepAlive(bool on) {
   int optval = on ? 1 : 0;
-  ::setsockopt(sockfd_, SOL_SOCKET, SO_KEEPALIVE, &optval,
-               sizeof(optval)); // TCP_NODELAY包含头文件 <netinet/tcp.h>
+  int ret = setsockopt(sockfd_, SOL_SOCKET, SO_KEEPALIVE, &optval,
+                       static_cast<socklen_t>(sizeof(optval)));
+  if (ret < 0) {
+    LOG_SYSERR << "Socket::setKeepAlive()";
+  }
 }

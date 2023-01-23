@@ -5,6 +5,7 @@
 #include <assert.h>
 #include <string>
 #include <vector>
+#include <string.h>
 
 namespace mymuduo {
 class Buffer : noncopyable {
@@ -17,14 +18,18 @@ public:
   explicit Buffer(size_t initialSize = kInitialSize)
       : buffer_(kCheapPrepend + initialSize), readerIndex_(kCheapPrepend),
         writerIndex_(kCheapPrepend) {}
-  Buffer(Buffer &&) = default;
-  Buffer &operator=(Buffer &&) = default;
+  void swap(Buffer& rhs) {
+    buffer_.swap(rhs.buffer_);
+    std::swap(readerIndex_, rhs.readerIndex_);
+    std::swap(writerIndex_, rhs.writerIndex_);
+  }
   size_t readableBytes() const { return writerIndex_ - readerIndex_; }
   size_t writableBytes() const { return buffer_.size() - writerIndex_; }
   size_t prependableBytes() const { return readerIndex_; }
   // 返回缓冲区中可读数据的起始地址
   const char *peek() const { return begin() + readerIndex_; }
   void retrieve(size_t len) {
+    assert(len <= readableBytes());
     // 应用只读取可读缓冲区数据的一部分(读取了len的长度)
     if (len < readableBytes()) {
       // 移动可读缓冲区指针
@@ -34,6 +39,11 @@ public:
     else {
       retrieveAll();
     }
+  }
+  void retrieveUntil(const char *end) {
+    assert(peek() <= end);
+    assert(end <= beginWrite());
+    retrieve(static_cast<size_t>(end - peek()));
   }
   void retrieveAll() {
     readerIndex_ = kCheapPrepend;
@@ -53,10 +63,15 @@ public:
       // 扩容
       makeSpace(len);
     }
+    assert(writableBytes() >= len);
   }
   void append(const char *data, size_t len) {
     ensureWriteableBytes(len);
     std::copy(data, data + len, beginWrite());
+    hasWritten(len);
+  }
+  void hasWritten(size_t len) {
+    assert(len <= writableBytes());
     writerIndex_ += len;
   }
   void append(const std::string &str) { append(str.data(), str.size()); }
@@ -64,18 +79,29 @@ public:
   const char *beginWrite() const { return begin() + writerIndex_; }
   // 从fd上读取数据
   ssize_t readFd(int fd, int *saveErrno);
-  // 通过fd发送数据
-  ssize_t writeFd(int fd, int *saveErrno);
 
-  const char *findCRLF(const char *start = nullptr) const {
-    if (start != nullptr) {
-      assert(peek() <= start);
-      assert(start <= beginWrite());
-    } else {
-      start = peek();
-    }
+  const char *findCRLF() const {
+    const char *crlf = std::search(peek(), beginWrite(), kCRLF, kCRLF + 2);
+    return crlf == beginWrite() ? NULL : crlf;
+  }
+
+  const char *findCRLF(const char *start) const {
+    assert(peek() <= start);
+    assert(start <= beginWrite());
     const char *crlf = std::search(start, beginWrite(), kCRLF, kCRLF + 2);
     return crlf == beginWrite() ? NULL : crlf;
+  }
+
+  const char *findEOL() const {
+    const void *eol = memchr(peek(), '\n', readableBytes());
+    return static_cast<const char *>(eol);
+  }
+
+  const char *findEOL(const char *start) const {
+    assert(peek() <= start);
+    assert(start <= beginWrite());
+    const void *eol = memchr(start, '\n', beginWrite() - start);
+    return static_cast<const char *>(eol);
   }
 
 private:
@@ -91,6 +117,7 @@ private:
                 begin() + kCheapPrepend);
       readerIndex_ = kCheapPrepend;
       writerIndex_ = readerIndex_ + readable;
+      assert(readableBytes() == readable);
     }
   }
 

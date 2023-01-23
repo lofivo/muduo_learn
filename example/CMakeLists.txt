@@ -1,0 +1,2 @@
+add_executable(EchoServer EchoServer.cc)
+target_link_libraries(EchoServer mymuduo)
