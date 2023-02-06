@@ -1,6 +1,6 @@
 #include "src/logger/FileUtil.h"
 #include "src/logger/Logging.h"
-
+#include <iostream>
 using namespace mymuduo;
 
 FileUtil::FileUtil(std::string &fileName)

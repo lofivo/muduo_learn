@@ -168,7 +168,7 @@ HttpConnection::parseRequestLine(const std::string &line) {
   } else if (path_.find('.') == std::string::npos) {
     path_ += ".html";
   }
-
+  // 获取文件属性
   if (::stat((kSourceDir + path_).c_str(), &requestFileStat_) < 0 ||
       S_ISDIR(requestFileStat_.st_mode)) {
     LOG_DEBUG << "HttpConnection::parseRequestLine(): no resource";
@@ -307,11 +307,15 @@ HttpConnection::HttpCode HttpConnection::parseFromUrlEncode() {
 }
 
 HttpConnection::HttpCode HttpConnection::userVerify() {
-  // TODO: 还未实现
   if (path_.find("register.html") != std::string::npos) {
     path_ = "/welcome.html";
   } else if (path_.find("login.html") != std::string::npos) {
-    path_ = "/welcome.html";
+    // 登录判断
+    if (post_["username"] == "admin" && post_["password"] == "123456") {
+      path_ = "/welcome.html";
+    } else {
+      path_ = "/error.html";
+    }
   } else {
     path_ = "/error.html";
   }

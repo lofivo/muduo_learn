@@ -62,6 +62,8 @@ public:
   static void setOutput(OutputFunc);
   static void setFlush(FlushFunc);
 
+  static void useAsyncLog(const std::string& basename, int rollSize, int flushInterval = 3);
+
 private:
   // 内部类
   class Impl {

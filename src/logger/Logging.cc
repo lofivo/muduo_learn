@@ -1,5 +1,5 @@
 #include "src/logger/Logging.h"
-
+#include "src/logger/AsyncLogging.h"
 namespace mymuduo {
 // TODO: 加上tid的输出
 namespace ThreadInfo {
@@ -111,5 +111,11 @@ void Logger::setLogLevel(Logger::LogLevel level) { g_logLevel = level; }
 void Logger::setOutput(OutputFunc out) { g_output = out; }
 
 void Logger::setFlush(FlushFunc flush) { g_flush = flush; }
+
+void Logger::useAsyncLog(const std::string& basename, int rollSize, int flushInterval) {
+  static AsyncLogging asyncLog(basename, rollSize, flushInterval);  // singleton
+  setOutput(std::bind(&AsyncLogging::append, &asyncLog, std::placeholders::_1, std::placeholders::_2));
+  asyncLog.start();
+}
 
 } // namespace mymuduo
