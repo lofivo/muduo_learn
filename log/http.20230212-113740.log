@@ -1,0 +1,1873 @@
+2023/02/12 11:37:119443 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:119483 TRACE printActiveChannels {7: IN }  - EventLoop.cc:198
+2023/02/12 11:37:119497 TRACE handleEventWithGuard 7: IN  - Channel.cc:91
+2023/02/12 11:37:119521 INFO  TcpServer::newConnection [HttpServer] - new connection [HttpServer-0.0.0.0:8888#819] from 43.143.228.48:37902 - TcpServer.cc:76
+2023/02/12 11:37:119547 INFO  TcpConnection::ctor[HttpServer-0.0.0.0:8888#819] at fd =831 - TcpConnection.cc:39
+2023/02/12 11:37:119579 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:119595 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:119603 TRACE printActiveChannels {11: IN }  - EventLoop.cc:198
+2023/02/12 11:37:119611 TRACE handleEventWithGuard 11: IN  - Channel.cc:91
+2023/02/12 11:37:119646 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:119655 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:119661 TRACE printActiveChannels {831: IN }  - EventLoop.cc:198
+2023/02/12 11:37:119669 TRACE handleEventWithGuard 831: IN  - Channel.cc:91
+2023/02/12 11:37:120903 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:120919 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:120925 TRACE printActiveChannels {831: IN HUP }  - EventLoop.cc:198
+2023/02/12 11:37:120933 TRACE handleEventWithGuard 831: IN HUP  - Channel.cc:91
+2023/02/12 11:37:120942 TRACE handleClose handleClose fd = 831 state = kDisconnecting - TcpConnection.cc:219
+2023/02/12 11:37:120955 DEBUG onConnection HttpServer-0.0.0.0:8888#819 is down - HttpConnection.cc:31
+2023/02/12 11:37:120973 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:120981 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:120994 TRACE printActiveChannels {6: IN }  - EventLoop.cc:198
+2023/02/12 11:37:121001 TRACE handleEventWithGuard 6: IN  - Channel.cc:91
+2023/02/12 11:37:121009 INFO  TcpServer::removeConnectionInLoop [HttpServer] - connection HttpServer-0.0.0.0:8888#819 - TcpServer.cc:104
+2023/02/12 11:37:121025 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:121031 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:121041 TRACE printActiveChannels {11: IN }  - EventLoop.cc:198
+2023/02/12 11:37:121049 TRACE handleEventWithGuard 11: IN  - Channel.cc:91
+2023/02/12 11:37:121060 TRACE poll fd total count 2 - EPollPoller.cc:26
+2023/02/12 11:37:146549 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:146578 TRACE printActiveChannels {7: IN }  - EventLoop.cc:198
+2023/02/12 11:37:146592 TRACE handleEventWithGuard 7: IN  - Channel.cc:91
+2023/02/12 11:37:146614 INFO  TcpServer::newConnection [HttpServer] - new connection [HttpServer-0.0.0.0:8888#820] from 43.143.228.48:37914 - TcpServer.cc:76
+2023/02/12 11:37:146637 INFO  TcpConnection::ctor[HttpServer-0.0.0.0:8888#820] at fd =5 - TcpConnection.cc:39
+2023/02/12 11:37:146667 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:146675 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:146689 TRACE printActiveChannels {11: IN }  - EventLoop.cc:198
+2023/02/12 11:37:146697 TRACE handleEventWithGuard 11: IN  - Channel.cc:91
+2023/02/12 11:37:146728 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:146735 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:146739 TRACE printActiveChannels {5: IN }  - EventLoop.cc:198
+2023/02/12 11:37:146744 TRACE handleEventWithGuard 5: IN  - Channel.cc:91
+2023/02/12 11:37:147921 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:147938 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:147943 TRACE printActiveChannels {5: IN HUP }  - EventLoop.cc:198
+2023/02/12 11:37:147951 TRACE handleEventWithGuard 5: IN HUP  - Channel.cc:91
+2023/02/12 11:37:147959 TRACE handleClose handleClose fd = 5 state = kDisconnecting - TcpConnection.cc:219
+2023/02/12 11:37:147971 DEBUG onConnection HttpServer-0.0.0.0:8888#820 is down - HttpConnection.cc:31
+2023/02/12 11:37:147989 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:148000 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:148013 TRACE printActiveChannels {6: IN }  - EventLoop.cc:198
+2023/02/12 11:37:148021 TRACE handleEventWithGuard 6: IN  - Channel.cc:91
+2023/02/12 11:37:148029 INFO  TcpServer::removeConnectionInLoop [HttpServer] - connection HttpServer-0.0.0.0:8888#820 - TcpServer.cc:104
+2023/02/12 11:37:148046 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:148052 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:148062 TRACE printActiveChannels {11: IN }  - EventLoop.cc:198
+2023/02/12 11:37:148069 TRACE handleEventWithGuard 11: IN  - Channel.cc:91
+2023/02/12 11:37:148080 TRACE poll fd total count 2 - EPollPoller.cc:26
+2023/02/12 11:37:155386 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:155412 TRACE printActiveChannels {7: IN }  - EventLoop.cc:198
+2023/02/12 11:37:155425 TRACE handleEventWithGuard 7: IN  - Channel.cc:91
+2023/02/12 11:37:155443 INFO  TcpServer::newConnection [HttpServer] - new connection [HttpServer-0.0.0.0:8888#821] from 43.143.228.48:37924 - TcpServer.cc:76
+2023/02/12 11:37:155463 INFO  TcpConnection::ctor[HttpServer-0.0.0.0:8888#821] at fd =832 - TcpConnection.cc:39
+2023/02/12 11:37:155489 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:155496 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:155510 TRACE printActiveChannels {11: IN }  - EventLoop.cc:198
+2023/02/12 11:37:155517 TRACE handleEventWithGuard 11: IN  - Channel.cc:91
+2023/02/12 11:37:155545 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:155552 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:155556 TRACE printActiveChannels {832: IN }  - EventLoop.cc:198
+2023/02/12 11:37:155561 TRACE handleEventWithGuard 832: IN  - Channel.cc:91
+2023/02/12 11:37:156724 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:156738 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:156743 TRACE printActiveChannels {832: IN HUP }  - EventLoop.cc:198
+2023/02/12 11:37:156750 TRACE handleEventWithGuard 832: IN HUP  - Channel.cc:91
+2023/02/12 11:37:156759 TRACE handleClose handleClose fd = 832 state = kDisconnecting - TcpConnection.cc:219
+2023/02/12 11:37:156770 DEBUG onConnection HttpServer-0.0.0.0:8888#821 is down - HttpConnection.cc:31
+2023/02/12 11:37:156788 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:156800 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:156813 TRACE printActiveChannels {6: IN }  - EventLoop.cc:198
+2023/02/12 11:37:156831 TRACE handleEventWithGuard 6: IN  - Channel.cc:91
+2023/02/12 11:37:156840 INFO  TcpServer::removeConnectionInLoop [HttpServer] - connection HttpServer-0.0.0.0:8888#821 - TcpServer.cc:104
+2023/02/12 11:37:156856 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:156874 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:156911 TRACE printActiveChannels {11: IN }  - EventLoop.cc:198
+2023/02/12 11:37:156917 TRACE handleEventWithGuard 11: IN  - Channel.cc:91
+2023/02/12 11:37:156929 TRACE poll fd total count 2 - EPollPoller.cc:26
+2023/02/12 11:37:183390 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:183419 TRACE printActiveChannels {7: IN }  - EventLoop.cc:198
+2023/02/12 11:37:183433 TRACE handleEventWithGuard 7: IN  - Channel.cc:91
+2023/02/12 11:37:183453 INFO  TcpServer::newConnection [HttpServer] - new connection [HttpServer-0.0.0.0:8888#822] from 43.143.228.48:37944 - TcpServer.cc:76
+2023/02/12 11:37:183474 INFO  TcpConnection::ctor[HttpServer-0.0.0.0:8888#822] at fd =833 - TcpConnection.cc:39
+2023/02/12 11:37:183502 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:183509 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:183523 TRACE printActiveChannels {11: IN }  - EventLoop.cc:198
+2023/02/12 11:37:183530 TRACE handleEventWithGuard 11: IN  - Channel.cc:91
+2023/02/12 11:37:183560 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:183567 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:183571 TRACE printActiveChannels {833: IN }  - EventLoop.cc:198
+2023/02/12 11:37:183576 TRACE handleEventWithGuard 833: IN  - Channel.cc:91
+2023/02/12 11:37:184833 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:184851 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:184857 TRACE printActiveChannels {833: IN HUP }  - EventLoop.cc:198
+2023/02/12 11:37:184892 TRACE handleEventWithGuard 833: IN HUP  - Channel.cc:91
+2023/02/12 11:37:184904 TRACE handleClose handleClose fd = 833 state = kDisconnecting - TcpConnection.cc:219
+2023/02/12 11:37:184918 DEBUG onConnection HttpServer-0.0.0.0:8888#822 is down - HttpConnection.cc:31
+2023/02/12 11:37:184935 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:184942 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:184956 TRACE printActiveChannels {6: IN }  - EventLoop.cc:198
+2023/02/12 11:37:184963 TRACE handleEventWithGuard 6: IN  - Channel.cc:91
+2023/02/12 11:37:184973 INFO  TcpServer::removeConnectionInLoop [HttpServer] - connection HttpServer-0.0.0.0:8888#822 - TcpServer.cc:104
+2023/02/12 11:37:184989 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:184995 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:185005 TRACE printActiveChannels {11: IN }  - EventLoop.cc:198
+2023/02/12 11:37:185012 TRACE handleEventWithGuard 11: IN  - Channel.cc:91
+2023/02/12 11:37:185023 TRACE poll fd total count 2 - EPollPoller.cc:26
+2023/02/12 11:37:186499 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:186522 TRACE printActiveChannels {7: IN }  - EventLoop.cc:198
+2023/02/12 11:37:186532 TRACE handleEventWithGuard 7: IN  - Channel.cc:91
+2023/02/12 11:37:186551 INFO  TcpServer::newConnection [HttpServer] - new connection [HttpServer-0.0.0.0:8888#823] from 43.143.228.48:37958 - TcpServer.cc:76
+2023/02/12 11:37:186571 INFO  TcpConnection::ctor[HttpServer-0.0.0.0:8888#823] at fd =834 - TcpConnection.cc:39
+2023/02/12 11:37:186595 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:186602 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:186615 TRACE printActiveChannels {11: IN }  - EventLoop.cc:198
+2023/02/12 11:37:186622 TRACE handleEventWithGuard 11: IN  - Channel.cc:91
+2023/02/12 11:37:186650 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:186657 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:186661 TRACE printActiveChannels {834: IN }  - EventLoop.cc:198
+2023/02/12 11:37:186666 TRACE handleEventWithGuard 834: IN  - Channel.cc:91
+2023/02/12 11:37:187825 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:187838 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:187843 TRACE printActiveChannels {834: IN HUP }  - EventLoop.cc:198
+2023/02/12 11:37:187850 TRACE handleEventWithGuard 834: IN HUP  - Channel.cc:91
+2023/02/12 11:37:187859 TRACE handleClose handleClose fd = 834 state = kDisconnecting - TcpConnection.cc:219
+2023/02/12 11:37:187870 DEBUG onConnection HttpServer-0.0.0.0:8888#823 is down - HttpConnection.cc:31
+2023/02/12 11:37:187888 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:187900 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:187912 TRACE printActiveChannels {6: IN }  - EventLoop.cc:198
+2023/02/12 11:37:187919 TRACE handleEventWithGuard 6: IN  - Channel.cc:91
+2023/02/12 11:37:187928 INFO  TcpServer::removeConnectionInLoop [HttpServer] - connection HttpServer-0.0.0.0:8888#823 - TcpServer.cc:104
+2023/02/12 11:37:187944 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:187950 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:187960 TRACE printActiveChannels {11: IN }  - EventLoop.cc:198
+2023/02/12 11:37:187967 TRACE handleEventWithGuard 11: IN  - Channel.cc:91
+2023/02/12 11:37:187978 TRACE poll fd total count 2 - EPollPoller.cc:26
+2023/02/12 11:37:210144 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:210192 TRACE printActiveChannels {7: IN }  - EventLoop.cc:198
+2023/02/12 11:37:210210 TRACE handleEventWithGuard 7: IN  - Channel.cc:91
+2023/02/12 11:37:210234 INFO  TcpServer::newConnection [HttpServer] - new connection [HttpServer-0.0.0.0:8888#824] from 43.143.228.48:37142 - TcpServer.cc:76
+2023/02/12 11:37:210270 INFO  TcpConnection::ctor[HttpServer-0.0.0.0:8888#824] at fd =835 - TcpConnection.cc:39
+2023/02/12 11:37:210304 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:210312 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:210327 TRACE printActiveChannels {11: IN }  - EventLoop.cc:198
+2023/02/12 11:37:210335 TRACE handleEventWithGuard 11: IN  - Channel.cc:91
+2023/02/12 11:37:210369 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:210375 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:210379 TRACE printActiveChannels {835: IN }  - EventLoop.cc:198
+2023/02/12 11:37:210384 TRACE handleEventWithGuard 835: IN  - Channel.cc:91
+2023/02/12 11:37:211558 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:211577 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:211582 TRACE printActiveChannels {835: IN HUP }  - EventLoop.cc:198
+2023/02/12 11:37:211590 TRACE handleEventWithGuard 835: IN HUP  - Channel.cc:91
+2023/02/12 11:37:211599 TRACE handleClose handleClose fd = 835 state = kDisconnecting - TcpConnection.cc:219
+2023/02/12 11:37:211611 DEBUG onConnection HttpServer-0.0.0.0:8888#824 is down - HttpConnection.cc:31
+2023/02/12 11:37:211629 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:211641 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:211654 TRACE printActiveChannels {6: IN }  - EventLoop.cc:198
+2023/02/12 11:37:211661 TRACE handleEventWithGuard 6: IN  - Channel.cc:91
+2023/02/12 11:37:211670 INFO  TcpServer::removeConnectionInLoop [HttpServer] - connection HttpServer-0.0.0.0:8888#824 - TcpServer.cc:104
+2023/02/12 11:37:211687 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:211693 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:211703 TRACE printActiveChannels {11: IN }  - EventLoop.cc:198
+2023/02/12 11:37:211710 TRACE handleEventWithGuard 11: IN  - Channel.cc:91
+2023/02/12 11:37:211721 TRACE poll fd total count 2 - EPollPoller.cc:26
+2023/02/12 11:37:213257 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:213313 TRACE printActiveChannels {7: IN }  - EventLoop.cc:198
+2023/02/12 11:37:213332 TRACE handleEventWithGuard 7: IN  - Channel.cc:91
+2023/02/12 11:37:213352 INFO  TcpServer::newConnection [HttpServer] - new connection [HttpServer-0.0.0.0:8888#825] from 43.143.228.48:37974 - TcpServer.cc:76
+2023/02/12 11:37:213372 INFO  TcpConnection::ctor[HttpServer-0.0.0.0:8888#825] at fd =836 - TcpConnection.cc:39
+2023/02/12 11:37:213398 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:213404 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:213417 TRACE printActiveChannels {11: IN }  - EventLoop.cc:198
+2023/02/12 11:37:213425 TRACE handleEventWithGuard 11: IN  - Channel.cc:91
+2023/02/12 11:37:213453 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:213460 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:213464 TRACE printActiveChannels {836: IN }  - EventLoop.cc:198
+2023/02/12 11:37:213469 TRACE handleEventWithGuard 836: IN  - Channel.cc:91
+2023/02/12 11:37:214112 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:214142 TRACE printActiveChannels {7: IN }  - EventLoop.cc:198
+2023/02/12 11:37:214153 TRACE handleEventWithGuard 7: IN  - Channel.cc:91
+2023/02/12 11:37:214175 INFO  TcpServer::newConnection [HttpServer] - new connection [HttpServer-0.0.0.0:8888#826] from 43.143.228.48:37152 - TcpServer.cc:76
+2023/02/12 11:37:214195 INFO  TcpConnection::ctor[HttpServer-0.0.0.0:8888#826] at fd =837 - TcpConnection.cc:39
+2023/02/12 11:37:214217 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:214734 TRACE poll fd total count 4 - EPollPoller.cc:26
+2023/02/12 11:37:214747 TRACE poll 3 events happened - EPollPoller.cc:32
+2023/02/12 11:37:214752 TRACE printActiveChannels {836: IN HUP }  - EventLoop.cc:198
+2023/02/12 11:37:214759 TRACE printActiveChannels {11: IN }  - EventLoop.cc:198
+2023/02/12 11:37:214763 TRACE printActiveChannels {837: IN }  - EventLoop.cc:198
+2023/02/12 11:37:214768 TRACE handleEventWithGuard 836: IN HUP  - Channel.cc:91
+2023/02/12 11:37:214776 TRACE handleClose handleClose fd = 836 state = kDisconnecting - TcpConnection.cc:219
+2023/02/12 11:37:214786 DEBUG onConnection HttpServer-0.0.0.0:8888#825 is down - HttpConnection.cc:31
+2023/02/12 11:37:214802 TRACE handleEventWithGuard 11: IN  - Channel.cc:91
+2023/02/12 11:37:214813 TRACE handleEventWithGuard 837: IN  - Channel.cc:91
+2023/02/12 11:37:214814 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:214839 TRACE printActiveChannels {6: IN }  - EventLoop.cc:198
+2023/02/12 11:37:214848 TRACE handleEventWithGuard 6: IN  - Channel.cc:91
+2023/02/12 11:37:214860 INFO  TcpServer::removeConnectionInLoop [HttpServer] - connection HttpServer-0.0.0.0:8888#825 - TcpServer.cc:104
+2023/02/12 11:37:214874 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:215982 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:215995 TRACE poll 2 events happened - EPollPoller.cc:32
+2023/02/12 11:37:216000 TRACE printActiveChannels {11: IN }  - EventLoop.cc:198
+2023/02/12 11:37:216006 TRACE printActiveChannels {837: IN HUP }  - EventLoop.cc:198
+2023/02/12 11:37:216010 TRACE handleEventWithGuard 11: IN  - Channel.cc:91
+2023/02/12 11:37:216017 TRACE handleEventWithGuard 837: IN HUP  - Channel.cc:91
+2023/02/12 11:37:216025 TRACE handleClose handleClose fd = 837 state = kDisconnecting - TcpConnection.cc:219
+2023/02/12 11:37:216036 DEBUG onConnection HttpServer-0.0.0.0:8888#826 is down - HttpConnection.cc:31
+2023/02/12 11:37:216053 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:216064 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:216077 TRACE printActiveChannels {6: IN }  - EventLoop.cc:198
+2023/02/12 11:37:216084 TRACE handleEventWithGuard 6: IN  - Channel.cc:91
+2023/02/12 11:37:216092 INFO  TcpServer::removeConnectionInLoop [HttpServer] - connection HttpServer-0.0.0.0:8888#826 - TcpServer.cc:104
+2023/02/12 11:37:216107 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:216113 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:216124 TRACE printActiveChannels {11: IN }  - EventLoop.cc:198
+2023/02/12 11:37:216131 TRACE handleEventWithGuard 11: IN  - Channel.cc:91
+2023/02/12 11:37:216142 TRACE poll fd total count 2 - EPollPoller.cc:26
+2023/02/12 11:37:232153 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:232179 TRACE printActiveChannels {7: IN }  - EventLoop.cc:198
+2023/02/12 11:37:232190 TRACE handleEventWithGuard 7: IN  - Channel.cc:91
+2023/02/12 11:37:232210 INFO  TcpServer::newConnection [HttpServer] - new connection [HttpServer-0.0.0.0:8888#827] from 43.143.228.48:37986 - TcpServer.cc:76
+2023/02/12 11:37:232230 INFO  TcpConnection::ctor[HttpServer-0.0.0.0:8888#827] at fd =838 - TcpConnection.cc:39
+2023/02/12 11:37:232260 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:232286 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:232297 TRACE printActiveChannels {11: IN }  - EventLoop.cc:198
+2023/02/12 11:37:232305 TRACE handleEventWithGuard 11: IN  - Channel.cc:91
+2023/02/12 11:37:232335 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:232341 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:232345 TRACE printActiveChannels {838: IN }  - EventLoop.cc:198
+2023/02/12 11:37:232350 TRACE handleEventWithGuard 838: IN  - Channel.cc:91
+2023/02/12 11:37:234693 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:234710 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:234718 TRACE printActiveChannels {838: IN HUP }  - EventLoop.cc:198
+2023/02/12 11:37:234731 TRACE handleEventWithGuard 838: IN HUP  - Channel.cc:91
+2023/02/12 11:37:234744 TRACE handleClose handleClose fd = 838 state = kDisconnecting - TcpConnection.cc:219
+2023/02/12 11:37:234762 DEBUG onConnection HttpServer-0.0.0.0:8888#827 is down - HttpConnection.cc:31
+2023/02/12 11:37:234783 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:234890 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:234905 TRACE printActiveChannels {6: IN }  - EventLoop.cc:198
+2023/02/12 11:37:234917 TRACE handleEventWithGuard 6: IN  - Channel.cc:91
+2023/02/12 11:37:234931 INFO  TcpServer::removeConnectionInLoop [HttpServer] - connection HttpServer-0.0.0.0:8888#827 - TcpServer.cc:104
+2023/02/12 11:37:234951 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:234964 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:234972 TRACE printActiveChannels {11: IN }  - EventLoop.cc:198
+2023/02/12 11:37:234980 TRACE handleEventWithGuard 11: IN  - Channel.cc:91
+2023/02/12 11:37:234994 TRACE poll fd total count 2 - EPollPoller.cc:26
+2023/02/12 11:37:250565 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:250589 TRACE printActiveChannels {7: IN }  - EventLoop.cc:198
+2023/02/12 11:37:250599 TRACE handleEventWithGuard 7: IN  - Channel.cc:91
+2023/02/12 11:37:250619 INFO  TcpServer::newConnection [HttpServer] - new connection [HttpServer-0.0.0.0:8888#828] from 43.143.228.48:38000 - TcpServer.cc:76
+2023/02/12 11:37:250639 INFO  TcpConnection::ctor[HttpServer-0.0.0.0:8888#828] at fd =839 - TcpConnection.cc:39
+2023/02/12 11:37:250665 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:250673 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:250687 TRACE printActiveChannels {11: IN }  - EventLoop.cc:198
+2023/02/12 11:37:250694 TRACE handleEventWithGuard 11: IN  - Channel.cc:91
+2023/02/12 11:37:250726 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:250732 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:250736 TRACE printActiveChannels {839: IN }  - EventLoop.cc:198
+2023/02/12 11:37:250741 TRACE handleEventWithGuard 839: IN  - Channel.cc:91
+2023/02/12 11:37:251916 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:251930 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:251936 TRACE printActiveChannels {839: IN HUP }  - EventLoop.cc:198
+2023/02/12 11:37:251943 TRACE handleEventWithGuard 839: IN HUP  - Channel.cc:91
+2023/02/12 11:37:251952 TRACE handleClose handleClose fd = 839 state = kDisconnecting - TcpConnection.cc:219
+2023/02/12 11:37:251964 DEBUG onConnection HttpServer-0.0.0.0:8888#828 is down - HttpConnection.cc:31
+2023/02/12 11:37:251982 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:251993 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:252006 TRACE printActiveChannels {6: IN }  - EventLoop.cc:198
+2023/02/12 11:37:252013 TRACE handleEventWithGuard 6: IN  - Channel.cc:91
+2023/02/12 11:37:252022 INFO  TcpServer::removeConnectionInLoop [HttpServer] - connection HttpServer-0.0.0.0:8888#828 - TcpServer.cc:104
+2023/02/12 11:37:252038 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:252044 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:252054 TRACE printActiveChannels {11: IN }  - EventLoop.cc:198
+2023/02/12 11:37:252062 TRACE handleEventWithGuard 11: IN  - Channel.cc:91
+2023/02/12 11:37:252074 TRACE poll fd total count 2 - EPollPoller.cc:26
+2023/02/12 11:37:253620 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:253642 TRACE printActiveChannels {7: IN }  - EventLoop.cc:198
+2023/02/12 11:37:253655 TRACE handleEventWithGuard 7: IN  - Channel.cc:91
+2023/02/12 11:37:253679 INFO  TcpServer::newConnection [HttpServer] - new connection [HttpServer-0.0.0.0:8888#829] from 43.143.228.48:38010 - TcpServer.cc:76
+2023/02/12 11:37:253699 INFO  TcpConnection::ctor[HttpServer-0.0.0.0:8888#829] at fd =840 - TcpConnection.cc:39
+2023/02/12 11:37:253724 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:253730 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:253744 TRACE printActiveChannels {11: IN }  - EventLoop.cc:198
+2023/02/12 11:37:253751 TRACE handleEventWithGuard 11: IN  - Channel.cc:91
+2023/02/12 11:37:253779 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:253785 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:253789 TRACE printActiveChannels {840: IN }  - EventLoop.cc:198
+2023/02/12 11:37:253794 TRACE handleEventWithGuard 840: IN  - Channel.cc:91
+2023/02/12 11:37:254942 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:254955 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:254960 TRACE printActiveChannels {840: IN HUP }  - EventLoop.cc:198
+2023/02/12 11:37:254967 TRACE handleEventWithGuard 840: IN HUP  - Channel.cc:91
+2023/02/12 11:37:254975 TRACE handleClose handleClose fd = 840 state = kDisconnecting - TcpConnection.cc:219
+2023/02/12 11:37:254987 DEBUG onConnection HttpServer-0.0.0.0:8888#829 is down - HttpConnection.cc:31
+2023/02/12 11:37:255005 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:255016 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:255029 TRACE printActiveChannels {6: IN }  - EventLoop.cc:198
+2023/02/12 11:37:255035 TRACE handleEventWithGuard 6: IN  - Channel.cc:91
+2023/02/12 11:37:255044 INFO  TcpServer::removeConnectionInLoop [HttpServer] - connection HttpServer-0.0.0.0:8888#829 - TcpServer.cc:104
+2023/02/12 11:37:255060 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:255066 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:255076 TRACE printActiveChannels {11: IN }  - EventLoop.cc:198
+2023/02/12 11:37:255083 TRACE handleEventWithGuard 11: IN  - Channel.cc:91
+2023/02/12 11:37:255094 TRACE poll fd total count 2 - EPollPoller.cc:26
+2023/02/12 11:37:256653 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:256673 TRACE printActiveChannels {7: IN }  - EventLoop.cc:198
+2023/02/12 11:37:256682 TRACE handleEventWithGuard 7: IN  - Channel.cc:91
+2023/02/12 11:37:256699 INFO  TcpServer::newConnection [HttpServer] - new connection [HttpServer-0.0.0.0:8888#830] from 43.143.228.48:38014 - TcpServer.cc:76
+2023/02/12 11:37:256717 INFO  TcpConnection::ctor[HttpServer-0.0.0.0:8888#830] at fd =841 - TcpConnection.cc:39
+2023/02/12 11:37:256740 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:256747 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:256760 TRACE printActiveChannels {11: IN }  - EventLoop.cc:198
+2023/02/12 11:37:256767 TRACE handleEventWithGuard 11: IN  - Channel.cc:91
+2023/02/12 11:37:256793 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:256800 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:256804 TRACE printActiveChannels {841: IN }  - EventLoop.cc:198
+2023/02/12 11:37:256809 TRACE handleEventWithGuard 841: IN  - Channel.cc:91
+2023/02/12 11:37:257964 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:257979 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:257984 TRACE printActiveChannels {841: IN HUP }  - EventLoop.cc:198
+2023/02/12 11:37:257991 TRACE handleEventWithGuard 841: IN HUP  - Channel.cc:91
+2023/02/12 11:37:257999 TRACE handleClose handleClose fd = 841 state = kDisconnecting - TcpConnection.cc:219
+2023/02/12 11:37:258010 DEBUG onConnection HttpServer-0.0.0.0:8888#830 is down - HttpConnection.cc:31
+2023/02/12 11:37:258028 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:258039 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:258052 TRACE printActiveChannels {6: IN }  - EventLoop.cc:198
+2023/02/12 11:37:258059 TRACE handleEventWithGuard 6: IN  - Channel.cc:91
+2023/02/12 11:37:258067 INFO  TcpServer::removeConnectionInLoop [HttpServer] - connection HttpServer-0.0.0.0:8888#830 - TcpServer.cc:104
+2023/02/12 11:37:258083 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:258090 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:258100 TRACE printActiveChannels {11: IN }  - EventLoop.cc:198
+2023/02/12 11:37:258106 TRACE handleEventWithGuard 11: IN  - Channel.cc:91
+2023/02/12 11:37:258117 TRACE poll fd total count 2 - EPollPoller.cc:26
+2023/02/12 11:37:271326 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:271349 TRACE printActiveChannels {7: IN }  - EventLoop.cc:198
+2023/02/12 11:37:271359 TRACE handleEventWithGuard 7: IN  - Channel.cc:91
+2023/02/12 11:37:271377 INFO  TcpServer::newConnection [HttpServer] - new connection [HttpServer-0.0.0.0:8888#831] from 43.143.228.48:38030 - TcpServer.cc:76
+2023/02/12 11:37:271396 INFO  TcpConnection::ctor[HttpServer-0.0.0.0:8888#831] at fd =842 - TcpConnection.cc:39
+2023/02/12 11:37:271421 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:271427 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:271441 TRACE printActiveChannels {11: IN }  - EventLoop.cc:198
+2023/02/12 11:37:271448 TRACE handleEventWithGuard 11: IN  - Channel.cc:91
+2023/02/12 11:37:271475 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:271481 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:271485 TRACE printActiveChannels {842: IN }  - EventLoop.cc:198
+2023/02/12 11:37:271490 TRACE handleEventWithGuard 842: IN  - Channel.cc:91
+2023/02/12 11:37:272628 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:272641 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:272647 TRACE printActiveChannels {842: IN HUP }  - EventLoop.cc:198
+2023/02/12 11:37:272654 TRACE handleEventWithGuard 842: IN HUP  - Channel.cc:91
+2023/02/12 11:37:272663 TRACE handleClose handleClose fd = 842 state = kDisconnecting - TcpConnection.cc:219
+2023/02/12 11:37:272674 DEBUG onConnection HttpServer-0.0.0.0:8888#831 is down - HttpConnection.cc:31
+2023/02/12 11:37:272691 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:272703 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:272716 TRACE printActiveChannels {6: IN }  - EventLoop.cc:198
+2023/02/12 11:37:272723 TRACE handleEventWithGuard 6: IN  - Channel.cc:91
+2023/02/12 11:37:272731 INFO  TcpServer::removeConnectionInLoop [HttpServer] - connection HttpServer-0.0.0.0:8888#831 - TcpServer.cc:104
+2023/02/12 11:37:272747 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:272753 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:272763 TRACE printActiveChannels {11: IN }  - EventLoop.cc:198
+2023/02/12 11:37:272770 TRACE handleEventWithGuard 11: IN  - Channel.cc:91
+2023/02/12 11:37:272781 TRACE poll fd total count 2 - EPollPoller.cc:26
+2023/02/12 11:37:307363 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:307400 TRACE printActiveChannels {7: IN }  - EventLoop.cc:198
+2023/02/12 11:37:307415 TRACE handleEventWithGuard 7: IN  - Channel.cc:91
+2023/02/12 11:37:307439 INFO  TcpServer::newConnection [HttpServer] - new connection [HttpServer-0.0.0.0:8888#832] from 43.143.228.48:38062 - TcpServer.cc:76
+2023/02/12 11:37:307466 INFO  TcpConnection::ctor[HttpServer-0.0.0.0:8888#832] at fd =843 - TcpConnection.cc:39
+2023/02/12 11:37:307497 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:307506 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:307520 TRACE printActiveChannels {11: IN }  - EventLoop.cc:198
+2023/02/12 11:37:307528 TRACE handleEventWithGuard 11: IN  - Channel.cc:91
+2023/02/12 11:37:307563 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:307570 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:307573 TRACE printActiveChannels {843: IN }  - EventLoop.cc:198
+2023/02/12 11:37:307578 TRACE handleEventWithGuard 843: IN  - Channel.cc:91
+2023/02/12 11:37:308761 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:308783 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:308790 TRACE printActiveChannels {843: IN HUP }  - EventLoop.cc:198
+2023/02/12 11:37:308799 TRACE handleEventWithGuard 843: IN HUP  - Channel.cc:91
+2023/02/12 11:37:308809 TRACE handleClose handleClose fd = 843 state = kDisconnecting - TcpConnection.cc:219
+2023/02/12 11:37:308823 DEBUG onConnection HttpServer-0.0.0.0:8888#832 is down - HttpConnection.cc:31
+2023/02/12 11:37:308841 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:308850 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:308891 TRACE printActiveChannels {6: IN }  - EventLoop.cc:198
+2023/02/12 11:37:308901 TRACE handleEventWithGuard 6: IN  - Channel.cc:91
+2023/02/12 11:37:308911 INFO  TcpServer::removeConnectionInLoop [HttpServer] - connection HttpServer-0.0.0.0:8888#832 - TcpServer.cc:104
+2023/02/12 11:37:308928 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:308934 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:308945 TRACE printActiveChannels {11: IN }  - EventLoop.cc:198
+2023/02/12 11:37:308953 TRACE handleEventWithGuard 11: IN  - Channel.cc:91
+2023/02/12 11:37:308965 TRACE poll fd total count 2 - EPollPoller.cc:26
+2023/02/12 11:37:310546 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:310571 TRACE printActiveChannels {7: IN }  - EventLoop.cc:198
+2023/02/12 11:37:310581 TRACE handleEventWithGuard 7: IN  - Channel.cc:91
+2023/02/12 11:37:310618 INFO  TcpServer::newConnection [HttpServer] - new connection [HttpServer-0.0.0.0:8888#833] from 43.143.228.48:38076 - TcpServer.cc:76
+2023/02/12 11:37:310639 INFO  TcpConnection::ctor[HttpServer-0.0.0.0:8888#833] at fd =844 - TcpConnection.cc:39
+2023/02/12 11:37:310666 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:310674 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:310687 TRACE printActiveChannels {11: IN }  - EventLoop.cc:198
+2023/02/12 11:37:310696 TRACE handleEventWithGuard 11: IN  - Channel.cc:91
+2023/02/12 11:37:310726 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:310733 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:310737 TRACE printActiveChannels {844: IN }  - EventLoop.cc:198
+2023/02/12 11:37:310742 TRACE handleEventWithGuard 844: IN  - Channel.cc:91
+2023/02/12 11:37:311456 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:311475 TRACE printActiveChannels {7: IN }  - EventLoop.cc:198
+2023/02/12 11:37:311485 TRACE handleEventWithGuard 7: IN  - Channel.cc:91
+2023/02/12 11:37:311508 INFO  TcpServer::newConnection [HttpServer] - new connection [HttpServer-0.0.0.0:8888#834] from 43.143.228.48:38088 - TcpServer.cc:76
+2023/02/12 11:37:311529 INFO  TcpConnection::ctor[HttpServer-0.0.0.0:8888#834] at fd =845 - TcpConnection.cc:39
+2023/02/12 11:37:311552 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:312028 TRACE poll fd total count 4 - EPollPoller.cc:26
+2023/02/12 11:37:312041 TRACE poll 3 events happened - EPollPoller.cc:32
+2023/02/12 11:37:312047 TRACE printActiveChannels {844: IN HUP }  - EventLoop.cc:198
+2023/02/12 11:37:312054 TRACE printActiveChannels {11: IN }  - EventLoop.cc:198
+2023/02/12 11:37:312058 TRACE printActiveChannels {845: IN }  - EventLoop.cc:198
+2023/02/12 11:37:312062 TRACE handleEventWithGuard 844: IN HUP  - Channel.cc:91
+2023/02/12 11:37:312071 TRACE handleClose handleClose fd = 844 state = kDisconnecting - TcpConnection.cc:219
+2023/02/12 11:37:312080 DEBUG onConnection HttpServer-0.0.0.0:8888#833 is down - HttpConnection.cc:31
+2023/02/12 11:37:312098 TRACE handleEventWithGuard 11: IN  - Channel.cc:91
+2023/02/12 11:37:312108 TRACE handleEventWithGuard 845: IN  - Channel.cc:91
+2023/02/12 11:37:312114 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:312127 TRACE printActiveChannels {6: IN }  - EventLoop.cc:198
+2023/02/12 11:37:312136 TRACE handleEventWithGuard 6: IN  - Channel.cc:91
+2023/02/12 11:37:312147 INFO  TcpServer::removeConnectionInLoop [HttpServer] - connection HttpServer-0.0.0.0:8888#833 - TcpServer.cc:104
+2023/02/12 11:37:312162 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:313312 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:313327 TRACE poll 2 events happened - EPollPoller.cc:32
+2023/02/12 11:37:313332 TRACE printActiveChannels {11: IN }  - EventLoop.cc:198
+2023/02/12 11:37:313338 TRACE printActiveChannels {845: IN HUP }  - EventLoop.cc:198
+2023/02/12 11:37:313343 TRACE handleEventWithGuard 11: IN  - Channel.cc:91
+2023/02/12 11:37:313350 TRACE handleEventWithGuard 845: IN HUP  - Channel.cc:91
+2023/02/12 11:37:313357 TRACE handleClose handleClose fd = 845 state = kDisconnecting - TcpConnection.cc:219
+2023/02/12 11:37:313382 DEBUG onConnection HttpServer-0.0.0.0:8888#834 is down - HttpConnection.cc:31
+2023/02/12 11:37:313401 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:313413 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:313425 TRACE printActiveChannels {6: IN }  - EventLoop.cc:198
+2023/02/12 11:37:313432 TRACE handleEventWithGuard 6: IN  - Channel.cc:91
+2023/02/12 11:37:313441 INFO  TcpServer::removeConnectionInLoop [HttpServer] - connection HttpServer-0.0.0.0:8888#834 - TcpServer.cc:104
+2023/02/12 11:37:313457 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:313462 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:313472 TRACE printActiveChannels {11: IN }  - EventLoop.cc:198
+2023/02/12 11:37:313480 TRACE handleEventWithGuard 11: IN  - Channel.cc:91
+2023/02/12 11:37:313491 TRACE poll fd total count 2 - EPollPoller.cc:26
+2023/02/12 11:37:314954 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:314973 TRACE printActiveChannels {7: IN }  - EventLoop.cc:198
+2023/02/12 11:37:314982 TRACE handleEventWithGuard 7: IN  - Channel.cc:91
+2023/02/12 11:37:314999 INFO  TcpServer::newConnection [HttpServer] - new connection [HttpServer-0.0.0.0:8888#835] from 43.143.228.48:38096 - TcpServer.cc:76
+2023/02/12 11:37:315017 INFO  TcpConnection::ctor[HttpServer-0.0.0.0:8888#835] at fd =846 - TcpConnection.cc:39
+2023/02/12 11:37:315041 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:315047 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:315059 TRACE printActiveChannels {11: IN }  - EventLoop.cc:198
+2023/02/12 11:37:315066 TRACE handleEventWithGuard 11: IN  - Channel.cc:91
+2023/02/12 11:37:315092 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:334677 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:334704 TRACE printActiveChannels {7: IN }  - EventLoop.cc:198
+2023/02/12 11:37:334716 TRACE handleEventWithGuard 7: IN  - Channel.cc:91
+2023/02/12 11:37:334735 INFO  TcpServer::newConnection [HttpServer] - new connection [HttpServer-0.0.0.0:8888#836] from 43.143.228.48:38114 - TcpServer.cc:76
+2023/02/12 11:37:334755 INFO  TcpConnection::ctor[HttpServer-0.0.0.0:8888#836] at fd =847 - TcpConnection.cc:39
+2023/02/12 11:37:334781 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:334788 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:334802 TRACE printActiveChannels {11: IN }  - EventLoop.cc:198
+2023/02/12 11:37:334809 TRACE handleEventWithGuard 11: IN  - Channel.cc:91
+2023/02/12 11:37:334848 TRACE poll fd total count 4 - EPollPoller.cc:26
+2023/02/12 11:37:334855 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:334859 TRACE printActiveChannels {847: IN }  - EventLoop.cc:198
+2023/02/12 11:37:334865 TRACE handleEventWithGuard 847: IN  - Channel.cc:91
+2023/02/12 11:37:336042 TRACE poll fd total count 4 - EPollPoller.cc:26
+2023/02/12 11:37:336058 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:336063 TRACE printActiveChannels {847: IN HUP }  - EventLoop.cc:198
+2023/02/12 11:37:336070 TRACE handleEventWithGuard 847: IN HUP  - Channel.cc:91
+2023/02/12 11:37:336079 TRACE handleClose handleClose fd = 847 state = kDisconnecting - TcpConnection.cc:219
+2023/02/12 11:37:336091 DEBUG onConnection HttpServer-0.0.0.0:8888#836 is down - HttpConnection.cc:31
+2023/02/12 11:37:336110 TRACE poll fd total count 4 - EPollPoller.cc:26
+2023/02/12 11:37:336121 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:336134 TRACE printActiveChannels {6: IN }  - EventLoop.cc:198
+2023/02/12 11:37:336141 TRACE handleEventWithGuard 6: IN  - Channel.cc:91
+2023/02/12 11:37:336150 INFO  TcpServer::removeConnectionInLoop [HttpServer] - connection HttpServer-0.0.0.0:8888#836 - TcpServer.cc:104
+2023/02/12 11:37:336167 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:336173 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:336183 TRACE printActiveChannels {11: IN }  - EventLoop.cc:198
+2023/02/12 11:37:336190 TRACE handleEventWithGuard 11: IN  - Channel.cc:91
+2023/02/12 11:37:336201 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:363416 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:363445 TRACE printActiveChannels {7: IN }  - EventLoop.cc:198
+2023/02/12 11:37:363458 TRACE handleEventWithGuard 7: IN  - Channel.cc:91
+2023/02/12 11:37:363478 INFO  TcpServer::newConnection [HttpServer] - new connection [HttpServer-0.0.0.0:8888#837] from 43.143.228.48:38118 - TcpServer.cc:76
+2023/02/12 11:37:363501 INFO  TcpConnection::ctor[HttpServer-0.0.0.0:8888#837] at fd =848 - TcpConnection.cc:39
+2023/02/12 11:37:363529 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:363536 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:363549 TRACE printActiveChannels {11: IN }  - EventLoop.cc:198
+2023/02/12 11:37:363558 TRACE handleEventWithGuard 11: IN  - Channel.cc:91
+2023/02/12 11:37:363590 TRACE poll fd total count 4 - EPollPoller.cc:26
+2023/02/12 11:37:363596 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:363600 TRACE printActiveChannels {848: IN }  - EventLoop.cc:198
+2023/02/12 11:37:363605 TRACE handleEventWithGuard 848: IN  - Channel.cc:91
+2023/02/12 11:37:364801 TRACE poll fd total count 4 - EPollPoller.cc:26
+2023/02/12 11:37:364817 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:364823 TRACE printActiveChannels {848: IN HUP }  - EventLoop.cc:198
+2023/02/12 11:37:364830 TRACE handleEventWithGuard 848: IN HUP  - Channel.cc:91
+2023/02/12 11:37:364839 TRACE handleClose handleClose fd = 848 state = kDisconnecting - TcpConnection.cc:219
+2023/02/12 11:37:364852 DEBUG onConnection HttpServer-0.0.0.0:8888#837 is down - HttpConnection.cc:31
+2023/02/12 11:37:364886 TRACE poll fd total count 4 - EPollPoller.cc:26
+2023/02/12 11:37:364901 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:364914 TRACE printActiveChannels {6: IN }  - EventLoop.cc:198
+2023/02/12 11:37:364921 TRACE handleEventWithGuard 6: IN  - Channel.cc:91
+2023/02/12 11:37:364931 INFO  TcpServer::removeConnectionInLoop [HttpServer] - connection HttpServer-0.0.0.0:8888#837 - TcpServer.cc:104
+2023/02/12 11:37:364947 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:364953 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:364963 TRACE printActiveChannels {11: IN }  - EventLoop.cc:198
+2023/02/12 11:37:364970 TRACE handleEventWithGuard 11: IN  - Channel.cc:91
+2023/02/12 11:37:364981 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:378513 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:378538 TRACE printActiveChannels {7: IN }  - EventLoop.cc:198
+2023/02/12 11:37:378550 TRACE handleEventWithGuard 7: IN  - Channel.cc:91
+2023/02/12 11:37:378568 INFO  TcpServer::newConnection [HttpServer] - new connection [HttpServer-0.0.0.0:8888#838] from 43.143.228.48:38128 - TcpServer.cc:76
+2023/02/12 11:37:378588 INFO  TcpConnection::ctor[HttpServer-0.0.0.0:8888#838] at fd =849 - TcpConnection.cc:39
+2023/02/12 11:37:378614 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:378621 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:378634 TRACE printActiveChannels {11: IN }  - EventLoop.cc:198
+2023/02/12 11:37:378641 TRACE handleEventWithGuard 11: IN  - Channel.cc:91
+2023/02/12 11:37:378669 TRACE poll fd total count 4 - EPollPoller.cc:26
+2023/02/12 11:37:378676 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:378680 TRACE printActiveChannels {849: IN }  - EventLoop.cc:198
+2023/02/12 11:37:378685 TRACE handleEventWithGuard 849: IN  - Channel.cc:91
+2023/02/12 11:37:379842 TRACE poll fd total count 4 - EPollPoller.cc:26
+2023/02/12 11:37:379858 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:379863 TRACE printActiveChannels {849: IN HUP }  - EventLoop.cc:198
+2023/02/12 11:37:379870 TRACE handleEventWithGuard 849: IN HUP  - Channel.cc:91
+2023/02/12 11:37:379878 TRACE handleClose handleClose fd = 849 state = kDisconnecting - TcpConnection.cc:219
+2023/02/12 11:37:379890 DEBUG onConnection HttpServer-0.0.0.0:8888#838 is down - HttpConnection.cc:31
+2023/02/12 11:37:379908 TRACE poll fd total count 4 - EPollPoller.cc:26
+2023/02/12 11:37:379921 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:379933 TRACE printActiveChannels {6: IN }  - EventLoop.cc:198
+2023/02/12 11:37:379940 TRACE handleEventWithGuard 6: IN  - Channel.cc:91
+2023/02/12 11:37:379949 INFO  TcpServer::removeConnectionInLoop [HttpServer] - connection HttpServer-0.0.0.0:8888#838 - TcpServer.cc:104
+2023/02/12 11:37:379965 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:379971 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:379981 TRACE printActiveChannels {11: IN }  - EventLoop.cc:198
+2023/02/12 11:37:379988 TRACE handleEventWithGuard 11: IN  - Channel.cc:91
+2023/02/12 11:37:379999 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:401779 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:401833 TRACE printActiveChannels {7: IN }  - EventLoop.cc:198
+2023/02/12 11:37:401845 TRACE handleEventWithGuard 7: IN  - Channel.cc:91
+2023/02/12 11:37:401864 INFO  TcpServer::newConnection [HttpServer] - new connection [HttpServer-0.0.0.0:8888#839] from 43.143.228.48:37296 - TcpServer.cc:76
+2023/02/12 11:37:401884 INFO  TcpConnection::ctor[HttpServer-0.0.0.0:8888#839] at fd =850 - TcpConnection.cc:39
+2023/02/12 11:37:401909 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:401919 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:401932 TRACE printActiveChannels {11: IN }  - EventLoop.cc:198
+2023/02/12 11:37:401939 TRACE handleEventWithGuard 11: IN  - Channel.cc:91
+2023/02/12 11:37:401968 TRACE poll fd total count 4 - EPollPoller.cc:26
+2023/02/12 11:37:401974 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:401978 TRACE printActiveChannels {850: IN }  - EventLoop.cc:198
+2023/02/12 11:37:401983 TRACE handleEventWithGuard 850: IN  - Channel.cc:91
+2023/02/12 11:37:402614 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:402633 TRACE printActiveChannels {7: IN }  - EventLoop.cc:198
+2023/02/12 11:37:402658 TRACE handleEventWithGuard 7: IN  - Channel.cc:91
+2023/02/12 11:37:402678 INFO  TcpServer::newConnection [HttpServer] - new connection [HttpServer-0.0.0.0:8888#840] from 43.143.228.48:38138 - TcpServer.cc:76
+2023/02/12 11:37:402699 INFO  TcpConnection::ctor[HttpServer-0.0.0.0:8888#840] at fd =851 - TcpConnection.cc:39
+2023/02/12 11:37:402723 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:403354 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:403375 TRACE printActiveChannels {7: IN }  - EventLoop.cc:198
+2023/02/12 11:37:403387 TRACE handleEventWithGuard 7: IN  - Channel.cc:91
+2023/02/12 11:37:403415 INFO  TcpServer::newConnection [HttpServer] - new connection [HttpServer-0.0.0.0:8888#841] from 43.143.228.48:38154 - TcpServer.cc:76
+2023/02/12 11:37:403431 TRACE poll fd total count 5 - EPollPoller.cc:26
+2023/02/12 11:37:403436 INFO  TcpConnection::ctor[HttpServer-0.0.0.0:8888#841] at fd =852 - TcpConnection.cc:39
+2023/02/12 11:37:403443 TRACE poll 3 events happened - EPollPoller.cc:32
+2023/02/12 11:37:403452 TRACE printActiveChannels {850: IN HUP }  - EventLoop.cc:198
+2023/02/12 11:37:403459 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:403460 TRACE printActiveChannels {11: IN }  - EventLoop.cc:198
+2023/02/12 11:37:403482 TRACE printActiveChannels {851: IN }  - EventLoop.cc:198
+2023/02/12 11:37:403489 TRACE handleEventWithGuard 850: IN HUP  - Channel.cc:91
+2023/02/12 11:37:403497 TRACE handleClose handleClose fd = 850 state = kDisconnecting - TcpConnection.cc:219
+2023/02/12 11:37:403508 DEBUG onConnection HttpServer-0.0.0.0:8888#839 is down - HttpConnection.cc:31
+2023/02/12 11:37:403524 TRACE handleEventWithGuard 11: IN  - Channel.cc:91
+2023/02/12 11:37:403531 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:403535 TRACE handleEventWithGuard 851: IN  - Channel.cc:91
+2023/02/12 11:37:403545 TRACE printActiveChannels {6: IN }  - EventLoop.cc:198
+2023/02/12 11:37:403554 TRACE handleEventWithGuard 6: IN  - Channel.cc:91
+2023/02/12 11:37:403565 INFO  TcpServer::removeConnectionInLoop [HttpServer] - connection HttpServer-0.0.0.0:8888#839 - TcpServer.cc:104
+2023/02/12 11:37:403579 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:404772 TRACE poll fd total count 5 - EPollPoller.cc:26
+2023/02/12 11:37:404789 TRACE poll 3 events happened - EPollPoller.cc:32
+2023/02/12 11:37:404797 TRACE printActiveChannels {11: IN }  - EventLoop.cc:198
+2023/02/12 11:37:404807 TRACE printActiveChannels {851: IN HUP }  - EventLoop.cc:198
+2023/02/12 11:37:404814 TRACE printActiveChannels {852: IN }  - EventLoop.cc:198
+2023/02/12 11:37:404819 TRACE handleEventWithGuard 11: IN  - Channel.cc:91
+2023/02/12 11:37:404826 TRACE handleEventWithGuard 851: IN HUP  - Channel.cc:91
+2023/02/12 11:37:404833 TRACE handleClose handleClose fd = 851 state = kDisconnecting - TcpConnection.cc:219
+2023/02/12 11:37:404844 DEBUG onConnection HttpServer-0.0.0.0:8888#840 is down - HttpConnection.cc:31
+2023/02/12 11:37:404861 TRACE handleEventWithGuard 852: IN  - Channel.cc:91
+2023/02/12 11:37:404891 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:404905 TRACE printActiveChannels {6: IN }  - EventLoop.cc:198
+2023/02/12 11:37:404914 TRACE handleEventWithGuard 6: IN  - Channel.cc:91
+2023/02/12 11:37:404926 INFO  TcpServer::removeConnectionInLoop [HttpServer] - connection HttpServer-0.0.0.0:8888#840 - TcpServer.cc:104
+2023/02/12 11:37:404940 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:406182 TRACE poll fd total count 4 - EPollPoller.cc:26
+2023/02/12 11:37:406217 TRACE poll 2 events happened - EPollPoller.cc:32
+2023/02/12 11:37:406228 TRACE printActiveChannels {11: IN }  - EventLoop.cc:198
+2023/02/12 11:37:406238 TRACE printActiveChannels {852: IN HUP }  - EventLoop.cc:198
+2023/02/12 11:37:406245 TRACE handleEventWithGuard 11: IN  - Channel.cc:91
+2023/02/12 11:37:406254 TRACE handleEventWithGuard 852: IN HUP  - Channel.cc:91
+2023/02/12 11:37:406265 TRACE handleClose handleClose fd = 852 state = kDisconnecting - TcpConnection.cc:219
+2023/02/12 11:37:406281 DEBUG onConnection HttpServer-0.0.0.0:8888#841 is down - HttpConnection.cc:31
+2023/02/12 11:37:406301 TRACE poll fd total count 4 - EPollPoller.cc:26
+2023/02/12 11:37:406308 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:406321 TRACE printActiveChannels {6: IN }  - EventLoop.cc:198
+2023/02/12 11:37:406331 TRACE handleEventWithGuard 6: IN  - Channel.cc:91
+2023/02/12 11:37:406342 INFO  TcpServer::removeConnectionInLoop [HttpServer] - connection HttpServer-0.0.0.0:8888#841 - TcpServer.cc:104
+2023/02/12 11:37:406359 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:406365 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:406375 TRACE printActiveChannels {11: IN }  - EventLoop.cc:198
+2023/02/12 11:37:406382 TRACE handleEventWithGuard 11: IN  - Channel.cc:91
+2023/02/12 11:37:406393 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:422573 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:422600 TRACE printActiveChannels {7: IN }  - EventLoop.cc:198
+2023/02/12 11:37:422614 TRACE handleEventWithGuard 7: IN  - Channel.cc:91
+2023/02/12 11:37:422632 INFO  TcpServer::newConnection [HttpServer] - new connection [HttpServer-0.0.0.0:8888#842] from 43.143.228.48:38200 - TcpServer.cc:76
+2023/02/12 11:37:422650 INFO  TcpConnection::ctor[HttpServer-0.0.0.0:8888#842] at fd =853 - TcpConnection.cc:39
+2023/02/12 11:37:422675 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:422682 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:422695 TRACE printActiveChannels {11: IN }  - EventLoop.cc:198
+2023/02/12 11:37:422702 TRACE handleEventWithGuard 11: IN  - Channel.cc:91
+2023/02/12 11:37:422730 TRACE poll fd total count 4 - EPollPoller.cc:26
+2023/02/12 11:37:422736 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:422740 TRACE printActiveChannels {853: IN }  - EventLoop.cc:198
+2023/02/12 11:37:422745 TRACE handleEventWithGuard 853: IN  - Channel.cc:91
+2023/02/12 11:37:423885 TRACE poll fd total count 4 - EPollPoller.cc:26
+2023/02/12 11:37:423897 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:423903 TRACE printActiveChannels {853: IN HUP }  - EventLoop.cc:198
+2023/02/12 11:37:423910 TRACE handleEventWithGuard 853: IN HUP  - Channel.cc:91
+2023/02/12 11:37:423918 TRACE handleClose handleClose fd = 853 state = kDisconnecting - TcpConnection.cc:219
+2023/02/12 11:37:423930 DEBUG onConnection HttpServer-0.0.0.0:8888#842 is down - HttpConnection.cc:31
+2023/02/12 11:37:423948 TRACE poll fd total count 4 - EPollPoller.cc:26
+2023/02/12 11:37:423959 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:423972 TRACE printActiveChannels {6: IN }  - EventLoop.cc:198
+2023/02/12 11:37:423979 TRACE handleEventWithGuard 6: IN  - Channel.cc:91
+2023/02/12 11:37:423987 INFO  TcpServer::removeConnectionInLoop [HttpServer] - connection HttpServer-0.0.0.0:8888#842 - TcpServer.cc:104
+2023/02/12 11:37:424003 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:424010 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:424020 TRACE printActiveChannels {11: IN }  - EventLoop.cc:198
+2023/02/12 11:37:424026 TRACE handleEventWithGuard 11: IN  - Channel.cc:91
+2023/02/12 11:37:424037 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:425660 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:425680 TRACE printActiveChannels {7: IN }  - EventLoop.cc:198
+2023/02/12 11:37:425691 TRACE handleEventWithGuard 7: IN  - Channel.cc:91
+2023/02/12 11:37:425707 INFO  TcpServer::newConnection [HttpServer] - new connection [HttpServer-0.0.0.0:8888#843] from 43.143.228.48:38212 - TcpServer.cc:76
+2023/02/12 11:37:425724 INFO  TcpConnection::ctor[HttpServer-0.0.0.0:8888#843] at fd =854 - TcpConnection.cc:39
+2023/02/12 11:37:425748 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:425753 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:425765 TRACE printActiveChannels {11: IN }  - EventLoop.cc:198
+2023/02/12 11:37:425772 TRACE handleEventWithGuard 11: IN  - Channel.cc:91
+2023/02/12 11:37:425798 TRACE poll fd total count 4 - EPollPoller.cc:26
+2023/02/12 11:37:425805 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:425809 TRACE printActiveChannels {854: IN }  - EventLoop.cc:198
+2023/02/12 11:37:425814 TRACE handleEventWithGuard 854: IN  - Channel.cc:91
+2023/02/12 11:37:426948 TRACE poll fd total count 4 - EPollPoller.cc:26
+2023/02/12 11:37:426962 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:426968 TRACE printActiveChannels {854: IN HUP }  - EventLoop.cc:198
+2023/02/12 11:37:426975 TRACE handleEventWithGuard 854: IN HUP  - Channel.cc:91
+2023/02/12 11:37:426983 TRACE handleClose handleClose fd = 854 state = kDisconnecting - TcpConnection.cc:219
+2023/02/12 11:37:426994 DEBUG onConnection HttpServer-0.0.0.0:8888#843 is down - HttpConnection.cc:31
+2023/02/12 11:37:427011 TRACE poll fd total count 4 - EPollPoller.cc:26
+2023/02/12 11:37:427023 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:427035 TRACE printActiveChannels {6: IN }  - EventLoop.cc:198
+2023/02/12 11:37:427042 TRACE handleEventWithGuard 6: IN  - Channel.cc:91
+2023/02/12 11:37:427051 INFO  TcpServer::removeConnectionInLoop [HttpServer] - connection HttpServer-0.0.0.0:8888#843 - TcpServer.cc:104
+2023/02/12 11:37:427066 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:427073 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:427083 TRACE printActiveChannels {11: IN }  - EventLoop.cc:198
+2023/02/12 11:37:427090 TRACE handleEventWithGuard 11: IN  - Channel.cc:91
+2023/02/12 11:37:427100 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:466133 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:466161 TRACE printActiveChannels {7: IN }  - EventLoop.cc:198
+2023/02/12 11:37:466173 TRACE handleEventWithGuard 7: IN  - Channel.cc:91
+2023/02/12 11:37:466192 INFO  TcpServer::newConnection [HttpServer] - new connection [HttpServer-0.0.0.0:8888#844] from 43.143.228.48:37338 - TcpServer.cc:76
+2023/02/12 11:37:466213 INFO  TcpConnection::ctor[HttpServer-0.0.0.0:8888#844] at fd =855 - TcpConnection.cc:39
+2023/02/12 11:37:466248 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:466262 TRACE printActiveChannels {11: IN }  - EventLoop.cc:198
+2023/02/12 11:37:466273 TRACE handleEventWithGuard 11: IN  - Channel.cc:91
+2023/02/12 11:37:466284 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:466310 TRACE poll fd total count 4 - EPollPoller.cc:26
+2023/02/12 11:37:466319 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:466323 TRACE printActiveChannels {855: IN }  - EventLoop.cc:198
+2023/02/12 11:37:466329 TRACE handleEventWithGuard 855: IN  - Channel.cc:91
+2023/02/12 11:37:467516 TRACE poll fd total count 4 - EPollPoller.cc:26
+2023/02/12 11:37:467530 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:467535 TRACE printActiveChannels {855: IN HUP }  - EventLoop.cc:198
+2023/02/12 11:37:467543 TRACE handleEventWithGuard 855: IN HUP  - Channel.cc:91
+2023/02/12 11:37:467551 TRACE handleClose handleClose fd = 855 state = kDisconnecting - TcpConnection.cc:219
+2023/02/12 11:37:467563 DEBUG onConnection HttpServer-0.0.0.0:8888#844 is down - HttpConnection.cc:31
+2023/02/12 11:37:467580 TRACE poll fd total count 4 - EPollPoller.cc:26
+2023/02/12 11:37:467592 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:467606 TRACE printActiveChannels {6: IN }  - EventLoop.cc:198
+2023/02/12 11:37:467616 TRACE handleEventWithGuard 6: IN  - Channel.cc:91
+2023/02/12 11:37:467627 INFO  TcpServer::removeConnectionInLoop [HttpServer] - connection HttpServer-0.0.0.0:8888#844 - TcpServer.cc:104
+2023/02/12 11:37:467643 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:467649 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:467659 TRACE printActiveChannels {11: IN }  - EventLoop.cc:198
+2023/02/12 11:37:467667 TRACE handleEventWithGuard 11: IN  - Channel.cc:91
+2023/02/12 11:37:467678 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:521290 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:521337 TRACE printActiveChannels {846: IN }  - EventLoop.cc:198
+2023/02/12 11:37:521351 TRACE handleEventWithGuard 846: IN  - Channel.cc:91
+2023/02/12 11:37:522564 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:522578 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:522584 TRACE printActiveChannels {846: IN HUP }  - EventLoop.cc:198
+2023/02/12 11:37:522591 TRACE handleEventWithGuard 846: IN HUP  - Channel.cc:91
+2023/02/12 11:37:522600 TRACE handleClose handleClose fd = 846 state = kDisconnecting - TcpConnection.cc:219
+2023/02/12 11:37:522613 DEBUG onConnection HttpServer-0.0.0.0:8888#835 is down - HttpConnection.cc:31
+2023/02/12 11:37:522632 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:522650 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:522662 TRACE printActiveChannels {6: IN }  - EventLoop.cc:198
+2023/02/12 11:37:522669 TRACE handleEventWithGuard 6: IN  - Channel.cc:91
+2023/02/12 11:37:522678 INFO  TcpServer::removeConnectionInLoop [HttpServer] - connection HttpServer-0.0.0.0:8888#835 - TcpServer.cc:104
+2023/02/12 11:37:522695 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:522701 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:522712 TRACE printActiveChannels {11: IN }  - EventLoop.cc:198
+2023/02/12 11:37:522719 TRACE handleEventWithGuard 11: IN  - Channel.cc:91
+2023/02/12 11:37:522734 TRACE poll fd total count 2 - EPollPoller.cc:26
+2023/02/12 11:37:524298 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:524318 TRACE printActiveChannels {7: IN }  - EventLoop.cc:198
+2023/02/12 11:37:524328 TRACE handleEventWithGuard 7: IN  - Channel.cc:91
+2023/02/12 11:37:524345 INFO  TcpServer::newConnection [HttpServer] - new connection [HttpServer-0.0.0.0:8888#845] from 43.143.228.48:38248 - TcpServer.cc:76
+2023/02/12 11:37:524365 INFO  TcpConnection::ctor[HttpServer-0.0.0.0:8888#845] at fd =856 - TcpConnection.cc:39
+2023/02/12 11:37:524391 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:524398 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:524411 TRACE printActiveChannels {11: IN }  - EventLoop.cc:198
+2023/02/12 11:37:524418 TRACE handleEventWithGuard 11: IN  - Channel.cc:91
+2023/02/12 11:37:524445 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:524451 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:524456 TRACE printActiveChannels {856: IN }  - EventLoop.cc:198
+2023/02/12 11:37:524461 TRACE handleEventWithGuard 856: IN  - Channel.cc:91
+2023/02/12 11:37:525656 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:525669 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:525674 TRACE printActiveChannels {856: IN HUP }  - EventLoop.cc:198
+2023/02/12 11:37:525682 TRACE handleEventWithGuard 856: IN HUP  - Channel.cc:91
+2023/02/12 11:37:525690 TRACE handleClose handleClose fd = 856 state = kDisconnecting - TcpConnection.cc:219
+2023/02/12 11:37:525701 DEBUG onConnection HttpServer-0.0.0.0:8888#845 is down - HttpConnection.cc:31
+2023/02/12 11:37:525719 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:525730 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:525743 TRACE printActiveChannels {6: IN }  - EventLoop.cc:198
+2023/02/12 11:37:525750 TRACE handleEventWithGuard 6: IN  - Channel.cc:91
+2023/02/12 11:37:525758 INFO  TcpServer::removeConnectionInLoop [HttpServer] - connection HttpServer-0.0.0.0:8888#845 - TcpServer.cc:104
+2023/02/12 11:37:525774 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:525780 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:525790 TRACE printActiveChannels {11: IN }  - EventLoop.cc:198
+2023/02/12 11:37:525797 TRACE handleEventWithGuard 11: IN  - Channel.cc:91
+2023/02/12 11:37:525808 TRACE poll fd total count 2 - EPollPoller.cc:26
+2023/02/12 11:37:530213 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:530237 TRACE printActiveChannels {7: IN }  - EventLoop.cc:198
+2023/02/12 11:37:530250 TRACE handleEventWithGuard 7: IN  - Channel.cc:91
+2023/02/12 11:37:530273 INFO  TcpServer::newConnection [HttpServer] - new connection [HttpServer-0.0.0.0:8888#846] from 43.143.228.48:37402 - TcpServer.cc:76
+2023/02/12 11:37:530294 INFO  TcpConnection::ctor[HttpServer-0.0.0.0:8888#846] at fd =857 - TcpConnection.cc:39
+2023/02/12 11:37:530319 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:530326 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:530339 TRACE printActiveChannels {11: IN }  - EventLoop.cc:198
+2023/02/12 11:37:530347 TRACE handleEventWithGuard 11: IN  - Channel.cc:91
+2023/02/12 11:37:530373 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:530659 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:530674 TRACE printActiveChannels {7: IN }  - EventLoop.cc:198
+2023/02/12 11:37:530682 TRACE handleEventWithGuard 7: IN  - Channel.cc:91
+2023/02/12 11:37:530697 INFO  TcpServer::newConnection [HttpServer] - new connection [HttpServer-0.0.0.0:8888#847] from 43.143.228.48:38264 - TcpServer.cc:76
+2023/02/12 11:37:530713 INFO  TcpConnection::ctor[HttpServer-0.0.0.0:8888#847] at fd =858 - TcpConnection.cc:39
+2023/02/12 11:37:530774 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:530776 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:530800 TRACE printActiveChannels {11: IN }  - EventLoop.cc:198
+2023/02/12 11:37:530809 TRACE handleEventWithGuard 11: IN  - Channel.cc:91
+2023/02/12 11:37:530855 TRACE poll fd total count 4 - EPollPoller.cc:26
+2023/02/12 11:37:530863 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:530868 TRACE printActiveChannels {858: IN }  - EventLoop.cc:198
+2023/02/12 11:37:530873 TRACE handleEventWithGuard 858: IN  - Channel.cc:91
+2023/02/12 11:37:532044 TRACE poll fd total count 4 - EPollPoller.cc:26
+2023/02/12 11:37:532058 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:532064 TRACE printActiveChannels {858: IN HUP }  - EventLoop.cc:198
+2023/02/12 11:37:532071 TRACE handleEventWithGuard 858: IN HUP  - Channel.cc:91
+2023/02/12 11:37:532080 TRACE handleClose handleClose fd = 858 state = kDisconnecting - TcpConnection.cc:219
+2023/02/12 11:37:532091 DEBUG onConnection HttpServer-0.0.0.0:8888#847 is down - HttpConnection.cc:31
+2023/02/12 11:37:532109 TRACE poll fd total count 4 - EPollPoller.cc:26
+2023/02/12 11:37:532119 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:532131 TRACE printActiveChannels {6: IN }  - EventLoop.cc:198
+2023/02/12 11:37:532138 TRACE handleEventWithGuard 6: IN  - Channel.cc:91
+2023/02/12 11:37:532147 INFO  TcpServer::removeConnectionInLoop [HttpServer] - connection HttpServer-0.0.0.0:8888#847 - TcpServer.cc:104
+2023/02/12 11:37:532163 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:532169 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:532180 TRACE printActiveChannels {11: IN }  - EventLoop.cc:198
+2023/02/12 11:37:532187 TRACE handleEventWithGuard 11: IN  - Channel.cc:91
+2023/02/12 11:37:532198 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:533712 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:533732 TRACE printActiveChannels {7: IN }  - EventLoop.cc:198
+2023/02/12 11:37:533741 TRACE handleEventWithGuard 7: IN  - Channel.cc:91
+2023/02/12 11:37:533758 INFO  TcpServer::newConnection [HttpServer] - new connection [HttpServer-0.0.0.0:8888#848] from 43.143.228.48:38274 - TcpServer.cc:76
+2023/02/12 11:37:533775 INFO  TcpConnection::ctor[HttpServer-0.0.0.0:8888#848] at fd =859 - TcpConnection.cc:39
+2023/02/12 11:37:533799 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:533806 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:533832 TRACE printActiveChannels {11: IN }  - EventLoop.cc:198
+2023/02/12 11:37:533840 TRACE handleEventWithGuard 11: IN  - Channel.cc:91
+2023/02/12 11:37:533867 TRACE poll fd total count 4 - EPollPoller.cc:26
+2023/02/12 11:37:533874 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:533878 TRACE printActiveChannels {859: IN }  - EventLoop.cc:198
+2023/02/12 11:37:533883 TRACE handleEventWithGuard 859: IN  - Channel.cc:91
+2023/02/12 11:37:535062 TRACE poll fd total count 4 - EPollPoller.cc:26
+2023/02/12 11:37:535076 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:535081 TRACE printActiveChannels {859: IN HUP }  - EventLoop.cc:198
+2023/02/12 11:37:535089 TRACE handleEventWithGuard 859: IN HUP  - Channel.cc:91
+2023/02/12 11:37:535097 TRACE handleClose handleClose fd = 859 state = kDisconnecting - TcpConnection.cc:219
+2023/02/12 11:37:535108 DEBUG onConnection HttpServer-0.0.0.0:8888#848 is down - HttpConnection.cc:31
+2023/02/12 11:37:535126 TRACE poll fd total count 4 - EPollPoller.cc:26
+2023/02/12 11:37:535135 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:535148 TRACE printActiveChannels {6: IN }  - EventLoop.cc:198
+2023/02/12 11:37:535156 TRACE handleEventWithGuard 6: IN  - Channel.cc:91
+2023/02/12 11:37:535164 INFO  TcpServer::removeConnectionInLoop [HttpServer] - connection HttpServer-0.0.0.0:8888#848 - TcpServer.cc:104
+2023/02/12 11:37:535180 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:535187 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:535197 TRACE printActiveChannels {11: IN }  - EventLoop.cc:198
+2023/02/12 11:37:535203 TRACE handleEventWithGuard 11: IN  - Channel.cc:91
+2023/02/12 11:37:535215 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:551411 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:551434 TRACE printActiveChannels {7: IN }  - EventLoop.cc:198
+2023/02/12 11:37:551444 TRACE handleEventWithGuard 7: IN  - Channel.cc:91
+2023/02/12 11:37:551462 INFO  TcpServer::newConnection [HttpServer] - new connection [HttpServer-0.0.0.0:8888#849] from 43.143.228.48:38290 - TcpServer.cc:76
+2023/02/12 11:37:551480 INFO  TcpConnection::ctor[HttpServer-0.0.0.0:8888#849] at fd =860 - TcpConnection.cc:39
+2023/02/12 11:37:551504 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:551511 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:551525 TRACE printActiveChannels {11: IN }  - EventLoop.cc:198
+2023/02/12 11:37:551534 TRACE handleEventWithGuard 11: IN  - Channel.cc:91
+2023/02/12 11:37:551561 TRACE poll fd total count 4 - EPollPoller.cc:26
+2023/02/12 11:37:551568 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:551572 TRACE printActiveChannels {860: IN }  - EventLoop.cc:198
+2023/02/12 11:37:551577 TRACE handleEventWithGuard 860: IN  - Channel.cc:91
+2023/02/12 11:37:552717 TRACE poll fd total count 4 - EPollPoller.cc:26
+2023/02/12 11:37:552732 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:552737 TRACE printActiveChannels {860: IN HUP }  - EventLoop.cc:198
+2023/02/12 11:37:552745 TRACE handleEventWithGuard 860: IN HUP  - Channel.cc:91
+2023/02/12 11:37:552753 TRACE handleClose handleClose fd = 860 state = kDisconnecting - TcpConnection.cc:219
+2023/02/12 11:37:552765 DEBUG onConnection HttpServer-0.0.0.0:8888#849 is down - HttpConnection.cc:31
+2023/02/12 11:37:552782 TRACE poll fd total count 4 - EPollPoller.cc:26
+2023/02/12 11:37:552799 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:552811 TRACE printActiveChannels {6: IN }  - EventLoop.cc:198
+2023/02/12 11:37:552827 TRACE handleEventWithGuard 6: IN  - Channel.cc:91
+2023/02/12 11:37:552836 INFO  TcpServer::removeConnectionInLoop [HttpServer] - connection HttpServer-0.0.0.0:8888#849 - TcpServer.cc:104
+2023/02/12 11:37:552852 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:552859 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:552900 TRACE printActiveChannels {11: IN }  - EventLoop.cc:198
+2023/02/12 11:37:552910 TRACE handleEventWithGuard 11: IN  - Channel.cc:91
+2023/02/12 11:37:552926 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:562530 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:562551 TRACE printActiveChannels {7: IN }  - EventLoop.cc:198
+2023/02/12 11:37:562560 TRACE handleEventWithGuard 7: IN  - Channel.cc:91
+2023/02/12 11:37:562576 INFO  TcpServer::newConnection [HttpServer] - new connection [HttpServer-0.0.0.0:8888#850] from 43.143.228.48:38306 - TcpServer.cc:76
+2023/02/12 11:37:562594 INFO  TcpConnection::ctor[HttpServer-0.0.0.0:8888#850] at fd =861 - TcpConnection.cc:39
+2023/02/12 11:37:562619 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:562628 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:562641 TRACE printActiveChannels {11: IN }  - EventLoop.cc:198
+2023/02/12 11:37:562648 TRACE handleEventWithGuard 11: IN  - Channel.cc:91
+2023/02/12 11:37:562675 TRACE poll fd total count 4 - EPollPoller.cc:26
+2023/02/12 11:37:562681 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:562685 TRACE printActiveChannels {861: IN }  - EventLoop.cc:198
+2023/02/12 11:37:562690 TRACE handleEventWithGuard 861: IN  - Channel.cc:91
+2023/02/12 11:37:563824 TRACE poll fd total count 4 - EPollPoller.cc:26
+2023/02/12 11:37:563838 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:563844 TRACE printActiveChannels {861: IN HUP }  - EventLoop.cc:198
+2023/02/12 11:37:563851 TRACE handleEventWithGuard 861: IN HUP  - Channel.cc:91
+2023/02/12 11:37:563859 TRACE handleClose handleClose fd = 861 state = kDisconnecting - TcpConnection.cc:219
+2023/02/12 11:37:563871 DEBUG onConnection HttpServer-0.0.0.0:8888#850 is down - HttpConnection.cc:31
+2023/02/12 11:37:563888 TRACE poll fd total count 4 - EPollPoller.cc:26
+2023/02/12 11:37:563899 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:563912 TRACE printActiveChannels {6: IN }  - EventLoop.cc:198
+2023/02/12 11:37:563919 TRACE handleEventWithGuard 6: IN  - Channel.cc:91
+2023/02/12 11:37:563928 INFO  TcpServer::removeConnectionInLoop [HttpServer] - connection HttpServer-0.0.0.0:8888#850 - TcpServer.cc:104
+2023/02/12 11:37:563944 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:563950 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:563960 TRACE printActiveChannels {11: IN }  - EventLoop.cc:198
+2023/02/12 11:37:563967 TRACE handleEventWithGuard 11: IN  - Channel.cc:91
+2023/02/12 11:37:563978 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:565544 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:565564 TRACE printActiveChannels {7: IN }  - EventLoop.cc:198
+2023/02/12 11:37:565574 TRACE handleEventWithGuard 7: IN  - Channel.cc:91
+2023/02/12 11:37:565590 INFO  TcpServer::newConnection [HttpServer] - new connection [HttpServer-0.0.0.0:8888#851] from 43.143.228.48:38308 - TcpServer.cc:76
+2023/02/12 11:37:565607 INFO  TcpConnection::ctor[HttpServer-0.0.0.0:8888#851] at fd =862 - TcpConnection.cc:39
+2023/02/12 11:37:565631 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:565638 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:565651 TRACE printActiveChannels {11: IN }  - EventLoop.cc:198
+2023/02/12 11:37:565658 TRACE handleEventWithGuard 11: IN  - Channel.cc:91
+2023/02/12 11:37:565685 TRACE poll fd total count 4 - EPollPoller.cc:26
+2023/02/12 11:37:565691 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:565695 TRACE printActiveChannels {862: IN }  - EventLoop.cc:198
+2023/02/12 11:37:565700 TRACE handleEventWithGuard 862: IN  - Channel.cc:91
+2023/02/12 11:37:566848 TRACE poll fd total count 4 - EPollPoller.cc:26
+2023/02/12 11:37:566862 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:566868 TRACE printActiveChannels {862: IN HUP }  - EventLoop.cc:198
+2023/02/12 11:37:566875 TRACE handleEventWithGuard 862: IN HUP  - Channel.cc:91
+2023/02/12 11:37:566883 TRACE handleClose handleClose fd = 862 state = kDisconnecting - TcpConnection.cc:219
+2023/02/12 11:37:566894 DEBUG onConnection HttpServer-0.0.0.0:8888#851 is down - HttpConnection.cc:31
+2023/02/12 11:37:566911 TRACE poll fd total count 4 - EPollPoller.cc:26
+2023/02/12 11:37:566923 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:566935 TRACE printActiveChannels {6: IN }  - EventLoop.cc:198
+2023/02/12 11:37:566942 TRACE handleEventWithGuard 6: IN  - Channel.cc:91
+2023/02/12 11:37:566951 INFO  TcpServer::removeConnectionInLoop [HttpServer] - connection HttpServer-0.0.0.0:8888#851 - TcpServer.cc:104
+2023/02/12 11:37:566967 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:566973 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:566983 TRACE printActiveChannels {11: IN }  - EventLoop.cc:198
+2023/02/12 11:37:566990 TRACE handleEventWithGuard 11: IN  - Channel.cc:91
+2023/02/12 11:37:567001 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:574518 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:574552 TRACE printActiveChannels {7: IN }  - EventLoop.cc:198
+2023/02/12 11:37:574566 TRACE handleEventWithGuard 7: IN  - Channel.cc:91
+2023/02/12 11:37:574586 INFO  TcpServer::newConnection [HttpServer] - new connection [HttpServer-0.0.0.0:8888#852] from 43.143.228.48:38324 - TcpServer.cc:76
+2023/02/12 11:37:574604 INFO  TcpConnection::ctor[HttpServer-0.0.0.0:8888#852] at fd =863 - TcpConnection.cc:39
+2023/02/12 11:37:574628 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:574634 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:574647 TRACE printActiveChannels {11: IN }  - EventLoop.cc:198
+2023/02/12 11:37:574655 TRACE handleEventWithGuard 11: IN  - Channel.cc:91
+2023/02/12 11:37:574682 TRACE poll fd total count 4 - EPollPoller.cc:26
+2023/02/12 11:37:574688 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:574692 TRACE printActiveChannels {863: IN }  - EventLoop.cc:198
+2023/02/12 11:37:574697 TRACE handleEventWithGuard 863: IN  - Channel.cc:91
+2023/02/12 11:37:575835 TRACE poll fd total count 4 - EPollPoller.cc:26
+2023/02/12 11:37:575849 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:575855 TRACE printActiveChannels {863: IN HUP }  - EventLoop.cc:198
+2023/02/12 11:37:575862 TRACE handleEventWithGuard 863: IN HUP  - Channel.cc:91
+2023/02/12 11:37:575870 TRACE handleClose handleClose fd = 863 state = kDisconnecting - TcpConnection.cc:219
+2023/02/12 11:37:575881 DEBUG onConnection HttpServer-0.0.0.0:8888#852 is down - HttpConnection.cc:31
+2023/02/12 11:37:575899 TRACE poll fd total count 4 - EPollPoller.cc:26
+2023/02/12 11:37:575910 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:575923 TRACE printActiveChannels {6: IN }  - EventLoop.cc:198
+2023/02/12 11:37:575930 TRACE handleEventWithGuard 6: IN  - Channel.cc:91
+2023/02/12 11:37:575938 INFO  TcpServer::removeConnectionInLoop [HttpServer] - connection HttpServer-0.0.0.0:8888#852 - TcpServer.cc:104
+2023/02/12 11:37:575954 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:575960 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:575971 TRACE printActiveChannels {11: IN }  - EventLoop.cc:198
+2023/02/12 11:37:575978 TRACE handleEventWithGuard 11: IN  - Channel.cc:91
+2023/02/12 11:37:575989 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:586569 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:586589 TRACE printActiveChannels {7: IN }  - EventLoop.cc:198
+2023/02/12 11:37:586599 TRACE handleEventWithGuard 7: IN  - Channel.cc:91
+2023/02/12 11:37:586615 INFO  TcpServer::newConnection [HttpServer] - new connection [HttpServer-0.0.0.0:8888#853] from 43.143.228.48:38326 - TcpServer.cc:76
+2023/02/12 11:37:586632 INFO  TcpConnection::ctor[HttpServer-0.0.0.0:8888#853] at fd =864 - TcpConnection.cc:39
+2023/02/12 11:37:586656 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:586664 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:586677 TRACE printActiveChannels {11: IN }  - EventLoop.cc:198
+2023/02/12 11:37:586686 TRACE handleEventWithGuard 11: IN  - Channel.cc:91
+2023/02/12 11:37:586712 TRACE poll fd total count 4 - EPollPoller.cc:26
+2023/02/12 11:37:586719 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:586723 TRACE printActiveChannels {864: IN }  - EventLoop.cc:198
+2023/02/12 11:37:586728 TRACE handleEventWithGuard 864: IN  - Channel.cc:91
+2023/02/12 11:37:587877 TRACE poll fd total count 4 - EPollPoller.cc:26
+2023/02/12 11:37:587889 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:587895 TRACE printActiveChannels {864: IN HUP }  - EventLoop.cc:198
+2023/02/12 11:37:587902 TRACE handleEventWithGuard 864: IN HUP  - Channel.cc:91
+2023/02/12 11:37:587910 TRACE handleClose handleClose fd = 864 state = kDisconnecting - TcpConnection.cc:219
+2023/02/12 11:37:587921 DEBUG onConnection HttpServer-0.0.0.0:8888#853 is down - HttpConnection.cc:31
+2023/02/12 11:37:587938 TRACE poll fd total count 4 - EPollPoller.cc:26
+2023/02/12 11:37:587953 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:587965 TRACE printActiveChannels {6: IN }  - EventLoop.cc:198
+2023/02/12 11:37:587972 TRACE handleEventWithGuard 6: IN  - Channel.cc:91
+2023/02/12 11:37:587981 INFO  TcpServer::removeConnectionInLoop [HttpServer] - connection HttpServer-0.0.0.0:8888#853 - TcpServer.cc:104
+2023/02/12 11:37:587996 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:588003 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:588013 TRACE printActiveChannels {11: IN }  - EventLoop.cc:198
+2023/02/12 11:37:588021 TRACE handleEventWithGuard 11: IN  - Channel.cc:91
+2023/02/12 11:37:588032 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:613334 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:613358 TRACE printActiveChannels {7: IN }  - EventLoop.cc:198
+2023/02/12 11:37:613369 TRACE handleEventWithGuard 7: IN  - Channel.cc:91
+2023/02/12 11:37:613388 INFO  TcpServer::newConnection [HttpServer] - new connection [HttpServer-0.0.0.0:8888#854] from 43.143.228.48:38168 - TcpServer.cc:76
+2023/02/12 11:37:613406 INFO  TcpConnection::ctor[HttpServer-0.0.0.0:8888#854] at fd =865 - TcpConnection.cc:39
+2023/02/12 11:37:613432 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:613439 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:613456 TRACE printActiveChannels {11: IN }  - EventLoop.cc:198
+2023/02/12 11:37:613441 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:613467 TRACE handleEventWithGuard 11: IN  - Channel.cc:91
+2023/02/12 11:37:613471 TRACE printActiveChannels {7: IN }  - EventLoop.cc:198
+2023/02/12 11:37:613480 TRACE handleEventWithGuard 7: IN  - Channel.cc:91
+2023/02/12 11:37:613496 INFO  TcpServer::newConnection [HttpServer] - new connection [HttpServer-0.0.0.0:8888#855] from 43.143.228.48:38180 - TcpServer.cc:76
+2023/02/12 11:37:613506 TRACE poll fd total count 4 - EPollPoller.cc:26
+2023/02/12 11:37:613514 INFO  TcpConnection::ctor[HttpServer-0.0.0.0:8888#855] at fd =866 - TcpConnection.cc:39
+2023/02/12 11:37:613517 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:613533 TRACE printActiveChannels {865: IN }  - EventLoop.cc:198
+2023/02/12 11:37:613540 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:613541 TRACE handleEventWithGuard 865: IN  - Channel.cc:91
+2023/02/12 11:37:614793 TRACE poll fd total count 5 - EPollPoller.cc:26
+2023/02/12 11:37:614808 TRACE poll 3 events happened - EPollPoller.cc:32
+2023/02/12 11:37:614814 TRACE printActiveChannels {865: IN HUP }  - EventLoop.cc:198
+2023/02/12 11:37:614821 TRACE printActiveChannels {11: IN }  - EventLoop.cc:198
+2023/02/12 11:37:614825 TRACE printActiveChannels {866: IN }  - EventLoop.cc:198
+2023/02/12 11:37:614830 TRACE handleEventWithGuard 865: IN HUP  - Channel.cc:91
+2023/02/12 11:37:614839 TRACE handleClose handleClose fd = 865 state = kDisconnecting - TcpConnection.cc:219
+2023/02/12 11:37:614849 DEBUG onConnection HttpServer-0.0.0.0:8888#854 is down - HttpConnection.cc:31
+2023/02/12 11:37:614864 TRACE handleEventWithGuard 11: IN  - Channel.cc:91
+2023/02/12 11:37:614875 TRACE handleEventWithGuard 866: IN  - Channel.cc:91
+2023/02/12 11:37:614878 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:614891 TRACE printActiveChannels {6: IN }  - EventLoop.cc:198
+2023/02/12 11:37:614901 TRACE handleEventWithGuard 6: IN  - Channel.cc:91
+2023/02/12 11:37:614912 INFO  TcpServer::removeConnectionInLoop [HttpServer] - connection HttpServer-0.0.0.0:8888#854 - TcpServer.cc:104
+2023/02/12 11:37:614927 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:616173 TRACE poll fd total count 4 - EPollPoller.cc:26
+2023/02/12 11:37:616187 TRACE poll 2 events happened - EPollPoller.cc:32
+2023/02/12 11:37:616192 TRACE printActiveChannels {11: IN }  - EventLoop.cc:198
+2023/02/12 11:37:616199 TRACE printActiveChannels {866: IN HUP }  - EventLoop.cc:198
+2023/02/12 11:37:616203 TRACE handleEventWithGuard 11: IN  - Channel.cc:91
+2023/02/12 11:37:616210 TRACE handleEventWithGuard 866: IN HUP  - Channel.cc:91
+2023/02/12 11:37:616217 TRACE handleClose handleClose fd = 866 state = kDisconnecting - TcpConnection.cc:219
+2023/02/12 11:37:616228 DEBUG onConnection HttpServer-0.0.0.0:8888#855 is down - HttpConnection.cc:31
+2023/02/12 11:37:616246 TRACE poll fd total count 4 - EPollPoller.cc:26
+2023/02/12 11:37:616294 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:616309 TRACE printActiveChannels {6: IN }  - EventLoop.cc:198
+2023/02/12 11:37:616317 TRACE handleEventWithGuard 6: IN  - Channel.cc:91
+2023/02/12 11:37:616326 INFO  TcpServer::removeConnectionInLoop [HttpServer] - connection HttpServer-0.0.0.0:8888#855 - TcpServer.cc:104
+2023/02/12 11:37:616342 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:616349 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:616360 TRACE printActiveChannels {11: IN }  - EventLoop.cc:198
+2023/02/12 11:37:616367 TRACE handleEventWithGuard 11: IN  - Channel.cc:91
+2023/02/12 11:37:616379 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:616521 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:616532 TRACE printActiveChannels {7: IN }  - EventLoop.cc:198
+2023/02/12 11:37:616539 TRACE handleEventWithGuard 7: IN  - Channel.cc:91
+2023/02/12 11:37:616554 INFO  TcpServer::newConnection [HttpServer] - new connection [HttpServer-0.0.0.0:8888#856] from 43.143.228.48:38330 - TcpServer.cc:76
+2023/02/12 11:37:616571 INFO  TcpConnection::ctor[HttpServer-0.0.0.0:8888#856] at fd =867 - TcpConnection.cc:39
+2023/02/12 11:37:616615 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:616655 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:616665 TRACE printActiveChannels {11: IN }  - EventLoop.cc:198
+2023/02/12 11:37:616672 TRACE handleEventWithGuard 11: IN  - Channel.cc:91
+2023/02/12 11:37:616700 TRACE poll fd total count 4 - EPollPoller.cc:26
+2023/02/12 11:37:616707 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:616711 TRACE printActiveChannels {867: IN }  - EventLoop.cc:198
+2023/02/12 11:37:616716 TRACE handleEventWithGuard 867: IN  - Channel.cc:91
+2023/02/12 11:37:617872 TRACE poll fd total count 4 - EPollPoller.cc:26
+2023/02/12 11:37:617885 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:617890 TRACE printActiveChannels {867: IN HUP }  - EventLoop.cc:198
+2023/02/12 11:37:617897 TRACE handleEventWithGuard 867: IN HUP  - Channel.cc:91
+2023/02/12 11:37:617905 TRACE handleClose handleClose fd = 867 state = kDisconnecting - TcpConnection.cc:219
+2023/02/12 11:37:617916 DEBUG onConnection HttpServer-0.0.0.0:8888#856 is down - HttpConnection.cc:31
+2023/02/12 11:37:617933 TRACE poll fd total count 4 - EPollPoller.cc:26
+2023/02/12 11:37:617945 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:617958 TRACE printActiveChannels {6: IN }  - EventLoop.cc:198
+2023/02/12 11:37:617964 TRACE handleEventWithGuard 6: IN  - Channel.cc:91
+2023/02/12 11:37:617973 INFO  TcpServer::removeConnectionInLoop [HttpServer] - connection HttpServer-0.0.0.0:8888#856 - TcpServer.cc:104
+2023/02/12 11:37:617989 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:617995 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:618005 TRACE printActiveChannels {11: IN }  - EventLoop.cc:198
+2023/02/12 11:37:618012 TRACE handleEventWithGuard 11: IN  - Channel.cc:91
+2023/02/12 11:37:618023 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:626165 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:626186 TRACE printActiveChannels {7: IN }  - EventLoop.cc:198
+2023/02/12 11:37:626195 TRACE handleEventWithGuard 7: IN  - Channel.cc:91
+2023/02/12 11:37:626211 INFO  TcpServer::newConnection [HttpServer] - new connection [HttpServer-0.0.0.0:8888#857] from 43.143.228.48:37478 - TcpServer.cc:76
+2023/02/12 11:37:626229 INFO  TcpConnection::ctor[HttpServer-0.0.0.0:8888#857] at fd =868 - TcpConnection.cc:39
+2023/02/12 11:37:626265 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:626291 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:626302 TRACE printActiveChannels {11: IN }  - EventLoop.cc:198
+2023/02/12 11:37:626309 TRACE handleEventWithGuard 11: IN  - Channel.cc:91
+2023/02/12 11:37:626337 TRACE poll fd total count 4 - EPollPoller.cc:26
+2023/02/12 11:37:626344 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:626348 TRACE printActiveChannels {868: IN }  - EventLoop.cc:198
+2023/02/12 11:37:626353 TRACE handleEventWithGuard 868: IN  - Channel.cc:91
+2023/02/12 11:37:627544 TRACE poll fd total count 4 - EPollPoller.cc:26
+2023/02/12 11:37:627557 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:627563 TRACE printActiveChannels {868: IN HUP }  - EventLoop.cc:198
+2023/02/12 11:37:627570 TRACE handleEventWithGuard 868: IN HUP  - Channel.cc:91
+2023/02/12 11:37:627578 TRACE handleClose handleClose fd = 868 state = kDisconnecting - TcpConnection.cc:219
+2023/02/12 11:37:627590 DEBUG onConnection HttpServer-0.0.0.0:8888#857 is down - HttpConnection.cc:31
+2023/02/12 11:37:627607 TRACE poll fd total count 4 - EPollPoller.cc:26
+2023/02/12 11:37:627619 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:627632 TRACE printActiveChannels {6: IN }  - EventLoop.cc:198
+2023/02/12 11:37:627642 TRACE handleEventWithGuard 6: IN  - Channel.cc:91
+2023/02/12 11:37:627652 INFO  TcpServer::removeConnectionInLoop [HttpServer] - connection HttpServer-0.0.0.0:8888#857 - TcpServer.cc:104
+2023/02/12 11:37:627668 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:627674 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:627684 TRACE printActiveChannels {11: IN }  - EventLoop.cc:198
+2023/02/12 11:37:627692 TRACE handleEventWithGuard 11: IN  - Channel.cc:91
+2023/02/12 11:37:627703 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:659384 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:659411 TRACE printActiveChannels {7: IN }  - EventLoop.cc:198
+2023/02/12 11:37:659423 TRACE handleEventWithGuard 7: IN  - Channel.cc:91
+2023/02/12 11:37:659441 INFO  TcpServer::newConnection [HttpServer] - new connection [HttpServer-0.0.0.0:8888#858] from 43.143.228.48:38376 - TcpServer.cc:76
+2023/02/12 11:37:659459 INFO  TcpConnection::ctor[HttpServer-0.0.0.0:8888#858] at fd =869 - TcpConnection.cc:39
+2023/02/12 11:37:659485 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:659491 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:659505 TRACE printActiveChannels {11: IN }  - EventLoop.cc:198
+2023/02/12 11:37:659529 TRACE handleEventWithGuard 11: IN  - Channel.cc:91
+2023/02/12 11:37:659536 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:659546 TRACE printActiveChannels {7: IN }  - EventLoop.cc:198
+2023/02/12 11:37:659554 TRACE handleEventWithGuard 7: IN  - Channel.cc:91
+2023/02/12 11:37:659571 INFO  TcpServer::newConnection [HttpServer] - new connection [HttpServer-0.0.0.0:8888#859] from 43.143.228.48:38392 - TcpServer.cc:76
+2023/02/12 11:37:659591 INFO  TcpConnection::ctor[HttpServer-0.0.0.0:8888#859] at fd =870 - TcpConnection.cc:39
+2023/02/12 11:37:659600 TRACE poll fd total count 4 - EPollPoller.cc:26
+2023/02/12 11:37:659611 TRACE poll 2 events happened - EPollPoller.cc:32
+2023/02/12 11:37:659613 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:659624 TRACE printActiveChannels {11: IN }  - EventLoop.cc:198
+2023/02/12 11:37:659637 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:659648 TRACE printActiveChannels {869: IN }  - EventLoop.cc:198
+2023/02/12 11:37:659652 TRACE printActiveChannels {7: IN }  - EventLoop.cc:198
+2023/02/12 11:37:659656 TRACE handleEventWithGuard 11: IN  - Channel.cc:91
+2023/02/12 11:37:659661 TRACE handleEventWithGuard 7: IN  - Channel.cc:91
+2023/02/12 11:37:659667 TRACE handleEventWithGuard 869: IN  - Channel.cc:91
+2023/02/12 11:37:659682 INFO  TcpServer::newConnection [HttpServer] - new connection [HttpServer-0.0.0.0:8888#860] from 43.143.228.48:38398 - TcpServer.cc:76
+2023/02/12 11:37:659701 INFO  TcpConnection::ctor[HttpServer-0.0.0.0:8888#860] at fd =871 - TcpConnection.cc:39
+2023/02/12 11:37:659721 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:660915 TRACE poll fd total count 6 - EPollPoller.cc:26
+2023/02/12 11:37:660930 TRACE poll 4 events happened - EPollPoller.cc:32
+2023/02/12 11:37:660935 TRACE printActiveChannels {11: IN }  - EventLoop.cc:198
+2023/02/12 11:37:660942 TRACE printActiveChannels {869: IN HUP }  - EventLoop.cc:198
+2023/02/12 11:37:660946 TRACE printActiveChannels {870: IN }  - EventLoop.cc:198
+2023/02/12 11:37:660950 TRACE printActiveChannels {871: IN }  - EventLoop.cc:198
+2023/02/12 11:37:660955 TRACE handleEventWithGuard 11: IN  - Channel.cc:91
+2023/02/12 11:37:660961 TRACE handleEventWithGuard 869: IN HUP  - Channel.cc:91
+2023/02/12 11:37:660970 TRACE handleClose handleClose fd = 869 state = kDisconnecting - TcpConnection.cc:219
+2023/02/12 11:37:660980 DEBUG onConnection HttpServer-0.0.0.0:8888#858 is down - HttpConnection.cc:31
+2023/02/12 11:37:660995 TRACE handleEventWithGuard 870: IN  - Channel.cc:91
+2023/02/12 11:37:661004 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:661018 TRACE printActiveChannels {6: IN }  - EventLoop.cc:198
+2023/02/12 11:37:661027 TRACE handleEventWithGuard 6: IN  - Channel.cc:91
+2023/02/12 11:37:661039 INFO  TcpServer::removeConnectionInLoop [HttpServer] - connection HttpServer-0.0.0.0:8888#858 - TcpServer.cc:104
+2023/02/12 11:37:661054 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:662255 TRACE handleEventWithGuard 871: IN  - Channel.cc:91
+2023/02/12 11:37:662641 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:662657 TRACE printActiveChannels {7: IN }  - EventLoop.cc:198
+2023/02/12 11:37:662668 TRACE handleEventWithGuard 7: IN  - Channel.cc:91
+2023/02/12 11:37:662713 INFO  TcpServer::newConnection [HttpServer] - new connection [HttpServer-0.0.0.0:8888#861] from 43.143.228.48:38400 - TcpServer.cc:76
+2023/02/12 11:37:662735 INFO  TcpConnection::ctor[HttpServer-0.0.0.0:8888#861] at fd =872 - TcpConnection.cc:39
+2023/02/12 11:37:662758 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:663507 TRACE poll fd total count 6 - EPollPoller.cc:26
+2023/02/12 11:37:663520 TRACE poll 4 events happened - EPollPoller.cc:32
+2023/02/12 11:37:663526 TRACE printActiveChannels {11: IN }  - EventLoop.cc:198
+2023/02/12 11:37:663532 TRACE printActiveChannels {870: IN HUP }  - EventLoop.cc:198
+2023/02/12 11:37:663536 TRACE printActiveChannels {871: IN HUP }  - EventLoop.cc:198
+2023/02/12 11:37:663540 TRACE printActiveChannels {872: IN }  - EventLoop.cc:198
+2023/02/12 11:37:663544 TRACE handleEventWithGuard 11: IN  - Channel.cc:91
+2023/02/12 11:37:663551 TRACE handleEventWithGuard 870: IN HUP  - Channel.cc:91
+2023/02/12 11:37:663559 TRACE handleClose handleClose fd = 870 state = kDisconnecting - TcpConnection.cc:219
+2023/02/12 11:37:663568 DEBUG onConnection HttpServer-0.0.0.0:8888#859 is down - HttpConnection.cc:31
+2023/02/12 11:37:663585 TRACE handleEventWithGuard 871: IN HUP  - Channel.cc:91
+2023/02/12 11:37:663595 TRACE handleClose handleClose fd = 871 state = kDisconnecting - TcpConnection.cc:219
+2023/02/12 11:37:663597 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:663607 DEBUG onConnection HttpServer-0.0.0.0:8888#860 is down - HttpConnection.cc:31
+2023/02/12 11:37:663612 TRACE printActiveChannels {6: IN }  - EventLoop.cc:198
+2023/02/12 11:37:663620 TRACE handleEventWithGuard 872: IN  - Channel.cc:91
+2023/02/12 11:37:663623 TRACE handleEventWithGuard 6: IN  - Channel.cc:91
+2023/02/12 11:37:663648 INFO  TcpServer::removeConnectionInLoop [HttpServer] - connection HttpServer-0.0.0.0:8888#859 - TcpServer.cc:104
+2023/02/12 11:37:663662 INFO  TcpServer::removeConnectionInLoop [HttpServer] - connection HttpServer-0.0.0.0:8888#860 - TcpServer.cc:104
+2023/02/12 11:37:663674 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:664835 TRACE poll fd total count 4 - EPollPoller.cc:26
+2023/02/12 11:37:664848 TRACE poll 2 events happened - EPollPoller.cc:32
+2023/02/12 11:37:664852 TRACE printActiveChannels {11: IN }  - EventLoop.cc:198
+2023/02/12 11:37:664859 TRACE printActiveChannels {872: IN HUP }  - EventLoop.cc:198
+2023/02/12 11:37:664881 TRACE handleEventWithGuard 11: IN  - Channel.cc:91
+2023/02/12 11:37:664889 TRACE handleEventWithGuard 872: IN HUP  - Channel.cc:91
+2023/02/12 11:37:664897 TRACE handleClose handleClose fd = 872 state = kDisconnecting - TcpConnection.cc:219
+2023/02/12 11:37:664909 DEBUG onConnection HttpServer-0.0.0.0:8888#861 is down - HttpConnection.cc:31
+2023/02/12 11:37:664924 TRACE poll fd total count 4 - EPollPoller.cc:26
+2023/02/12 11:37:664933 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:664946 TRACE printActiveChannels {6: IN }  - EventLoop.cc:198
+2023/02/12 11:37:664953 TRACE handleEventWithGuard 6: IN  - Channel.cc:91
+2023/02/12 11:37:664961 INFO  TcpServer::removeConnectionInLoop [HttpServer] - connection HttpServer-0.0.0.0:8888#861 - TcpServer.cc:104
+2023/02/12 11:37:664977 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:664983 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:664992 TRACE printActiveChannels {11: IN }  - EventLoop.cc:198
+2023/02/12 11:37:664999 TRACE handleEventWithGuard 11: IN  - Channel.cc:91
+2023/02/12 11:37:665010 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:678671 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:678691 TRACE printActiveChannels {7: IN }  - EventLoop.cc:198
+2023/02/12 11:37:678701 TRACE handleEventWithGuard 7: IN  - Channel.cc:91
+2023/02/12 11:37:678717 INFO  TcpServer::newConnection [HttpServer] - new connection [HttpServer-0.0.0.0:8888#862] from 43.143.228.48:38410 - TcpServer.cc:76
+2023/02/12 11:37:678735 INFO  TcpConnection::ctor[HttpServer-0.0.0.0:8888#862] at fd =873 - TcpConnection.cc:39
+2023/02/12 11:37:678761 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:678770 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:678783 TRACE printActiveChannels {11: IN }  - EventLoop.cc:198
+2023/02/12 11:37:678790 TRACE handleEventWithGuard 11: IN  - Channel.cc:91
+2023/02/12 11:37:678827 TRACE poll fd total count 4 - EPollPoller.cc:26
+2023/02/12 11:37:678834 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:678838 TRACE printActiveChannels {873: IN }  - EventLoop.cc:198
+2023/02/12 11:37:678844 TRACE handleEventWithGuard 873: IN  - Channel.cc:91
+2023/02/12 11:37:680005 TRACE poll fd total count 4 - EPollPoller.cc:26
+2023/02/12 11:37:680019 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:680024 TRACE printActiveChannels {873: IN HUP }  - EventLoop.cc:198
+2023/02/12 11:37:680032 TRACE handleEventWithGuard 873: IN HUP  - Channel.cc:91
+2023/02/12 11:37:680040 TRACE handleClose handleClose fd = 873 state = kDisconnecting - TcpConnection.cc:219
+2023/02/12 11:37:680051 DEBUG onConnection HttpServer-0.0.0.0:8888#862 is down - HttpConnection.cc:31
+2023/02/12 11:37:680068 TRACE poll fd total count 4 - EPollPoller.cc:26
+2023/02/12 11:37:680078 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:680091 TRACE printActiveChannels {6: IN }  - EventLoop.cc:198
+2023/02/12 11:37:680099 TRACE handleEventWithGuard 6: IN  - Channel.cc:91
+2023/02/12 11:37:680107 INFO  TcpServer::removeConnectionInLoop [HttpServer] - connection HttpServer-0.0.0.0:8888#862 - TcpServer.cc:104
+2023/02/12 11:37:680123 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:680129 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:680139 TRACE printActiveChannels {11: IN }  - EventLoop.cc:198
+2023/02/12 11:37:680146 TRACE handleEventWithGuard 11: IN  - Channel.cc:91
+2023/02/12 11:37:680157 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:694571 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:694595 TRACE printActiveChannels {7: IN }  - EventLoop.cc:198
+2023/02/12 11:37:694608 TRACE handleEventWithGuard 7: IN  - Channel.cc:91
+2023/02/12 11:37:694632 INFO  TcpServer::newConnection [HttpServer] - new connection [HttpServer-0.0.0.0:8888#863] from 43.143.228.48:38424 - TcpServer.cc:76
+2023/02/12 11:37:694669 INFO  TcpConnection::ctor[HttpServer-0.0.0.0:8888#863] at fd =874 - TcpConnection.cc:39
+2023/02/12 11:37:694696 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:694703 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:694716 TRACE printActiveChannels {11: IN }  - EventLoop.cc:198
+2023/02/12 11:37:694724 TRACE handleEventWithGuard 11: IN  - Channel.cc:91
+2023/02/12 11:37:694752 TRACE poll fd total count 4 - EPollPoller.cc:26
+2023/02/12 11:37:694759 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:694763 TRACE printActiveChannels {874: IN }  - EventLoop.cc:198
+2023/02/12 11:37:694768 TRACE handleEventWithGuard 874: IN  - Channel.cc:91
+2023/02/12 11:37:695421 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:695440 TRACE printActiveChannels {7: IN }  - EventLoop.cc:198
+2023/02/12 11:37:695451 TRACE handleEventWithGuard 7: IN  - Channel.cc:91
+2023/02/12 11:37:695528 INFO  TcpServer::newConnection [HttpServer] - new connection [HttpServer-0.0.0.0:8888#864] from 43.143.228.48:38430 - TcpServer.cc:76
+2023/02/12 11:37:695550 INFO  TcpConnection::ctor[HttpServer-0.0.0.0:8888#864] at fd =875 - TcpConnection.cc:39
+2023/02/12 11:37:695574 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:696092 TRACE poll fd total count 5 - EPollPoller.cc:26
+2023/02/12 11:37:696104 TRACE poll 3 events happened - EPollPoller.cc:32
+2023/02/12 11:37:696109 TRACE printActiveChannels {874: IN HUP }  - EventLoop.cc:198
+2023/02/12 11:37:696116 TRACE printActiveChannels {11: IN }  - EventLoop.cc:198
+2023/02/12 11:37:696121 TRACE printActiveChannels {875: IN }  - EventLoop.cc:198
+2023/02/12 11:37:696125 TRACE handleEventWithGuard 874: IN HUP  - Channel.cc:91
+2023/02/12 11:37:696133 TRACE handleClose handleClose fd = 874 state = kDisconnecting - TcpConnection.cc:219
+2023/02/12 11:37:696143 DEBUG onConnection HttpServer-0.0.0.0:8888#863 is down - HttpConnection.cc:31
+2023/02/12 11:37:696160 TRACE handleEventWithGuard 11: IN  - Channel.cc:91
+2023/02/12 11:37:696170 TRACE handleEventWithGuard 875: IN  - Channel.cc:91
+2023/02/12 11:37:696171 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:696194 TRACE printActiveChannels {6: IN }  - EventLoop.cc:198
+2023/02/12 11:37:696203 TRACE handleEventWithGuard 6: IN  - Channel.cc:91
+2023/02/12 11:37:696215 INFO  TcpServer::removeConnectionInLoop [HttpServer] - connection HttpServer-0.0.0.0:8888#863 - TcpServer.cc:104
+2023/02/12 11:37:696229 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:697403 TRACE poll fd total count 4 - EPollPoller.cc:26
+2023/02/12 11:37:697416 TRACE poll 2 events happened - EPollPoller.cc:32
+2023/02/12 11:37:697421 TRACE printActiveChannels {11: IN }  - EventLoop.cc:198
+2023/02/12 11:37:697428 TRACE printActiveChannels {875: IN HUP }  - EventLoop.cc:198
+2023/02/12 11:37:697432 TRACE handleEventWithGuard 11: IN  - Channel.cc:91
+2023/02/12 11:37:697439 TRACE handleEventWithGuard 875: IN HUP  - Channel.cc:91
+2023/02/12 11:37:697446 TRACE handleClose handleClose fd = 875 state = kDisconnecting - TcpConnection.cc:219
+2023/02/12 11:37:697457 DEBUG onConnection HttpServer-0.0.0.0:8888#864 is down - HttpConnection.cc:31
+2023/02/12 11:37:697474 TRACE poll fd total count 4 - EPollPoller.cc:26
+2023/02/12 11:37:697486 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:697499 TRACE printActiveChannels {6: IN }  - EventLoop.cc:198
+2023/02/12 11:37:697506 TRACE handleEventWithGuard 6: IN  - Channel.cc:91
+2023/02/12 11:37:697514 INFO  TcpServer::removeConnectionInLoop [HttpServer] - connection HttpServer-0.0.0.0:8888#864 - TcpServer.cc:104
+2023/02/12 11:37:697530 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:697536 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:697546 TRACE printActiveChannels {11: IN }  - EventLoop.cc:198
+2023/02/12 11:37:697553 TRACE handleEventWithGuard 11: IN  - Channel.cc:91
+2023/02/12 11:37:697564 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:723434 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:723460 TRACE printActiveChannels {7: IN }  - EventLoop.cc:198
+2023/02/12 11:37:723472 TRACE handleEventWithGuard 7: IN  - Channel.cc:91
+2023/02/12 11:37:723491 INFO  TcpServer::newConnection [HttpServer] - new connection [HttpServer-0.0.0.0:8888#865] from 43.143.228.48:38438 - TcpServer.cc:76
+2023/02/12 11:37:723510 INFO  TcpConnection::ctor[HttpServer-0.0.0.0:8888#865] at fd =876 - TcpConnection.cc:39
+2023/02/12 11:37:723534 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:723541 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:723555 TRACE printActiveChannels {11: IN }  - EventLoop.cc:198
+2023/02/12 11:37:723564 TRACE handleEventWithGuard 11: IN  - Channel.cc:91
+2023/02/12 11:37:723591 TRACE poll fd total count 4 - EPollPoller.cc:26
+2023/02/12 11:37:723598 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:723602 TRACE printActiveChannels {876: IN }  - EventLoop.cc:198
+2023/02/12 11:37:723607 TRACE handleEventWithGuard 876: IN  - Channel.cc:91
+2023/02/12 11:37:724745 TRACE poll fd total count 4 - EPollPoller.cc:26
+2023/02/12 11:37:724758 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:724763 TRACE printActiveChannels {876: IN HUP }  - EventLoop.cc:198
+2023/02/12 11:37:724771 TRACE handleEventWithGuard 876: IN HUP  - Channel.cc:91
+2023/02/12 11:37:724778 TRACE handleClose handleClose fd = 876 state = kDisconnecting - TcpConnection.cc:219
+2023/02/12 11:37:724790 DEBUG onConnection HttpServer-0.0.0.0:8888#865 is down - HttpConnection.cc:31
+2023/02/12 11:37:724808 TRACE poll fd total count 4 - EPollPoller.cc:26
+2023/02/12 11:37:724835 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:724846 TRACE printActiveChannels {6: IN }  - EventLoop.cc:198
+2023/02/12 11:37:724853 TRACE handleEventWithGuard 6: IN  - Channel.cc:91
+2023/02/12 11:37:724875 INFO  TcpServer::removeConnectionInLoop [HttpServer] - connection HttpServer-0.0.0.0:8888#865 - TcpServer.cc:104
+2023/02/12 11:37:724896 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:724900 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:724911 TRACE printActiveChannels {11: IN }  - EventLoop.cc:198
+2023/02/12 11:37:724919 TRACE handleEventWithGuard 11: IN  - Channel.cc:91
+2023/02/12 11:37:724931 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:738676 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:738699 TRACE printActiveChannels {7: IN }  - EventLoop.cc:198
+2023/02/12 11:37:738709 TRACE handleEventWithGuard 7: IN  - Channel.cc:91
+2023/02/12 11:37:738726 INFO  TcpServer::newConnection [HttpServer] - new connection [HttpServer-0.0.0.0:8888#866] from 43.143.228.48:38446 - TcpServer.cc:76
+2023/02/12 11:37:738744 INFO  TcpConnection::ctor[HttpServer-0.0.0.0:8888#866] at fd =877 - TcpConnection.cc:39
+2023/02/12 11:37:738768 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:738775 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:738788 TRACE printActiveChannels {11: IN }  - EventLoop.cc:198
+2023/02/12 11:37:738798 TRACE handleEventWithGuard 11: IN  - Channel.cc:91
+2023/02/12 11:37:738839 TRACE poll fd total count 4 - EPollPoller.cc:26
+2023/02/12 11:37:738846 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:738850 TRACE printActiveChannels {877: IN }  - EventLoop.cc:198
+2023/02/12 11:37:738856 TRACE handleEventWithGuard 877: IN  - Channel.cc:91
+2023/02/12 11:37:740017 TRACE poll fd total count 4 - EPollPoller.cc:26
+2023/02/12 11:37:740032 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:740038 TRACE printActiveChannels {877: IN HUP }  - EventLoop.cc:198
+2023/02/12 11:37:740045 TRACE handleEventWithGuard 877: IN HUP  - Channel.cc:91
+2023/02/12 11:37:740053 TRACE handleClose handleClose fd = 877 state = kDisconnecting - TcpConnection.cc:219
+2023/02/12 11:37:740064 DEBUG onConnection HttpServer-0.0.0.0:8888#866 is down - HttpConnection.cc:31
+2023/02/12 11:37:740081 TRACE poll fd total count 4 - EPollPoller.cc:26
+2023/02/12 11:37:740089 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:740102 TRACE printActiveChannels {6: IN }  - EventLoop.cc:198
+2023/02/12 11:37:740109 TRACE handleEventWithGuard 6: IN  - Channel.cc:91
+2023/02/12 11:37:740118 INFO  TcpServer::removeConnectionInLoop [HttpServer] - connection HttpServer-0.0.0.0:8888#866 - TcpServer.cc:104
+2023/02/12 11:37:740134 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:740139 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:740149 TRACE printActiveChannels {11: IN }  - EventLoop.cc:198
+2023/02/12 11:37:740158 TRACE handleEventWithGuard 11: IN  - Channel.cc:91
+2023/02/12 11:37:740172 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:741629 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:741650 TRACE printActiveChannels {7: IN }  - EventLoop.cc:198
+2023/02/12 11:37:741660 TRACE handleEventWithGuard 7: IN  - Channel.cc:91
+2023/02/12 11:37:741676 INFO  TcpServer::newConnection [HttpServer] - new connection [HttpServer-0.0.0.0:8888#867] from 43.143.228.48:38458 - TcpServer.cc:76
+2023/02/12 11:37:741693 INFO  TcpConnection::ctor[HttpServer-0.0.0.0:8888#867] at fd =878 - TcpConnection.cc:39
+2023/02/12 11:37:741717 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:741723 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:741736 TRACE printActiveChannels {11: IN }  - EventLoop.cc:198
+2023/02/12 11:37:741744 TRACE handleEventWithGuard 11: IN  - Channel.cc:91
+2023/02/12 11:37:741771 TRACE poll fd total count 4 - EPollPoller.cc:26
+2023/02/12 11:37:741777 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:741781 TRACE printActiveChannels {878: IN }  - EventLoop.cc:198
+2023/02/12 11:37:741786 TRACE handleEventWithGuard 878: IN  - Channel.cc:91
+2023/02/12 11:37:742920 TRACE poll fd total count 4 - EPollPoller.cc:26
+2023/02/12 11:37:742933 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:742939 TRACE printActiveChannels {878: IN HUP }  - EventLoop.cc:198
+2023/02/12 11:37:742946 TRACE handleEventWithGuard 878: IN HUP  - Channel.cc:91
+2023/02/12 11:37:742954 TRACE handleClose handleClose fd = 878 state = kDisconnecting - TcpConnection.cc:219
+2023/02/12 11:37:742965 DEBUG onConnection HttpServer-0.0.0.0:8888#867 is down - HttpConnection.cc:31
+2023/02/12 11:37:742983 TRACE poll fd total count 4 - EPollPoller.cc:26
+2023/02/12 11:37:742999 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:743011 TRACE printActiveChannels {6: IN }  - EventLoop.cc:198
+2023/02/12 11:37:743017 TRACE handleEventWithGuard 6: IN  - Channel.cc:91
+2023/02/12 11:37:743026 INFO  TcpServer::removeConnectionInLoop [HttpServer] - connection HttpServer-0.0.0.0:8888#867 - TcpServer.cc:104
+2023/02/12 11:37:743041 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:743048 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:743058 TRACE printActiveChannels {11: IN }  - EventLoop.cc:198
+2023/02/12 11:37:743066 TRACE handleEventWithGuard 11: IN  - Channel.cc:91
+2023/02/12 11:37:743077 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:750503 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:750525 TRACE printActiveChannels {7: IN }  - EventLoop.cc:198
+2023/02/12 11:37:750535 TRACE handleEventWithGuard 7: IN  - Channel.cc:91
+2023/02/12 11:37:750551 INFO  TcpServer::newConnection [HttpServer] - new connection [HttpServer-0.0.0.0:8888#868] from 43.143.228.48:38474 - TcpServer.cc:76
+2023/02/12 11:37:750568 INFO  TcpConnection::ctor[HttpServer-0.0.0.0:8888#868] at fd =879 - TcpConnection.cc:39
+2023/02/12 11:37:750592 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:750599 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:750612 TRACE printActiveChannels {11: IN }  - EventLoop.cc:198
+2023/02/12 11:37:750619 TRACE handleEventWithGuard 11: IN  - Channel.cc:91
+2023/02/12 11:37:750645 TRACE poll fd total count 4 - EPollPoller.cc:26
+2023/02/12 11:37:750652 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:750656 TRACE printActiveChannels {879: IN }  - EventLoop.cc:198
+2023/02/12 11:37:750661 TRACE handleEventWithGuard 879: IN  - Channel.cc:91
+2023/02/12 11:37:751862 TRACE poll fd total count 4 - EPollPoller.cc:26
+2023/02/12 11:37:751878 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:751884 TRACE printActiveChannels {879: IN HUP }  - EventLoop.cc:198
+2023/02/12 11:37:751891 TRACE handleEventWithGuard 879: IN HUP  - Channel.cc:91
+2023/02/12 11:37:751899 TRACE handleClose handleClose fd = 879 state = kDisconnecting - TcpConnection.cc:219
+2023/02/12 11:37:751911 DEBUG onConnection HttpServer-0.0.0.0:8888#868 is down - HttpConnection.cc:31
+2023/02/12 11:37:751928 TRACE poll fd total count 4 - EPollPoller.cc:26
+2023/02/12 11:37:751936 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:751948 TRACE printActiveChannels {6: IN }  - EventLoop.cc:198
+2023/02/12 11:37:751955 TRACE handleEventWithGuard 6: IN  - Channel.cc:91
+2023/02/12 11:37:751964 INFO  TcpServer::removeConnectionInLoop [HttpServer] - connection HttpServer-0.0.0.0:8888#868 - TcpServer.cc:104
+2023/02/12 11:37:751980 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:751985 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:751996 TRACE printActiveChannels {11: IN }  - EventLoop.cc:198
+2023/02/12 11:37:752003 TRACE handleEventWithGuard 11: IN  - Channel.cc:91
+2023/02/12 11:37:752014 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:766617 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:766639 TRACE printActiveChannels {7: IN }  - EventLoop.cc:198
+2023/02/12 11:37:766649 TRACE handleEventWithGuard 7: IN  - Channel.cc:91
+2023/02/12 11:37:766666 INFO  TcpServer::newConnection [HttpServer] - new connection [HttpServer-0.0.0.0:8888#869] from 43.143.228.48:38478 - TcpServer.cc:76
+2023/02/12 11:37:766684 INFO  TcpConnection::ctor[HttpServer-0.0.0.0:8888#869] at fd =880 - TcpConnection.cc:39
+2023/02/12 11:37:766708 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:766720 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:766733 TRACE printActiveChannels {11: IN }  - EventLoop.cc:198
+2023/02/12 11:37:766739 TRACE handleEventWithGuard 11: IN  - Channel.cc:91
+2023/02/12 11:37:766766 TRACE poll fd total count 4 - EPollPoller.cc:26
+2023/02/12 11:37:766772 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:766776 TRACE printActiveChannels {880: IN }  - EventLoop.cc:198
+2023/02/12 11:37:766781 TRACE handleEventWithGuard 880: IN  - Channel.cc:91
+2023/02/12 11:37:767922 TRACE poll fd total count 4 - EPollPoller.cc:26
+2023/02/12 11:37:767936 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:767941 TRACE printActiveChannels {880: IN HUP }  - EventLoop.cc:198
+2023/02/12 11:37:767948 TRACE handleEventWithGuard 880: IN HUP  - Channel.cc:91
+2023/02/12 11:37:767957 TRACE handleClose handleClose fd = 880 state = kDisconnecting - TcpConnection.cc:219
+2023/02/12 11:37:767968 DEBUG onConnection HttpServer-0.0.0.0:8888#869 is down - HttpConnection.cc:31
+2023/02/12 11:37:767985 TRACE poll fd total count 4 - EPollPoller.cc:26
+2023/02/12 11:37:767997 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:768010 TRACE printActiveChannels {6: IN }  - EventLoop.cc:198
+2023/02/12 11:37:768016 TRACE handleEventWithGuard 6: IN  - Channel.cc:91
+2023/02/12 11:37:768025 INFO  TcpServer::removeConnectionInLoop [HttpServer] - connection HttpServer-0.0.0.0:8888#869 - TcpServer.cc:104
+2023/02/12 11:37:768041 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:768047 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:768057 TRACE printActiveChannels {11: IN }  - EventLoop.cc:198
+2023/02/12 11:37:768064 TRACE handleEventWithGuard 11: IN  - Channel.cc:91
+2023/02/12 11:37:768075 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:786619 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:786644 TRACE printActiveChannels {7: IN }  - EventLoop.cc:198
+2023/02/12 11:37:786654 TRACE handleEventWithGuard 7: IN  - Channel.cc:91
+2023/02/12 11:37:786672 INFO  TcpServer::newConnection [HttpServer] - new connection [HttpServer-0.0.0.0:8888#870] from 43.143.228.48:38482 - TcpServer.cc:76
+2023/02/12 11:37:786691 INFO  TcpConnection::ctor[HttpServer-0.0.0.0:8888#870] at fd =881 - TcpConnection.cc:39
+2023/02/12 11:37:786715 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:786722 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:786736 TRACE printActiveChannels {11: IN }  - EventLoop.cc:198
+2023/02/12 11:37:786744 TRACE handleEventWithGuard 11: IN  - Channel.cc:91
+2023/02/12 11:37:786772 TRACE poll fd total count 4 - EPollPoller.cc:26
+2023/02/12 11:37:786779 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:786783 TRACE printActiveChannels {881: IN }  - EventLoop.cc:198
+2023/02/12 11:37:786788 TRACE handleEventWithGuard 881: IN  - Channel.cc:91
+2023/02/12 11:37:787953 TRACE poll fd total count 4 - EPollPoller.cc:26
+2023/02/12 11:37:787968 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:787974 TRACE printActiveChannels {881: IN HUP }  - EventLoop.cc:198
+2023/02/12 11:37:787981 TRACE handleEventWithGuard 881: IN HUP  - Channel.cc:91
+2023/02/12 11:37:787989 TRACE handleClose handleClose fd = 881 state = kDisconnecting - TcpConnection.cc:219
+2023/02/12 11:37:788001 DEBUG onConnection HttpServer-0.0.0.0:8888#870 is down - HttpConnection.cc:31
+2023/02/12 11:37:788019 TRACE poll fd total count 4 - EPollPoller.cc:26
+2023/02/12 11:37:788035 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:788047 TRACE printActiveChannels {6: IN }  - EventLoop.cc:198
+2023/02/12 11:37:788054 TRACE handleEventWithGuard 6: IN  - Channel.cc:91
+2023/02/12 11:37:788062 INFO  TcpServer::removeConnectionInLoop [HttpServer] - connection HttpServer-0.0.0.0:8888#870 - TcpServer.cc:104
+2023/02/12 11:37:788078 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:788085 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:788095 TRACE printActiveChannels {11: IN }  - EventLoop.cc:198
+2023/02/12 11:37:788103 TRACE handleEventWithGuard 11: IN  - Channel.cc:91
+2023/02/12 11:37:788115 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:789683 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:789704 TRACE printActiveChannels {7: IN }  - EventLoop.cc:198
+2023/02/12 11:37:789714 TRACE handleEventWithGuard 7: IN  - Channel.cc:91
+2023/02/12 11:37:789730 INFO  TcpServer::newConnection [HttpServer] - new connection [HttpServer-0.0.0.0:8888#871] from 43.143.228.48:38492 - TcpServer.cc:76
+2023/02/12 11:37:789747 INFO  TcpConnection::ctor[HttpServer-0.0.0.0:8888#871] at fd =882 - TcpConnection.cc:39
+2023/02/12 11:37:789771 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:789777 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:789790 TRACE printActiveChannels {11: IN }  - EventLoop.cc:198
+2023/02/12 11:37:789798 TRACE handleEventWithGuard 11: IN  - Channel.cc:91
+2023/02/12 11:37:789833 TRACE poll fd total count 4 - EPollPoller.cc:26
+2023/02/12 11:37:789840 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:789845 TRACE printActiveChannels {882: IN }  - EventLoop.cc:198
+2023/02/12 11:37:789850 TRACE handleEventWithGuard 882: IN  - Channel.cc:91
+2023/02/12 11:37:790983 TRACE poll fd total count 4 - EPollPoller.cc:26
+2023/02/12 11:37:790997 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:791002 TRACE printActiveChannels {882: IN HUP }  - EventLoop.cc:198
+2023/02/12 11:37:791010 TRACE handleEventWithGuard 882: IN HUP  - Channel.cc:91
+2023/02/12 11:37:791017 TRACE handleClose handleClose fd = 882 state = kDisconnecting - TcpConnection.cc:219
+2023/02/12 11:37:791029 DEBUG onConnection HttpServer-0.0.0.0:8888#871 is down - HttpConnection.cc:31
+2023/02/12 11:37:791046 TRACE poll fd total count 4 - EPollPoller.cc:26
+2023/02/12 11:37:791058 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:791070 TRACE printActiveChannels {6: IN }  - EventLoop.cc:198
+2023/02/12 11:37:791077 TRACE handleEventWithGuard 6: IN  - Channel.cc:91
+2023/02/12 11:37:791085 INFO  TcpServer::removeConnectionInLoop [HttpServer] - connection HttpServer-0.0.0.0:8888#871 - TcpServer.cc:104
+2023/02/12 11:37:791101 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:791107 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:791117 TRACE printActiveChannels {11: IN }  - EventLoop.cc:198
+2023/02/12 11:37:791125 TRACE handleEventWithGuard 11: IN  - Channel.cc:91
+2023/02/12 11:37:791136 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:811489 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:811514 TRACE printActiveChannels {7: IN }  - EventLoop.cc:198
+2023/02/12 11:37:811539 TRACE handleEventWithGuard 7: IN  - Channel.cc:91
+2023/02/12 11:37:811570 INFO  TcpServer::newConnection [HttpServer] - new connection [HttpServer-0.0.0.0:8888#872] from 43.143.228.48:38498 - TcpServer.cc:76
+2023/02/12 11:37:811593 INFO  TcpConnection::ctor[HttpServer-0.0.0.0:8888#872] at fd =883 - TcpConnection.cc:39
+2023/02/12 11:37:811640 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:811644 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:811650 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:811660 TRACE printActiveChannels {7: IN }  - EventLoop.cc:198
+2023/02/12 11:37:811660 TRACE printActiveChannels {11: IN }  - EventLoop.cc:198
+2023/02/12 11:37:811674 TRACE handleEventWithGuard 7: IN  - Channel.cc:91
+2023/02/12 11:37:811681 TRACE handleEventWithGuard 11: IN  - Channel.cc:91
+2023/02/12 11:37:811691 INFO  TcpServer::newConnection [HttpServer] - new connection [HttpServer-0.0.0.0:8888#873] from 43.143.228.48:38508 - TcpServer.cc:76
+2023/02/12 11:37:811710 INFO  TcpConnection::ctor[HttpServer-0.0.0.0:8888#873] at fd =884 - TcpConnection.cc:39
+2023/02/12 11:37:811720 TRACE poll fd total count 4 - EPollPoller.cc:26
+2023/02/12 11:37:811730 TRACE poll 2 events happened - EPollPoller.cc:32
+2023/02/12 11:37:811731 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:811739 TRACE printActiveChannels {11: IN }  - EventLoop.cc:198
+2023/02/12 11:37:811751 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:811767 TRACE printActiveChannels {883: IN }  - EventLoop.cc:198
+2023/02/12 11:37:811779 TRACE printActiveChannels {7: IN }  - EventLoop.cc:198
+2023/02/12 11:37:811788 TRACE handleEventWithGuard 11: IN  - Channel.cc:91
+2023/02/12 11:37:811794 TRACE handleEventWithGuard 7: IN  - Channel.cc:91
+2023/02/12 11:37:811798 TRACE handleEventWithGuard 883: IN  - Channel.cc:91
+2023/02/12 11:37:811813 INFO  TcpServer::newConnection [HttpServer] - new connection [HttpServer-0.0.0.0:8888#874] from 43.143.228.48:38506 - TcpServer.cc:76
+2023/02/12 11:37:811846 INFO  TcpConnection::ctor[HttpServer-0.0.0.0:8888#874] at fd =885 - TcpConnection.cc:39
+2023/02/12 11:37:811867 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:813093 TRACE poll fd total count 6 - EPollPoller.cc:26
+2023/02/12 11:37:813107 TRACE poll 4 events happened - EPollPoller.cc:32
+2023/02/12 11:37:813113 TRACE printActiveChannels {11: IN }  - EventLoop.cc:198
+2023/02/12 11:37:813120 TRACE printActiveChannels {883: IN HUP }  - EventLoop.cc:198
+2023/02/12 11:37:813124 TRACE printActiveChannels {884: IN }  - EventLoop.cc:198
+2023/02/12 11:37:813128 TRACE printActiveChannels {885: IN }  - EventLoop.cc:198
+2023/02/12 11:37:813133 TRACE handleEventWithGuard 11: IN  - Channel.cc:91
+2023/02/12 11:37:813139 TRACE handleEventWithGuard 883: IN HUP  - Channel.cc:91
+2023/02/12 11:37:813147 TRACE handleClose handleClose fd = 883 state = kDisconnecting - TcpConnection.cc:219
+2023/02/12 11:37:813157 DEBUG onConnection HttpServer-0.0.0.0:8888#872 is down - HttpConnection.cc:31
+2023/02/12 11:37:813173 TRACE handleEventWithGuard 884: IN  - Channel.cc:91
+2023/02/12 11:37:813184 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:813197 TRACE printActiveChannels {6: IN }  - EventLoop.cc:198
+2023/02/12 11:37:813207 TRACE handleEventWithGuard 6: IN  - Channel.cc:91
+2023/02/12 11:37:813218 INFO  TcpServer::removeConnectionInLoop [HttpServer] - connection HttpServer-0.0.0.0:8888#872 - TcpServer.cc:104
+2023/02/12 11:37:813233 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:814527 TRACE handleEventWithGuard 885: IN  - Channel.cc:91
+2023/02/12 11:37:814813 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:814842 TRACE printActiveChannels {7: IN }  - EventLoop.cc:198
+2023/02/12 11:37:814852 TRACE handleEventWithGuard 7: IN  - Channel.cc:91
+2023/02/12 11:37:814873 INFO  TcpServer::newConnection [HttpServer] - new connection [HttpServer-0.0.0.0:8888#875] from 43.143.228.48:38510 - TcpServer.cc:76
+2023/02/12 11:37:814892 INFO  TcpConnection::ctor[HttpServer-0.0.0.0:8888#875] at fd =886 - TcpConnection.cc:39
+2023/02/12 11:37:814953 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:815820 TRACE poll fd total count 6 - EPollPoller.cc:26
+2023/02/12 11:37:815833 TRACE poll 4 events happened - EPollPoller.cc:32
+2023/02/12 11:37:815839 TRACE printActiveChannels {11: IN }  - EventLoop.cc:198
+2023/02/12 11:37:815846 TRACE printActiveChannels {884: IN HUP }  - EventLoop.cc:198
+2023/02/12 11:37:815850 TRACE printActiveChannels {885: IN HUP }  - EventLoop.cc:198
+2023/02/12 11:37:815854 TRACE printActiveChannels {886: IN }  - EventLoop.cc:198
+2023/02/12 11:37:815859 TRACE handleEventWithGuard 11: IN  - Channel.cc:91
+2023/02/12 11:37:815865 TRACE handleEventWithGuard 884: IN HUP  - Channel.cc:91
+2023/02/12 11:37:815873 TRACE handleClose handleClose fd = 884 state = kDisconnecting - TcpConnection.cc:219
+2023/02/12 11:37:815882 DEBUG onConnection HttpServer-0.0.0.0:8888#873 is down - HttpConnection.cc:31
+2023/02/12 11:37:815900 TRACE handleEventWithGuard 885: IN HUP  - Channel.cc:91
+2023/02/12 11:37:815910 TRACE handleClose handleClose fd = 885 state = kDisconnecting - TcpConnection.cc:219
+2023/02/12 11:37:815911 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:815927 DEBUG onConnection HttpServer-0.0.0.0:8888#874 is down - HttpConnection.cc:31
+2023/02/12 11:37:815935 TRACE printActiveChannels {6: IN }  - EventLoop.cc:198
+2023/02/12 11:37:815940 TRACE handleEventWithGuard 886: IN  - Channel.cc:91
+2023/02/12 11:37:815945 TRACE handleEventWithGuard 6: IN  - Channel.cc:91
+2023/02/12 11:37:815958 INFO  TcpServer::removeConnectionInLoop [HttpServer] - connection HttpServer-0.0.0.0:8888#873 - TcpServer.cc:104
+2023/02/12 11:37:815972 INFO  TcpServer::removeConnectionInLoop [HttpServer] - connection HttpServer-0.0.0.0:8888#874 - TcpServer.cc:104
+2023/02/12 11:37:815983 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:817127 TRACE poll fd total count 4 - EPollPoller.cc:26
+2023/02/12 11:37:817140 TRACE poll 2 events happened - EPollPoller.cc:32
+2023/02/12 11:37:817144 TRACE printActiveChannels {11: IN }  - EventLoop.cc:198
+2023/02/12 11:37:817151 TRACE printActiveChannels {886: IN HUP }  - EventLoop.cc:198
+2023/02/12 11:37:817155 TRACE handleEventWithGuard 11: IN  - Channel.cc:91
+2023/02/12 11:37:817162 TRACE handleEventWithGuard 886: IN HUP  - Channel.cc:91
+2023/02/12 11:37:817170 TRACE handleClose handleClose fd = 886 state = kDisconnecting - TcpConnection.cc:219
+2023/02/12 11:37:817180 DEBUG onConnection HttpServer-0.0.0.0:8888#875 is down - HttpConnection.cc:31
+2023/02/12 11:37:817197 TRACE poll fd total count 4 - EPollPoller.cc:26
+2023/02/12 11:37:817209 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:817222 TRACE printActiveChannels {6: IN }  - EventLoop.cc:198
+2023/02/12 11:37:817228 TRACE handleEventWithGuard 6: IN  - Channel.cc:91
+2023/02/12 11:37:817237 INFO  TcpServer::removeConnectionInLoop [HttpServer] - connection HttpServer-0.0.0.0:8888#875 - TcpServer.cc:104
+2023/02/12 11:37:817266 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:817289 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:817299 TRACE printActiveChannels {11: IN }  - EventLoop.cc:198
+2023/02/12 11:37:817306 TRACE handleEventWithGuard 11: IN  - Channel.cc:91
+2023/02/12 11:37:817318 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:838610 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:838633 TRACE printActiveChannels {7: IN }  - EventLoop.cc:198
+2023/02/12 11:37:838643 TRACE handleEventWithGuard 7: IN  - Channel.cc:91
+2023/02/12 11:37:838661 INFO  TcpServer::newConnection [HttpServer] - new connection [HttpServer-0.0.0.0:8888#876] from 43.143.228.48:38518 - TcpServer.cc:76
+2023/02/12 11:37:838680 INFO  TcpConnection::ctor[HttpServer-0.0.0.0:8888#876] at fd =887 - TcpConnection.cc:39
+2023/02/12 11:37:838705 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:838714 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:838727 TRACE printActiveChannels {11: IN }  - EventLoop.cc:198
+2023/02/12 11:37:838734 TRACE handleEventWithGuard 11: IN  - Channel.cc:91
+2023/02/12 11:37:838761 TRACE poll fd total count 4 - EPollPoller.cc:26
+2023/02/12 11:37:838768 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:838772 TRACE printActiveChannels {887: IN }  - EventLoop.cc:198
+2023/02/12 11:37:838777 TRACE handleEventWithGuard 887: IN  - Channel.cc:91
+2023/02/12 11:37:839929 TRACE poll fd total count 4 - EPollPoller.cc:26
+2023/02/12 11:37:839944 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:839949 TRACE printActiveChannels {887: IN HUP }  - EventLoop.cc:198
+2023/02/12 11:37:839957 TRACE handleEventWithGuard 887: IN HUP  - Channel.cc:91
+2023/02/12 11:37:839965 TRACE handleClose handleClose fd = 887 state = kDisconnecting - TcpConnection.cc:219
+2023/02/12 11:37:839976 DEBUG onConnection HttpServer-0.0.0.0:8888#876 is down - HttpConnection.cc:31
+2023/02/12 11:37:839994 TRACE poll fd total count 4 - EPollPoller.cc:26
+2023/02/12 11:37:840005 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:840018 TRACE printActiveChannels {6: IN }  - EventLoop.cc:198
+2023/02/12 11:37:840025 TRACE handleEventWithGuard 6: IN  - Channel.cc:91
+2023/02/12 11:37:840034 INFO  TcpServer::removeConnectionInLoop [HttpServer] - connection HttpServer-0.0.0.0:8888#876 - TcpServer.cc:104
+2023/02/12 11:37:840050 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:840056 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:840066 TRACE printActiveChannels {11: IN }  - EventLoop.cc:198
+2023/02/12 11:37:840073 TRACE handleEventWithGuard 11: IN  - Channel.cc:91
+2023/02/12 11:37:840084 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:841626 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:841647 TRACE printActiveChannels {7: IN }  - EventLoop.cc:198
+2023/02/12 11:37:841657 TRACE handleEventWithGuard 7: IN  - Channel.cc:91
+2023/02/12 11:37:841674 INFO  TcpServer::newConnection [HttpServer] - new connection [HttpServer-0.0.0.0:8888#877] from 43.143.228.48:38532 - TcpServer.cc:76
+2023/02/12 11:37:841706 INFO  TcpConnection::ctor[HttpServer-0.0.0.0:8888#877] at fd =888 - TcpConnection.cc:39
+2023/02/12 11:37:841731 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:841739 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:841752 TRACE printActiveChannels {11: IN }  - EventLoop.cc:198
+2023/02/12 11:37:841759 TRACE handleEventWithGuard 11: IN  - Channel.cc:91
+2023/02/12 11:37:841786 TRACE poll fd total count 4 - EPollPoller.cc:26
+2023/02/12 11:37:841793 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:841796 TRACE printActiveChannels {888: IN }  - EventLoop.cc:198
+2023/02/12 11:37:841801 TRACE handleEventWithGuard 888: IN  - Channel.cc:91
+2023/02/12 11:37:842954 TRACE poll fd total count 4 - EPollPoller.cc:26
+2023/02/12 11:37:842968 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:842973 TRACE printActiveChannels {888: IN HUP }  - EventLoop.cc:198
+2023/02/12 11:37:842980 TRACE handleEventWithGuard 888: IN HUP  - Channel.cc:91
+2023/02/12 11:37:842988 TRACE handleClose handleClose fd = 888 state = kDisconnecting - TcpConnection.cc:219
+2023/02/12 11:37:843000 DEBUG onConnection HttpServer-0.0.0.0:8888#877 is down - HttpConnection.cc:31
+2023/02/12 11:37:843017 TRACE poll fd total count 4 - EPollPoller.cc:26
+2023/02/12 11:37:843029 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:843041 TRACE printActiveChannels {6: IN }  - EventLoop.cc:198
+2023/02/12 11:37:843048 TRACE handleEventWithGuard 6: IN  - Channel.cc:91
+2023/02/12 11:37:843057 INFO  TcpServer::removeConnectionInLoop [HttpServer] - connection HttpServer-0.0.0.0:8888#877 - TcpServer.cc:104
+2023/02/12 11:37:843073 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:843078 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:843089 TRACE printActiveChannels {11: IN }  - EventLoop.cc:198
+2023/02/12 11:37:843096 TRACE handleEventWithGuard 11: IN  - Channel.cc:91
+2023/02/12 11:37:843107 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:846600 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:846623 TRACE printActiveChannels {7: IN }  - EventLoop.cc:198
+2023/02/12 11:37:846632 TRACE handleEventWithGuard 7: IN  - Channel.cc:91
+2023/02/12 11:37:846648 INFO  TcpServer::newConnection [HttpServer] - new connection [HttpServer-0.0.0.0:8888#878] from 43.143.228.48:38536 - TcpServer.cc:76
+2023/02/12 11:37:846665 INFO  TcpConnection::ctor[HttpServer-0.0.0.0:8888#878] at fd =889 - TcpConnection.cc:39
+2023/02/12 11:37:846689 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:846698 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:846710 TRACE printActiveChannels {11: IN }  - EventLoop.cc:198
+2023/02/12 11:37:846717 TRACE handleEventWithGuard 11: IN  - Channel.cc:91
+2023/02/12 11:37:846743 TRACE poll fd total count 4 - EPollPoller.cc:26
+2023/02/12 11:37:846750 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:846754 TRACE printActiveChannels {889: IN }  - EventLoop.cc:198
+2023/02/12 11:37:846759 TRACE handleEventWithGuard 889: IN  - Channel.cc:91
+2023/02/12 11:37:847904 TRACE poll fd total count 4 - EPollPoller.cc:26
+2023/02/12 11:37:847920 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:847925 TRACE printActiveChannels {889: IN HUP }  - EventLoop.cc:198
+2023/02/12 11:37:847933 TRACE handleEventWithGuard 889: IN HUP  - Channel.cc:91
+2023/02/12 11:37:847941 TRACE handleClose handleClose fd = 889 state = kDisconnecting - TcpConnection.cc:219
+2023/02/12 11:37:847952 DEBUG onConnection HttpServer-0.0.0.0:8888#878 is down - HttpConnection.cc:31
+2023/02/12 11:37:847968 TRACE poll fd total count 4 - EPollPoller.cc:26
+2023/02/12 11:37:847977 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:847990 TRACE printActiveChannels {6: IN }  - EventLoop.cc:198
+2023/02/12 11:37:847997 TRACE handleEventWithGuard 6: IN  - Channel.cc:91
+2023/02/12 11:37:848005 INFO  TcpServer::removeConnectionInLoop [HttpServer] - connection HttpServer-0.0.0.0:8888#878 - TcpServer.cc:104
+2023/02/12 11:37:848021 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:848027 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:848037 TRACE printActiveChannels {11: IN }  - EventLoop.cc:198
+2023/02/12 11:37:848044 TRACE handleEventWithGuard 11: IN  - Channel.cc:91
+2023/02/12 11:37:848055 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:853722 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:853745 TRACE printActiveChannels {7: IN }  - EventLoop.cc:198
+2023/02/12 11:37:853757 TRACE handleEventWithGuard 7: IN  - Channel.cc:91
+2023/02/12 11:37:853774 INFO  TcpServer::newConnection [HttpServer] - new connection [HttpServer-0.0.0.0:8888#879] from 43.143.228.48:36934 - TcpServer.cc:76
+2023/02/12 11:37:853792 INFO  TcpConnection::ctor[HttpServer-0.0.0.0:8888#879] at fd =890 - TcpConnection.cc:39
+2023/02/12 11:37:853826 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:853833 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:853846 TRACE printActiveChannels {11: IN }  - EventLoop.cc:198
+2023/02/12 11:37:853853 TRACE handleEventWithGuard 11: IN  - Channel.cc:91
+2023/02/12 11:37:853880 TRACE poll fd total count 4 - EPollPoller.cc:26
+2023/02/12 11:37:853887 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:853891 TRACE printActiveChannels {890: IN }  - EventLoop.cc:198
+2023/02/12 11:37:853896 TRACE handleEventWithGuard 890: IN  - Channel.cc:91
+2023/02/12 11:37:855024 TRACE poll fd total count 4 - EPollPoller.cc:26
+2023/02/12 11:37:855038 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:855043 TRACE printActiveChannels {890: IN HUP }  - EventLoop.cc:198
+2023/02/12 11:37:855050 TRACE handleEventWithGuard 890: IN HUP  - Channel.cc:91
+2023/02/12 11:37:855058 TRACE handleClose handleClose fd = 890 state = kDisconnecting - TcpConnection.cc:219
+2023/02/12 11:37:855069 DEBUG onConnection HttpServer-0.0.0.0:8888#879 is down - HttpConnection.cc:31
+2023/02/12 11:37:855087 TRACE poll fd total count 4 - EPollPoller.cc:26
+2023/02/12 11:37:855099 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:855111 TRACE printActiveChannels {6: IN }  - EventLoop.cc:198
+2023/02/12 11:37:855119 TRACE handleEventWithGuard 6: IN  - Channel.cc:91
+2023/02/12 11:37:855127 INFO  TcpServer::removeConnectionInLoop [HttpServer] - connection HttpServer-0.0.0.0:8888#879 - TcpServer.cc:104
+2023/02/12 11:37:855143 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:855149 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:855159 TRACE printActiveChannels {11: IN }  - EventLoop.cc:198
+2023/02/12 11:37:855166 TRACE handleEventWithGuard 11: IN  - Channel.cc:91
+2023/02/12 11:37:855177 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:882239 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:882270 TRACE printActiveChannels {7: IN }  - EventLoop.cc:198
+2023/02/12 11:37:882284 TRACE handleEventWithGuard 7: IN  - Channel.cc:91
+2023/02/12 11:37:882312 INFO  TcpServer::newConnection [HttpServer] - new connection [HttpServer-0.0.0.0:8888#880] from 43.143.228.48:37672 - TcpServer.cc:76
+2023/02/12 11:37:882333 INFO  TcpConnection::ctor[HttpServer-0.0.0.0:8888#880] at fd =891 - TcpConnection.cc:39
+2023/02/12 11:37:882359 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:882367 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:882381 TRACE printActiveChannels {11: IN }  - EventLoop.cc:198
+2023/02/12 11:37:882391 TRACE handleEventWithGuard 11: IN  - Channel.cc:91
+2023/02/12 11:37:882423 TRACE poll fd total count 4 - EPollPoller.cc:26
+2023/02/12 11:37:882430 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:882434 TRACE printActiveChannels {891: IN }  - EventLoop.cc:198
+2023/02/12 11:37:882439 TRACE handleEventWithGuard 891: IN  - Channel.cc:91
+2023/02/12 11:37:883591 TRACE poll fd total count 4 - EPollPoller.cc:26
+2023/02/12 11:37:883625 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:883633 TRACE printActiveChannels {891: IN HUP }  - EventLoop.cc:198
+2023/02/12 11:37:883642 TRACE handleEventWithGuard 891: IN HUP  - Channel.cc:91
+2023/02/12 11:37:883650 TRACE handleClose handleClose fd = 891 state = kDisconnecting - TcpConnection.cc:219
+2023/02/12 11:37:883663 DEBUG onConnection HttpServer-0.0.0.0:8888#880 is down - HttpConnection.cc:31
+2023/02/12 11:37:883680 TRACE poll fd total count 4 - EPollPoller.cc:26
+2023/02/12 11:37:883686 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:883700 TRACE printActiveChannels {6: IN }  - EventLoop.cc:198
+2023/02/12 11:37:883707 TRACE handleEventWithGuard 6: IN  - Channel.cc:91
+2023/02/12 11:37:883715 INFO  TcpServer::removeConnectionInLoop [HttpServer] - connection HttpServer-0.0.0.0:8888#880 - TcpServer.cc:104
+2023/02/12 11:37:883731 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:883737 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:883747 TRACE printActiveChannels {11: IN }  - EventLoop.cc:198
+2023/02/12 11:37:883754 TRACE handleEventWithGuard 11: IN  - Channel.cc:91
+2023/02/12 11:37:883765 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:885372 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:885394 TRACE printActiveChannels {7: IN }  - EventLoop.cc:198
+2023/02/12 11:37:885403 TRACE handleEventWithGuard 7: IN  - Channel.cc:91
+2023/02/12 11:37:885421 INFO  TcpServer::newConnection [HttpServer] - new connection [HttpServer-0.0.0.0:8888#881] from 43.143.228.48:38558 - TcpServer.cc:76
+2023/02/12 11:37:885439 INFO  TcpConnection::ctor[HttpServer-0.0.0.0:8888#881] at fd =892 - TcpConnection.cc:39
+2023/02/12 11:37:885463 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:885470 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:885483 TRACE printActiveChannels {11: IN }  - EventLoop.cc:198
+2023/02/12 11:37:885490 TRACE handleEventWithGuard 11: IN  - Channel.cc:91
+2023/02/12 11:37:885517 TRACE poll fd total count 4 - EPollPoller.cc:26
+2023/02/12 11:37:885523 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:885527 TRACE printActiveChannels {892: IN }  - EventLoop.cc:198
+2023/02/12 11:37:885532 TRACE handleEventWithGuard 892: IN  - Channel.cc:91
+2023/02/12 11:37:886833 TRACE poll fd total count 4 - EPollPoller.cc:26
+2023/02/12 11:37:886848 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:886853 TRACE printActiveChannels {892: IN HUP }  - EventLoop.cc:198
+2023/02/12 11:37:886861 TRACE handleEventWithGuard 892: IN HUP  - Channel.cc:91
+2023/02/12 11:37:886869 TRACE handleClose handleClose fd = 892 state = kDisconnecting - TcpConnection.cc:219
+2023/02/12 11:37:886881 DEBUG onConnection HttpServer-0.0.0.0:8888#881 is down - HttpConnection.cc:31
+2023/02/12 11:37:886898 TRACE poll fd total count 4 - EPollPoller.cc:26
+2023/02/12 11:37:886909 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:886921 TRACE printActiveChannels {6: IN }  - EventLoop.cc:198
+2023/02/12 11:37:886928 TRACE handleEventWithGuard 6: IN  - Channel.cc:91
+2023/02/12 11:37:886937 INFO  TcpServer::removeConnectionInLoop [HttpServer] - connection HttpServer-0.0.0.0:8888#881 - TcpServer.cc:104
+2023/02/12 11:37:886952 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:886958 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:886968 TRACE printActiveChannels {11: IN }  - EventLoop.cc:198
+2023/02/12 11:37:886975 TRACE handleEventWithGuard 11: IN  - Channel.cc:91
+2023/02/12 11:37:886987 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:887556 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:887582 TRACE printActiveChannels {7: IN }  - EventLoop.cc:198
+2023/02/12 11:37:887591 TRACE handleEventWithGuard 7: IN  - Channel.cc:91
+2023/02/12 11:37:887607 INFO  TcpServer::newConnection [HttpServer] - new connection [HttpServer-0.0.0.0:8888#882] from 43.143.228.48:38574 - TcpServer.cc:76
+2023/02/12 11:37:887625 INFO  TcpConnection::ctor[HttpServer-0.0.0.0:8888#882] at fd =893 - TcpConnection.cc:39
+2023/02/12 11:37:887650 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:887673 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:887684 TRACE printActiveChannels {11: IN }  - EventLoop.cc:198
+2023/02/12 11:37:887691 TRACE handleEventWithGuard 11: IN  - Channel.cc:91
+2023/02/12 11:37:887718 TRACE poll fd total count 4 - EPollPoller.cc:26
+2023/02/12 11:37:887725 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:887729 TRACE printActiveChannels {893: IN }  - EventLoop.cc:198
+2023/02/12 11:37:887734 TRACE handleEventWithGuard 893: IN  - Channel.cc:91
+2023/02/12 11:37:888515 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:888532 TRACE printActiveChannels {7: IN }  - EventLoop.cc:198
+2023/02/12 11:37:888543 TRACE handleEventWithGuard 7: IN  - Channel.cc:91
+2023/02/12 11:37:888562 INFO  TcpServer::newConnection [HttpServer] - new connection [HttpServer-0.0.0.0:8888#883] from 43.143.228.48:38582 - TcpServer.cc:76
+2023/02/12 11:37:888582 INFO  TcpConnection::ctor[HttpServer-0.0.0.0:8888#883] at fd =894 - TcpConnection.cc:39
+2023/02/12 11:37:888604 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:889067 TRACE poll fd total count 5 - EPollPoller.cc:26
+2023/02/12 11:37:889079 TRACE poll 3 events happened - EPollPoller.cc:32
+2023/02/12 11:37:889085 TRACE printActiveChannels {893: IN HUP }  - EventLoop.cc:198
+2023/02/12 11:37:889091 TRACE printActiveChannels {11: IN }  - EventLoop.cc:198
+2023/02/12 11:37:889095 TRACE printActiveChannels {894: IN }  - EventLoop.cc:198
+2023/02/12 11:37:889100 TRACE handleEventWithGuard 893: IN HUP  - Channel.cc:91
+2023/02/12 11:37:889107 TRACE handleClose handleClose fd = 893 state = kDisconnecting - TcpConnection.cc:219
+2023/02/12 11:37:889117 DEBUG onConnection HttpServer-0.0.0.0:8888#882 is down - HttpConnection.cc:31
+2023/02/12 11:37:889133 TRACE handleEventWithGuard 11: IN  - Channel.cc:91
+2023/02/12 11:37:889144 TRACE handleEventWithGuard 894: IN  - Channel.cc:91
+2023/02/12 11:37:889144 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:889167 TRACE printActiveChannels {6: IN }  - EventLoop.cc:198
+2023/02/12 11:37:889177 TRACE handleEventWithGuard 6: IN  - Channel.cc:91
+2023/02/12 11:37:889188 INFO  TcpServer::removeConnectionInLoop [HttpServer] - connection HttpServer-0.0.0.0:8888#882 - TcpServer.cc:104
+2023/02/12 11:37:889202 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:890339 TRACE poll fd total count 4 - EPollPoller.cc:26
+2023/02/12 11:37:890352 TRACE poll 2 events happened - EPollPoller.cc:32
+2023/02/12 11:37:890357 TRACE printActiveChannels {11: IN }  - EventLoop.cc:198
+2023/02/12 11:37:890364 TRACE printActiveChannels {894: IN HUP }  - EventLoop.cc:198
+2023/02/12 11:37:890368 TRACE handleEventWithGuard 11: IN  - Channel.cc:91
+2023/02/12 11:37:890375 TRACE handleEventWithGuard 894: IN HUP  - Channel.cc:91
+2023/02/12 11:37:890382 TRACE handleClose handleClose fd = 894 state = kDisconnecting - TcpConnection.cc:219
+2023/02/12 11:37:890393 DEBUG onConnection HttpServer-0.0.0.0:8888#883 is down - HttpConnection.cc:31
+2023/02/12 11:37:890410 TRACE poll fd total count 4 - EPollPoller.cc:26
+2023/02/12 11:37:890422 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:890434 TRACE printActiveChannels {6: IN }  - EventLoop.cc:198
+2023/02/12 11:37:890441 TRACE handleEventWithGuard 6: IN  - Channel.cc:91
+2023/02/12 11:37:890450 INFO  TcpServer::removeConnectionInLoop [HttpServer] - connection HttpServer-0.0.0.0:8888#883 - TcpServer.cc:104
+2023/02/12 11:37:890465 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:890471 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:890481 TRACE printActiveChannels {11: IN }  - EventLoop.cc:198
+2023/02/12 11:37:890488 TRACE handleEventWithGuard 11: IN  - Channel.cc:91
+2023/02/12 11:37:890498 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:951530 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:951575 TRACE printActiveChannels {7: IN }  - EventLoop.cc:198
+2023/02/12 11:37:951597 TRACE handleEventWithGuard 7: IN  - Channel.cc:91
+2023/02/12 11:37:951633 INFO  TcpServer::newConnection [HttpServer] - new connection [HttpServer-0.0.0.0:8888#884] from 43.143.228.48:37562 - TcpServer.cc:76
+2023/02/12 11:37:951669 INFO  TcpConnection::ctor[HttpServer-0.0.0.0:8888#884] at fd =895 - TcpConnection.cc:39
+2023/02/12 11:37:951716 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:951732 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:951741 TRACE printActiveChannels {11: IN }  - EventLoop.cc:198
+2023/02/12 11:37:951750 TRACE handleEventWithGuard 11: IN  - Channel.cc:91
+2023/02/12 11:37:951804 TRACE poll fd total count 4 - EPollPoller.cc:26
+2023/02/12 11:37:153299 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:153351 TRACE printActiveChannels {895: IN }  - EventLoop.cc:198
+2023/02/12 11:37:153373 TRACE handleEventWithGuard 895: IN  - Channel.cc:91
+2023/02/12 11:37:154668 TRACE poll fd total count 4 - EPollPoller.cc:26
+2023/02/12 11:37:154688 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:154694 TRACE printActiveChannels {895: IN HUP }  - EventLoop.cc:198
+2023/02/12 11:37:154703 TRACE handleEventWithGuard 895: IN HUP  - Channel.cc:91
+2023/02/12 11:37:154713 TRACE handleClose handleClose fd = 895 state = kDisconnecting - TcpConnection.cc:219
+2023/02/12 11:37:154729 DEBUG onConnection HttpServer-0.0.0.0:8888#884 is down - HttpConnection.cc:31
+2023/02/12 11:37:154752 TRACE poll fd total count 4 - EPollPoller.cc:26
+2023/02/12 11:37:154770 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:154786 TRACE printActiveChannels {6: IN }  - EventLoop.cc:198
+2023/02/12 11:37:154796 TRACE handleEventWithGuard 6: IN  - Channel.cc:91
+2023/02/12 11:37:154810 INFO  TcpServer::removeConnectionInLoop [HttpServer] - connection HttpServer-0.0.0.0:8888#884 - TcpServer.cc:104
+2023/02/12 11:37:154842 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:154849 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:154860 TRACE printActiveChannels {11: IN }  - EventLoop.cc:198
+2023/02/12 11:37:154868 TRACE handleEventWithGuard 11: IN  - Channel.cc:91
+2023/02/12 11:37:154881 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:713785 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:713847 TRACE printActiveChannels {7: IN }  - EventLoop.cc:198
+2023/02/12 11:37:713869 TRACE handleEventWithGuard 7: IN  - Channel.cc:91
+2023/02/12 11:37:713902 INFO  TcpServer::newConnection [HttpServer] - new connection [HttpServer-0.0.0.0:8888#885] from 43.143.228.48:36200 - TcpServer.cc:76
+2023/02/12 11:37:713935 INFO  TcpConnection::ctor[HttpServer-0.0.0.0:8888#885] at fd =896 - TcpConnection.cc:39
+2023/02/12 11:37:713975 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:713987 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:714003 TRACE printActiveChannels {11: IN }  - EventLoop.cc:198
+2023/02/12 11:37:714010 TRACE handleEventWithGuard 11: IN  - Channel.cc:91
+2023/02/12 11:37:714050 TRACE poll fd total count 4 - EPollPoller.cc:26
+2023/02/12 11:37:833693 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:833744 TRACE printActiveChannels {7: IN }  - EventLoop.cc:198
+2023/02/12 11:37:833764 TRACE handleEventWithGuard 7: IN  - Channel.cc:91
+2023/02/12 11:37:833797 INFO  TcpServer::newConnection [HttpServer] - new connection [HttpServer-0.0.0.0:8888#886] from 43.143.228.48:37628 - TcpServer.cc:76
+2023/02/12 11:37:833839 INFO  TcpConnection::ctor[HttpServer-0.0.0.0:8888#886] at fd =897 - TcpConnection.cc:39
+2023/02/12 11:37:833878 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:833888 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:833904 TRACE printActiveChannels {11: IN }  - EventLoop.cc:198
+2023/02/12 11:37:833912 TRACE handleEventWithGuard 11: IN  - Channel.cc:91
+2023/02/12 11:37:833955 TRACE poll fd total count 5 - EPollPoller.cc:26
+2023/02/12 11:37:969402 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:969507 TRACE printActiveChannels {896: IN }  - EventLoop.cc:198
+2023/02/12 11:37:969533 TRACE handleEventWithGuard 896: IN  - Channel.cc:91
+2023/02/12 11:37:971124 TRACE poll fd total count 5 - EPollPoller.cc:26
+2023/02/12 11:37:971146 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:971152 TRACE printActiveChannels {896: IN HUP }  - EventLoop.cc:198
+2023/02/12 11:37:971162 TRACE handleEventWithGuard 896: IN HUP  - Channel.cc:91
+2023/02/12 11:37:971173 TRACE handleClose handleClose fd = 896 state = kDisconnecting - TcpConnection.cc:219
+2023/02/12 11:37:971188 DEBUG onConnection HttpServer-0.0.0.0:8888#885 is down - HttpConnection.cc:31
+2023/02/12 11:37:971209 TRACE poll fd total count 5 - EPollPoller.cc:26
+2023/02/12 11:37:971224 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:971247 TRACE printActiveChannels {6: IN }  - EventLoop.cc:198
+2023/02/12 11:37:971257 TRACE handleEventWithGuard 6: IN  - Channel.cc:91
+2023/02/12 11:37:971271 INFO  TcpServer::removeConnectionInLoop [HttpServer] - connection HttpServer-0.0.0.0:8888#885 - TcpServer.cc:104
+2023/02/12 11:37:971295 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:971302 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:971316 TRACE printActiveChannels {11: IN }  - EventLoop.cc:198
+2023/02/12 11:37:971323 TRACE handleEventWithGuard 11: IN  - Channel.cc:91
+2023/02/12 11:37:971336 TRACE poll fd total count 4 - EPollPoller.cc:26
+2023/02/12 11:37:225370 TRACE poll 2 events happened - EPollPoller.cc:32
+2023/02/12 11:37:225425 TRACE printActiveChannels {857: IN }  - EventLoop.cc:198
+2023/02/12 11:37:225444 TRACE printActiveChannels {897: IN }  - EventLoop.cc:198
+2023/02/12 11:37:225451 TRACE handleEventWithGuard 857: IN  - Channel.cc:91
+2023/02/12 11:37:226810 TRACE handleEventWithGuard 897: IN  - Channel.cc:91
+2023/02/12 11:37:228013 TRACE poll fd total count 4 - EPollPoller.cc:26
+2023/02/12 11:37:228030 TRACE poll 2 events happened - EPollPoller.cc:32
+2023/02/12 11:37:228037 TRACE printActiveChannels {857: IN HUP ERR }  - EventLoop.cc:198
+2023/02/12 11:37:228050 TRACE printActiveChannels {897: IN HUP }  - EventLoop.cc:198
+2023/02/12 11:37:228055 TRACE handleEventWithGuard 857: IN HUP ERR  - Channel.cc:91
+2023/02/12 11:37:228066 ERROR TcpConnection::handleError [HttpServer-0.0.0.0:8888#846]: SO_ERROR = 104 - TcpConnection.cc:236
+2023/02/12 11:37:228076 TRACE handleClose handleClose fd = 857 state = kDisconnecting - TcpConnection.cc:219
+2023/02/12 11:37:228090 DEBUG onConnection HttpServer-0.0.0.0:8888#846 is down - HttpConnection.cc:31
+2023/02/12 11:37:228110 TRACE handleEventWithGuard 897: IN HUP  - Channel.cc:91
+2023/02/12 11:37:228121 TRACE handleClose handleClose fd = 897 state = kDisconnecting - TcpConnection.cc:219
+2023/02/12 11:37:228125 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:228134 DEBUG onConnection HttpServer-0.0.0.0:8888#886 is down - HttpConnection.cc:31
+2023/02/12 11:37:228141 TRACE printActiveChannels {6: IN }  - EventLoop.cc:198
+2023/02/12 11:37:228148 TRACE poll fd total count 4 - EPollPoller.cc:26
+2023/02/12 11:37:228152 TRACE handleEventWithGuard 6: IN  - Channel.cc:91
+2023/02/12 11:37:228167 INFO  TcpServer::removeConnectionInLoop [HttpServer] - connection HttpServer-0.0.0.0:8888#846 - TcpServer.cc:104
+2023/02/12 11:37:228186 INFO  TcpServer::removeConnectionInLoop [HttpServer] - connection HttpServer-0.0.0.0:8888#886 - TcpServer.cc:104
+2023/02/12 11:37:228193 TRACE poll 1 events happened - EPollPoller.cc:32
+2023/02/12 11:37:228199 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:228203 TRACE printActiveChannels {11: IN }  - EventLoop.cc:198
+2023/02/12 11:37:228212 TRACE handleEventWithGuard 11: IN  - Channel.cc:91
+2023/02/12 11:37:228227 TRACE poll fd total count 2 - EPollPoller.cc:26
+2023/02/12 11:37:232597 TRACE poll nothing happened - EPollPoller.cc:38
+2023/02/12 11:37:232664 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:37:234637 TRACE poll nothing happened - EPollPoller.cc:38
+2023/02/12 11:37:234675 TRACE poll fd total count 2 - EPollPoller.cc:26
+2023/02/12 11:38:238850 TRACE poll nothing happened - EPollPoller.cc:38
+2023/02/12 11:38:238894 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:38:244578 TRACE poll nothing happened - EPollPoller.cc:38
+2023/02/12 11:38:244612 TRACE poll fd total count 2 - EPollPoller.cc:26
+2023/02/12 11:38:248891 TRACE poll nothing happened - EPollPoller.cc:38
+2023/02/12 11:38:248934 TRACE poll fd total count 3 - EPollPoller.cc:26
+2023/02/12 11:38:252894 TRACE poll nothing happened - EPollPoller.cc:38
+2023/02/12 11:38:252920 TRACE poll fd total count 2 - EPollPoller.cc:26

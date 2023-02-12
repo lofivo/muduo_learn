@@ -19,7 +19,7 @@ int main() {
   server.setConnectionCallback(onConnection);
   server.setMessageCallback(onMessage);
 
-  server.setThreadNum(1);
+  server.setThreadNum(4);
   server.start();
   loop.loop();
 }
